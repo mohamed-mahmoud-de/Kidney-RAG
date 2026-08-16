@@ -1,0 +1,245 @@
+===== SLIDE 1 =====
+AI Clinical Decision Support Lite Hackathon
+===== SLIDE 2 =====
+Day 1
+Research, Scope & Document Ingestion
+AI Clinical Decision Support Lite Hackathon
+Understand
+Clinical RAG
+Decide
+Scope + sources
+Build
+First index
+What students will learn and execute during Day 1
+AI Clinical Decision Support Lite Hackathon
+01
+===== SLIDE 3 =====
+Today’s learning objectives
+Students should leave this session ready to implement the first working knowledge base.
+Conceptual goal
+Understand why clinical RAG is different from a normal chatbot: the answer must be grounded in official medical evidence, not model memory.
+Technical goal
+Learn the first pipeline: PDF parsing, cleaning, section-aware chunking, metadata preservation, embeddings, and vector indexing.
+Execution goal
+Finish the day with selected guidelines, a narrow scope, and a searchable knowledge base tested with sample queries.
+AI Clinical Decision Support Lite Hackathon
+02
+===== SLIDE 4 =====
+Why this hackathon matters
+The challenge is not fluent text. It is safe, traceable, evidence-based clinical guidance.
+A normal LLM may answer confidently even when it has no evidence.
+Fluent answer
+≠
+Safe answer
+Retrieved evidence
++
+Citation
+Grounded
+response
+Student takeaway
+If the system cannot find evidence in the uploaded guidelines, it should say so instead of guessing.
+Day 1 foundation
+Every later score depends on today’s foundation: useful documents, clean chunks, and correct citation metadata.
+AI Clinical Decision Support Lite Hackathon
+03
+===== SLIDE 5 =====
+What are we building?
+A lightweight clinical decision-support assistant that answers from official guidelines only.
+PDF
+Guidelines
+Parse +
+Chunk
+Embed +
+Index
+Retrieve
+Top-K
+Generate
+Answer
+Citations +
+Safety
+Input
+Official medical guideline PDFs and a clinical question.
+Core logic
+Search the guidelines, select relevant chunks, then answer only from them.
+Output
+Recommendation, supporting evidence, citation, confidence, and disclaimer.
+AI Clinical Decision Support Lite Hackathon
+04
+===== SLIDE 6 =====
+Day 1 roadmap
+The day moves from problem definition to the first searchable guideline index.
+1
+Scope
+Pick a narrow clinical problem.
+2
+Sources
+Select official, legally usable PDFs.
+3
+Parsing
+Extract clean text from each PDF.
+4
+Chunking
+Split by sections and preserve context.
+5
+Indexing
+Generate embeddings and store metadata.
+End-of-day target
+A demo-ready knowledge base is not required today. A working first index with visible chunks and metadata is required.
+AI Clinical Decision Support Lite Hackathon
+05
+===== SLIDE 7 =====
+Step 1 — Choose a narrow clinical scope
+The best scope is small enough to evaluate and important enough to demonstrate.
+Good examples
+• Adult hypertension initial management.
+• Diabetes screening guidance.
+• Asthma step-up / step-down guidance.
+• Preventive screening recommendations.
+• Antibiotic use for one condition area.
+Avoid today
+• “All diseases assistant.”
+• Mixing too many specialties.
+• Rare cases with weak guideline coverage.
+• Patient-specific diagnosis.
+• Emergency medical advice.
+Scope statement template
+This system helps [target user] answer questions about [clinical topic] using [official guideline source].
+Team task: write your scope statement in one sentence before touching code.
+AI Clinical Decision Support Lite Hackathon
+06
+===== SLIDE 8 =====
+Step 2 — Select credible guideline PDFs
+Your dataset must be trusted, legal, public, and manageable.
+Allowed data
+• Official medical guideline PDFs.
+• Public health documents.
+• Publicly accessible recommendations.
+• Moderate-size collections.
+• Sources that can be cited clearly.
+Not allowed
+• Hospital records.
+• Private patient data.
+• PHI or identifiable health data.
+• Credential-gated datasets.
+• Extremely large research corpora.
+Suggested sources
+• WHO clinical guidelines.
+• CDC recommendations.
+• NICE guidelines.
+• USPSTF recommendations.
+• Other official bodies with clear public use.
+AI Clinical Decision Support Lite Hackathon
+07
+===== SLIDE 9 =====
+Step 3 — Build the ingestion pipeline
+Turn guideline PDFs into clean, searchable, citable data.
+PDF
+Parsing
+Text
+Cleaning
+Section
+Detection
+Chunk
+Creation
+Metadata
+Storage
+PDF parsing
+Extract text while preserving page numbers. Check if tables and multi-column layouts are readable.
+Cleaning
+Remove repeated headers, footers, page noise, broken line breaks, and obvious extraction artifacts.
+Section detection
+Keep headings and recommendation sections because they make retrieval and citations stronger.
+AI Clinical Decision Support Lite Hackathon
+08
+===== SLIDE 10 =====
+Step 4 — Section-aware chunking
+A good chunk contains one coherent clinical idea and enough context to support an answer.
+Chunking decision
+Too small
+Missing context
+Balanced
+One useful idea
+Too large
+Low precision
+Recommended start
+Use section-aware chunks around 400–800 tokens with overlap only when needed.
+Preserve context
+Keep section title, recommendation label, page number, and document name with every chunk.
+Manual check
+Open 5 chunks and verify that each one makes sense without the entire PDF.
+AI Clinical Decision Support Lite Hackathon
+09
+===== SLIDE 11 =====
+Step 5 — Metadata is the citation foundation
+Citations shown later are only as accurate as the metadata saved today.
+Minimum chunk object
+{
+  "document_name": "NICE Hypertension Guideline",
+  "page_number": 18,
+  "section_title": "Starting treatment",
+  "chunk_id": "nice_htn_p18_c03",
+  "source_url": "...",
+  "text": "..."
+}
+Why it matters
+Without document name, page, and section, the final answer may look cited but cannot be trusted.
+Student task
+Store metadata with the vector entry, not in a separate spreadsheet that can get out of sync.
+Quality check
+Pick one chunk and trace it back to the original PDF page.
+AI Clinical Decision Support Lite Hackathon
+10
+===== SLIDE 12 =====
+Step 6 — Build the first vector index
+The goal today is not perfect retrieval. It is a working baseline that can be improved tomorrow.
+Chunk
+Text
+Embedding
+Model
+Vector
+Database
+Top-K
+Search Test
+Embedding choice
+Use a reliable text embedding model. Keep the model name and settings documented.
+Index storage
+Use any vector database, but make sure scores and metadata can be retrieved with the text.
+Baseline test
+Run 5–10 clinical questions and inspect the returned chunks before generation.
+AI Clinical Decision Support Lite Hackathon
+11
+===== SLIDE 13 =====
+Hands-on lab — Complete this today
+Practical checklist for teams after the teaching block.
+Choose one narrow clinical topic
+Create section-aware chunks
+Download 1–2 official guideline PDFs
+Attach metadata: document, section, page, chunk ID
+Document why the source is credible and public
+Generate embeddings and index chunks
+Extract text and inspect sample pages
+Run 5–10 clinical queries and display chunks
+Stop point: Do not optimize prompts or UI until the first index can retrieve reasonable evidence.
+AI Clinical Decision Support Lite Hackathon
+12
+===== SLIDE 14 =====
+End-of-day review questions
+Use these questions to decide whether the team is ready for Day 2: Retrieval Optimization.
+Source readiness
+• Are the PDFs official and public?
+• Is the scope narrow?
+• Are source URLs and names recorded?
+• Are licensing concerns avoided?
+Chunk readiness
+• Are chunks readable?
+• Do chunks preserve page and section?
+• Are recommendations split correctly?
+• Is garbage text removed?
+Search readiness
+• Are embeddings created?
+• Is metadata returned with chunks?
+• Do 5–10 questions retrieve reasonable evidence?
+• Are weak results visible?
+Ready for Day 2 when the team can show: question → top chunks → source page/section.
+AI Clinical Decision Support Lite Hackathon
+13
