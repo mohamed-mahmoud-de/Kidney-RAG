@@ -1,0 +1,43 @@
+# Secrets — NEVER commit
+.env
+.env.*
+!.env.example
+*.key
+*_key.txt
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Vector store — regenerable, and big
+corpus/index/
+corpus/embeddings/
+*.chroma
+*.sqlite3
+*.duckdb
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temp / scratch
+scratch/
+tmp/
+*.tmp
+_test_*
