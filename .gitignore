@@ -48,3 +48,7 @@ scratch/
 tmp/
 *.tmp
 _test_*
+
+# Office lock/temp files
+~$*
+*.tmp
