@@ -52,3 +52,6 @@ _test_*
 # Office lock/temp files
 ~$*
 *.tmp
+
+# Regenerable model embedding caches
+models/
