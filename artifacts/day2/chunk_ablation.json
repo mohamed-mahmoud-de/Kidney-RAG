@@ -1,0 +1,46 @@
+{
+  "k": 5,
+  "ablation_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "results": [
+    {
+      "config": "400_40",
+      "chunk_size": 400,
+      "overlap": 40,
+      "hard_max": 550,
+      "n_chunks": 876,
+      "median_tokens": 383,
+      "k": 5,
+      "n_scored": 15,
+      "precision_at_k": 0.3867,
+      "recall_at_k": 0.8,
+      "hit_at_k": 0.9333
+    },
+    {
+      "config": "550_55",
+      "chunk_size": 550,
+      "overlap": 55,
+      "hard_max": 750,
+      "n_chunks": 666,
+      "median_tokens": 509,
+      "k": 5,
+      "n_scored": 15,
+      "precision_at_k": 0.36,
+      "recall_at_k": 0.7,
+      "hit_at_k": 0.8
+    },
+    {
+      "config": "700_70",
+      "chunk_size": 700,
+      "overlap": 70,
+      "hard_max": 900,
+      "n_chunks": 522,
+      "median_tokens": 646,
+      "k": 5,
+      "n_scored": 15,
+      "precision_at_k": 0.3467,
+      "recall_at_k": 0.8,
+      "hit_at_k": 0.8667
+    }
+  ],
+  "winner": "400_40"
+}

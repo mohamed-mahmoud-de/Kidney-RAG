@@ -1,0 +1,16 @@
+id,category,query,expected_chunk_ids,expected_behavior,semantic_p_at_k,bm25_p_at_k,hybrid_p_at_k,semantic_r_at_k,bm25_r_at_k,hybrid_r_at_k,semantic_hit_at_k,bm25_hit_at_k,hybrid_hit_at_k,semantic_latency_ms,bm25_latency_ms,hybrid_latency_ms
+q01,direct,At what eGFR can an SGLT2 inhibitor be started in a patient with type 2 diabetes and CKD?,"[""kdigo_p99_c01""]",retrieve,0.2,0.0,0.2,1.0,0.0,1.0,1,0,1,1682.03,3.86,139.26
+q02,direct,What ACR value defines severely increased albuminuria (category A3)?,"[""kdigo_p15_c20""]",retrieve,0.2,0.2,0.2,1.0,1.0,1.0,1,1,1,189.23,2.82,127.7
+q03,direct,What clinic blood pressure target should adults with CKD and an ACR of 70 mg/mmol or more aim for?,"[""nice_p23_c02""]",retrieve,0.2,0.2,0.2,1.0,1.0,1.0,1,1,1,178.37,2.88,143.52
+q04,direct,What daily protein intake is recommended for adults with CKD stages G3 to G5?,"[""kdigo_p93_c01""]",retrieve,0.2,0.2,0.2,1.0,1.0,1.0,1,1,1,171.45,2.11,132.32
+q05,direct,How often should HbA1c be monitored in a patient with diabetes and CKD?,"[""kdigo_dm_p56_c06""]",retrieve,0.2,0.2,0.2,1.0,1.0,1.0,1,1,1,166.02,1.36,133.27
+q06,direct,"Which GFR category corresponds to kidney failure, and what is its eGFR cutoff?","[""kdigo_p15_c19""]",retrieve,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,158.47,1.71,139.41
+q07,direct,When does NICE recommend offering an SGLT2 inhibitor (dapagliflozin) to adults with CKD?,"[""nice_p23_c03""]",retrieve,0.2,0.2,0.2,1.0,1.0,1.0,1,1,1,144.33,1.66,142.47
+q08,multi_source,What blood pressure target is recommended for adults with CKD and albuminuria?,"[""nice_p23_c02"", ""kdigo_p97_c01"", ""kdigo_p97_c02""]",retrieve,0.6,0.4,0.6,1.0,0.6667,1.0,1,1,1,129.91,1.42,128.54
+q09,multi_source,How should serum potassium be monitored when treating with finerenone (a nonsteroidal MRA)?,"[""kdigo_p104_c05"", ""kdigo_p104_c06"", ""kdigo_dm_p49_c04"", ""kdigo_dm_p49_c08""]",retrieve,0.4,0.2,0.2,0.5,0.25,0.25,1,1,1,326.41,1.8,148.91
+q10,multi_source,"Which drug class is first-line for a patient with CKD, hypertension, and proteinuria?","[""nice_p23_c04"", ""kdigo_p98_c01"", ""kdigo_p98_c02""]",retrieve,0.2,0.0,0.2,0.3333,0.0,0.3333,1,0,1,151.79,1.8,166.52
+q11,edge,"Can metformin be used in a patient with CKD, and down to what eGFR?","[""kdigo_dm_p78_c03""]",retrieve,0.2,0.2,0.2,1.0,1.0,1.0,1,1,1,161.11,1.53,158.37
+q12,edge,What is the diagnostic threshold for albuminuria in CKD?,"[""kdigo_p15_c20"", ""nice_p13_c01"", ""nice_p13_c02""]",retrieve,0.2,0.0,0.0,0.3333,0.0,0.0,1,0,0,141.18,1.01,137.29
+q13,edge,How soon should potassium be rechecked after starting a mineralocorticoid receptor antagonist?,"[""kdigo_p104_c04"", ""kdigo_p104_c05""]",retrieve,0.0,0.2,0.2,0.0,0.5,0.5,0,1,1,157.47,1.55,140.35
+q14,screening_refusal,Should asymptomatic adults be screened for chronic kidney disease?,"[""uspstf_p2_c01"", ""uspstf_p2_c02""]",retrieve_then_flag_insufficient_evidence,0.4,0.4,0.4,1.0,1.0,1.0,1,1,1,139.85,1.33,140.16
+q15,screening_refusal,Does the USPSTF recommend routine screening for chronic kidney disease?,"[""uspstf_p1_c01"", ""uspstf_p2_c01""]",retrieve_then_flag_insufficient_evidence,0.2,0.4,0.2,0.5,1.0,0.5,1,1,1,128.73,1.74,133.18

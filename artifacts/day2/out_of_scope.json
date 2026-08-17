@@ -1,0 +1,44 @@
+[
+  {
+    "id": "q16",
+    "query": "What is the recommended antibiotic for community-acquired pneumonia?",
+    "top_cosine_similarities": [
+      0.6299,
+      0.6244,
+      0.6223
+    ],
+    "top_chunk_ids": [
+      "nice_p51_c09",
+      "kdigo_p15_c10",
+      "uspstf_p4_c04"
+    ]
+  },
+  {
+    "id": "q17",
+    "query": "How should acute appendicitis be managed?",
+    "top_cosine_similarities": [
+      0.6238,
+      0.6185,
+      0.6105
+    ],
+    "top_chunk_ids": [
+      "kdigo_p115_c07",
+      "kdigo_p138_c02",
+      "kdigo_dm_p94_c04"
+    ]
+  },
+  {
+    "id": "q18",
+    "query": "What is the first-line treatment for an acute myocardial infarction?",
+    "top_cosine_similarities": [
+      0.6633,
+      0.6591,
+      0.654
+    ],
+    "top_chunk_ids": [
+      "kdigo_p123_c04",
+      "kdigo_dm_p30_c03",
+      "kdigo_dm_p38_c35"
+    ]
+  }
+]

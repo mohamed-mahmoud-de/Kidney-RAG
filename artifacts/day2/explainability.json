@@ -1,0 +1,1499 @@
+[
+  {
+    "query_id": "q01",
+    "query": "At what eGFR can an SGLT2 inhibitor be started in a patient with type 2 diabetes and CKD?",
+    "expected_chunk_ids": [
+      "kdigo_p99_c01"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "kdigo_dm_p76_c02",
+        "fused_score": 0.01544477,
+        "cosine_rank": 6,
+        "bm25_rank": 2,
+        "cosine_sim": 0.789399,
+        "bm25_score": 17.700814,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "Chapter 4: Glucose-lowering therapies in patients",
+        "page_number": 76,
+        "page_range": [
+          76,
+          77
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "Practice Point 4.2: Most patients with T2D, CKD, and\neGFR ≥30 ml/min per 1.73 m2 would benefit from treatment with both metformin and an SGLT2i.\n\nBoth metformin (see Section 4.1) and SGLT2i agents (see\nSection 1.3) are preferred glucose-lowering medications for\npatients with T2D, CKD, and suitable eGFR. Metformin and\nSGLT2i each reduce the risk of developing diabetes complications with a low risk of hypoglycemia. Metformin has been\nproven to be a safe, effective, and inexpensive foundation for\nglycemic control in T2D, with modest long-term benefits for\nthe prevention of diabetes complications. In comparison,\nSGLT2i have weaker effects on HbA1c, particularly with an\neGFR <60 ml/min per 1.73 m2, but they have large effects on\nreducing CKD progression and CVD events, especially heart\nfailure, which appear to be independent of eGFR.92,97\nIn most patients with T2D, CKD, and an eGFR ≥30 ml/\nmin per 1.73 m2, metformin and an SGLT2i can be used safely\nand effectively together. Metformin should not be used for\nGLP-1 receptor agonist\n(preferred)\nDPP-4 inhibitor\nInsulin\nSulfonylurea\nTZD\nAlpha-glucosidase inhibitor\nFirst-line therapy\nLifestyle therapy\nAdditional drug therapy as\nneeded for glycemic control\n• Guided by patient preferences, comorbidities,\n  eGFR, and cost\n• Includes patients with eGFR < 30 ml/min per\n  1.73 m2 or treated with dialysis\n• See Figure 25\nPhysical activity\nNutrition\nWeight loss\nSGLT2 inhibitor\nMetformin\n+\nDiscontinue\nDiscontinue\nReduce dose\nDiscontinue\nDo not initiate\neGFR\n< 45\neGFR\n< 30\nsis\nylai\nD\nsis\nylai\nD\neGFR\n< 20\nFigure 23 | Treatment algorithm for selecting glucose-lowering drugs for patients with type 2 diabetes (T2D) and chronic kidney\ndisease (CKD). Kidney icon indicates estimated glomerular filtration rate (eGFR; ml/min per 1.73 m2); dialysis machine icon indicates dialysis."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "kdigo_dm_p38_c39",
+        "fused_score": 0.01524684,
+        "cosine_rank": 5,
+        "bm25_rank": 7,
+        "cosine_sim": 0.794751,
+        "bm25_score": 15.802232,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "1.3 Sodium–glucose cotransporter-2 inhibitors",
+        "page_number": 38,
+        "page_range": [
+          38,
+          48
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "Adapted from Zoungas S, de Boer IH.\n\nSGLT2 inhibitors in diabetic\nkidney disease. Clin J Am Soc Nephrol. 2021;16:631–633.148 Copyright ª 2021 by the American Society of Nephrology. ACR, albumin-creatinine\nratio; AKI, acute kidney injury; eGFR, estimated glomerular filtration rate; HbA1c, glycated hemoglobin. SGLT2\ninhibitor\nDose\nDosing approved by the US FDA\nKidney function eligible for inclusion in pivotal\nrandomized trials\n10 mg daily\neGFR ≥25 ml/min per 1.73 m2 \n10 mg daily \n(Can increase to 25 mg daily\nif needed for glucose control) \neGFR ≥30 ml/min per 1.73 m2  for T2D and ASCVD\nfor glucose control \neGFR ≥20 ml/min per 1.73m2  for HF\n100 mg daily \n(The higher dose of 300 mg\nis not recommended for CKD) \neGFR ≥25 ml/min per 1.73 m2  in DAPA-CKD\neGFR ≥30 ml/min per 1.73 m2  in DAPA-HF\nand DECLARE\neGFR ≥30 ml/min per 1.73 m2  in EMPA-REG\neGFR ≥20 ml/min per 1.73 m2  in EMPEROR-Reduced \nand EMPEROR-Preserved\neGFR ≥30 ml/min per 1.73 m2  in CREDENCE\neGFR ≥30 ml/min per 1.73 m2 \nFigure 7 | Sodium–glucose cotransporter-2 inhibitors (SGLT2i) with established kidney and cardiovascular benefits and dose\nadjustments as approved by the US Food and Drug Administration (FDA) (take note of country-to-country variation). ASCVD,\natherosclerotic cardiovascular disease; CKD, chronic kidney disease; eGFR, estimated glomerular filtration rate; HF, heart failure; T2D, type 2\ndiabetes.\nchapter 1"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "kdigo_p99_c01",
+        "fused_score": 0.01477869,
+        "cosine_rank": 2,
+        "bm25_rank": 26,
+        "cosine_sim": 0.815212,
+        "bm25_score": 10.62191,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.7 Sodium-glucose cotransporter-2 inhibitors",
+        "page_number": 99,
+        "page_range": [
+          99,
+          103
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "eGFR <30 ml/min per 1.73 m2, compared with those who\ncontinue.508,509 In addition, a recent individual patient level\ndata meta-analysis demonstrated a benefit in delaying KRT\nin patients with eGFR <30 ml/min per 1.73 m2.510\n3.7 Sodium-glucose cotransporter-2 inhibitors\n(SGLT2i)\nThe Work Group concurs with the KDIGO 2022 Clinical\nPractice Guideline for Diabetes Management in Chronic\nKidney Disease, which stated: “We recommend treating patients with type 2 diabetes (T2D), CKD, and an eGFR ≥20 ml/\nmin per 1.73 m2 with an SGLT2i (1A).”23 However, in this\nguideline, we offer a more general 1A recommendation for\nadults with CKD. We also highlight practice points from\nthe KDIGO Diabetes guideline for diabetes management in\nCKD, which are also relevant for people with CKD without\ndiabetes:\nRecommendation 3.7.1: We recommend treating\npatients with type 2 diabetes (T2D), CKD, and an\neGFR ≥20 ml/min per 1.73 m2 with an SGLT2i (1A). Practice Point 3.7.1: Once an SGLT2i is initiated, it is\nreasonable to continue an SGLT2i even if the eGFR falls\nbelow 20 ml/min per 1.73 m2, unless it is not tolerated\nor KRT is initiated. Practice Point 3.7.2: It is reasonable to withhold SGLT2i\nduring times of prolonged fasting, surgery, or critical\nmedical illness (when people may be at greater risk for\nketosis). Recommendation 3.7.2: We recommend treating\nadults with CKD with an SGLT2i for the following\n(1A):\n\u0003 eGFR ≥20 ml/min per 1.73 m2 with urine ACR ≥200\nmg/g (≥20 mg/mmol), or\n\u0003 heart failure, irrespective of level of albuminuria. Practice Point 3.7.3: SGLT2i initiation or use does not\nnecessitate alteration of frequency of CKD monitoring and\nthe reversible decrease in eGFR on initiation is generally\nnot an indication to discontinue therapy. Use of SGLT2i in people with T2D is recommended in previous\nguidelines irrespective of level of albuminuria."
+      },
+      {
+        "rank": 4,
+        "chunk_id": "kdigo_dm_p38_c38",
+        "fused_score": 0.01400081,
+        "cosine_rank": 13,
+        "bm25_rank": 8,
+        "cosine_sim": 0.772562,
+        "bm25_score": 15.553094,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "1.3 Sodium–glucose cotransporter-2 inhibitors",
+        "page_number": 38,
+        "page_range": [
+          38,
+          48
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "s\ne\ns\ns\nA\nHypoglycemia risk? • Insulin or sulfonylurea\n• History of severe\n  hypoglycemia\n• HbA1c at or below goal\nVolume depletion risk?\n\n• Concurrent diuretic use\n• Tenuous volume status\n• History of AKI\nSGLT2 inhibitor\nwith proven benefits:\n• Canagliflozin 100 mg\n• Dapagliflozin 10 mg\n• Empagliflozin 10 mg\nEducation:\n• Sick day protocol*\n• Perioperative care†\n• Foot care\n• Assess adverse effects\n• Review knowledge\n• Anticipate an acute\n  drop in eGFR, which is\n  generally not a reason\n  to stop the SGLT2\n  inhibitor\nEligible patients:\n• eGFR ≥20 ml/min/1.73 m2\nHigh priority features:\n• ACR ≥200 mg/g [≥20 mg/mmol]\n• Heart failure\nPotential contraindications:\n• Genital infection risk\n• Diabetic ketoacidosis\n• Foot ulcers\n• Immunosuppression\nIf\nhigh\nIf\nhigh\nEducation:\n• Hypoglycemia symptoms\n• Glycemia monitoring\nConsider insulin/sulfonylurea\ndose reduction\nEducation:\n• Volume depletion symptoms\nConsider diuretic dose\nreduction\n• Ask about\n  hypoglycemia\n• Reduce sulfonylurea\n  or insulin if needed\n• Re-assess volume\n• Reduce concomitant\n  diuretic if needed\nFigure 6 | Practical approach to initiating sodium-glucose cotransporter-2 inhibitors (SGLT2i) in patients with type 2 diabetes and\nchronic kidney disease (CKD). *Sick day protocol (for illness or excessive exercise or alcohol intake): temporarily withhold SGLT2i, keep\ndrinking and eating (if possible), check blood glucose and blood ketone levels more often, and seek medical help early. †Periprocedural/\nperioperative care: inform patients about risk of diabetic ketoacidosis; withhold SGLT2i the day of day-stay procedures and limit fasting to\nminimum required; withhold SGLT2i at least 2 days in advance and the day of procedures/surgery requiring 1 or more days in hospital and/or\nbowel preparation (which may require increasing other glucose-lowering drugs during that time), measure both blood glucose and blood\nketone levels on hospital admission (proceed with procedure/surgery if the patient is clinically well and ketones are <1.0 mmol/l), and restart\nSGLT2i after procedure/surgery only when eating and drinking normally. Adapted from Zoungas S, de Boer IH."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "kdigo_p99_c05",
+        "fused_score": 0.0134375,
+        "cosine_rank": 20,
+        "bm25_rank": 4,
+        "cosine_sim": 0.759491,
+        "bm25_score": 16.95355,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.7 Sodium-glucose cotransporter-2 inhibitors",
+        "page_number": 99,
+        "page_range": [
+          99,
+          103
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "allocation to an SGLT2i reduced the risk of the composite of cardiovascular death or hospitalization for heart\nfailure by 23% irrespective of diabetes status (Figure 23511),\nalthough there were limited numbers of cardiovascular\nevents in people with CKD without diabetes.\n\nSGLT2i also\nafford an\napproximate\n10%\nRR\nreduction\nin\nMACE,\nprimarily from reduced risk of cardiovascular death and\nmyocardial infarction with no clear effect on stroke.511,512\nFurthermore, SGLT2i also importantly reduce the risk of\nhospitalization from any cause,403 reduce BP,403,513,514 uric\nMean\nbaseline eGFR,\nml/min per\n1.73 m2\nEvents/participants\nSGLT2\ninhibitor\nPlacebo\nEvent rate per\n1000 patient-years\nSGLT2\ninhibitor\nPlacebo\nEvent rate per\n1000 patient-years\nSGLT2\ninhibitor\nPlacebo\nKidney disease progression\nRR\n(95% CI)\nEvents/participants\nSGLT2\ninhibitor\nPlacebo\nRR\n(95% CI)\nAcute kidney injury\n0.75\n0.25\n0.5\n1.00\n1.50\nFavors SGLT2 inhibitor\nFavors placebo\n0.75\n0.25\n0.5\n1.00\n1.50\nFavors SGLT2 inhibitor\nFavors placebo\nDiabetes\nDECLARE−TIMI 58\nCANVAS Program\nVERTIS CV\nEMPA−REG OUTCOME\nDAPA−HF\nEMPEROR−REDUCED\nEMPEROR−PRESERVED\nDELIVER\nCREDENCE\nSOLOIST−WHF\nSCORED\nDAPA−CKD\nEMPA−KIDNEY\nSubtotal: diabetes\nNo diabetes\nDAPA−HF\nEMPEROR−REDUCED\nDELIVER*\nEMPEROR−PRESERVED\nDAPA−CKD\nEMPA−KIDNEY\nSubtotal: no diabetes\nTotal: overall\n85\n77\n76\n74\n63\n61\n60\n60\n56\n51\n44\n44\n36\n67\n68\n63\n63\n62\n42\n39\n56\n65\n56/8582\n80/5795\n49/5499\n51/4645\n18/1075\n13/927\n38/1466\n33/1578\n153/2202\nNA/NA\n37/5292\n103/1455\n108/1525\n739/40,041\n10/1298\n5/936\n17/1551\n12/1531\n39/697\n119/1779\n202/7792\n941/47,833\n102/857"
+      }
+    ]
+  },
+  {
+    "query_id": "q02",
+    "query": "What ACR value defines severely increased albuminuria (category A3)?",
+    "expected_chunk_ids": [
+      "kdigo_p15_c20"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "kdigo_p15_c20",
+        "fused_score": 0.01639344,
+        "cosine_rank": 1,
+        "bm25_rank": 1,
+        "cosine_sim": 0.817531,
+        "bm25_score": 20.282622,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "foreword",
+        "page_number": 15,
+        "page_range": [
+          15,
+          33
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "In the absence of evidence of kidney damage,\nneither G1 nor G2 fulfills the criteria for CKD.\n\nTable 3| Albuminuria categories in chronic kidney disease\nCategory\nAER\n(mg/24 h)\nACR (approximately\nequivalent)\nTerms\n(mg/mmol)\n(mg/g)\nA1\n<30\n<3\n<30\nNormal to mildly\nincreased\nA2\n30–300\n3–30\n30–300\nModerately increaseda\nA3\n>300\n>30\n>300\nSeverely increased\nACR, albumin-to-creatinine ratio; AER, albumin excretion rate.\naRelative to the young adult level.\nintroduction, qualifying statements, and key concepts"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "kdigo_p81_c05",
+        "fused_score": 0.01590571,
+        "cosine_rank": 2,
+        "bm25_rank": 5,
+        "cosine_sim": 0.797571,
+        "bm25_score": 15.440082,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "2.1 Overview on monitoring for progression of CKD",
+        "page_number": 81,
+        "page_range": [
+          81,
+          82
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "Small fluctuations in albuminuria or proteinuria levels\nmay not indicate disease progression.\n\nAppreciation of factors\nthat impact albuminuria and changes in the measure is\nimportant for healthcare providers. Routine surveillance using ACR or PCR is warranted in higher risk people with CKD,\nas changes in urine ACR are associated with kidney failure. Specifically, in large population studies, a doubling of the\nACR within a 2-year duration is associated with an increase in\nthe risk of progression to kidney failure by 50%–100%.391,392\nAlbuminuria categories\nDescription and range\nGFR categories (ml/min/1.73 m2)\nDescription and range\nA1\nG1\n≥90\nG2\n60–89\nG3a\n45–59\nG3b\n30–44\nG4\n15–29\nG5\n<15\nKidney failure\nSeverely decreased\nModerately to\nseverely decreased\nMildly to\nmoderately decreased\nMildly decreased\nNormal or high\nA2\nA3\nNormal to mildly\nincreased\nModerately\nincreased\nSeverely\nincreased\n<30 mg/g\n<3 mg/mmol\nScreen\n1\nScreen\n1\nTreat\n1\nTreat\n1\nTreat\n3\nTreat\n3\nTreat\n1\nTreat\n2\nTreat\n2\nTreat\n3\nTreat\n3\nTreat\n3\nTreat*\n3\nTreat\n4+\nTreat*\n3\nTreat\n4+\nTreat\n4+\nTreat\n4+\n30–299 mg/g\n3–29 mg/mmol\n≥300 mg/g\n≥30 mg/mmol\nCKD is classified based on:\n• Cause (C)\n• GFR (G)\n• Albuminuria (A)\nLow risk (if no other markers of kidney disease, no CKD)\nModerately increased risk\nHigh risk\nVery high risk\nFigure 13 | Frequency of monitoring glomerular filtration rate (GFR) and albuminuria in people with chronic kidney disease (CKD). Albuminuria and GFR grid reflects the risk of progression by intensity of coloring (green, yellow, orange, red, and deep red). The numbers in the\nboxes are a guide to the frequency of monitoring (number of times per year). Reproduced from de Boer IH, Khunti K, Sadusky T, et al. Diabetes\nmanagement in chronic kidney disease: a consensus report by the American Diabetes Association (ADA) and Kidney Disease: Improving Global\nOutcomes (KDIGO)."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "kdigo_p81_c04",
+        "fused_score": 0.01548295,
+        "cosine_rank": 4,
+        "bm25_rank": 6,
+        "cosine_sim": 0.793257,
+        "bm25_score": 14.715929,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "2.1 Overview on monitoring for progression of CKD",
+        "page_number": 81,
+        "page_range": [
+          81,
+          82
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "Small fluctuations in albuminuria or proteinuria levels\nmay not indicate disease progression.\n\nAppreciation of factors\nthat impact albuminuria and changes in the measure is\nimportant for healthcare providers. Routine surveillance using ACR or PCR is warranted in higher risk people with CKD,\nas changes in urine ACR are associated with kidney failure. Specifically, in large population studies, a doubling of the\nACR within a 2-year duration is associated with an increase in\nthe risk of progression to kidney failure by 50%–100%.391,392\nAlbuminuria categories\nDescription and range\nGFR categories (ml/min/1.73 m2)\nDescription and range\nA1\nG1\n≥90\nG2\n60–89\nG3a\n45–59\nG3b\n30–44\nG4\n15–29\nG5\n<15\nKidney failure\nSeverely decreased\nModerately to\nseverely decreased\nMildly to\nmoderately decreased\nMildly decreased\nNormal or high\nA2\nA3\nNormal to mildly\nincreased\nModerately\nincreased\nSeverely\nincreased\n<30 mg/g\n<3 mg/mmol\nScreen\n1\nScreen\n1\nTreat\n1\nTreat\n1\nTreat\n3\nTreat\n3\nTreat\n1\nTreat\n2\nTreat\n2\nTreat\n3\nTreat\n3\nTreat\n3\nTreat*\n3\nTreat\n4+\nTreat*\n3\nTreat\n4+\nTreat\n4+\nTreat\n4+\n30–299 mg/g\n3–29 mg/mmol\n≥300 mg/g\n≥30 mg/mmol\nCKD is classified based on:\n• Cause (C)\n• GFR (G)\n• Albuminuria (A)\nLow risk (if no other markers of kidney disease, no CKD)\nModerately increased risk\nHigh risk\nVery high risk\nFigure 13 | Frequency of monitoring glomerular filtration rate (GFR) and albuminuria in people with chronic kidney disease (CKD). Albuminuria and GFR grid reflects the risk of progression by intensity of coloring (green, yellow, orange, red, and deep red). The numbers in the\nboxes are a guide to the frequency of monitoring (number of times per year). Reproduced from de Boer IH, Khunti K, Sadusky T, et al. Diabetes\nmanagement in chronic kidney disease: a consensus report by the American Diabetes Association (ADA) and Kidney Disease: Improving Global\nOutcomes (KDIGO).\n\nDiabetes\nmanagement in chronic kidney disease: a consensus report by the American Diabetes Association (ADA) and Kidney Disease: Improving Global\nOutcomes (KDIGO).\n\nKidney Int. 2022;102:974–989.29 Copyright ª 2022, International Society of Nephrology, American Diabetes Association, and\nKDIGO. Published by Elsevier Inc. and American Diabetes Association. All rights reserved.\nchapter 2"
+      },
+      {
+        "rank": 4,
+        "chunk_id": "kdigo_p83_c01",
+        "fused_score": 0.01545894,
+        "cosine_rank": 3,
+        "bm25_rank": 9,
+        "cosine_sim": 0.794101,
+        "bm25_score": 12.59586,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "2.2 Risk prediction in people with CKD",
+        "page_number": 83,
+        "page_range": [
+          83,
+          87
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "However, changes in albuminuria within an individual have\nsubstantial variability, with large fluctuations expected given\nthat\nthe\n95%\nCI\naround\nrepeat\nACR\ntesting\nis\napproximately 50%. For this reason, the Work Group has\ndefined a doubling in albuminuria or more as exceeding the\nexpected variability and warranting evaluation if replicated\nupon repeat testing. Conversely, reductions of the ACR by\nup to 50% are also consistent with random fluctuation. Special considerations\nPediatric\nconsiderations. Increases\nin\nalbuminuria\nand\nproteinuria are also associated with increased risk of disease\nprogression in pediatric populations. A number of studies in\npediatric subjects detailed in Table 18225,228,393–398 highlight\nthe value of measurement of albuminuria/proteinuria. Considerations in older adults. Urine ACR in older adult\npopulation may be elevated due to the loss of muscle mass\nleading to lower SCr and lower urinary CrCl. In older adults\nor people with frailty, the interpretation of urine ACR should\ntake into consideration age-related changes in muscle mass\nand/or sarcopenia. 2.2 Risk prediction in people with CKD\nThe CKD staging heatmaps reflect RRs for each CKD category compared with persons who do not have CKD at a\npopulation level; however, a person’s absolute risk for each\noutcome requires the use of risk prediction equations for the\nspecific adverse event. Individual-level risk prediction can inform key clinical decisions, improve the patient-healthcare provider dialogue, and\nenable personalized care for persons with CKD.399 The heatmap\nconcept introduced in the KDIGO 2012 CKD guideline\nemphasizes the RR of adverse outcomes by levels of eGFR and\nalbuminuria\nin\npopulations,\nand\nencourages\nhealthcare\nproviders to classify those people with CKD as high risk for\nkidney, cardiovascular, and other adverse events based on those\n2 parameters.400 The heatmaps also reinforce the importance\nto all of using both eGFR and ACR for assessing severity and\nprognosis of CKD and are color-coded to indicate those RRs in\npopulations but do not enable individual risk prediction. However, the people within a specific “cell” on the grid or\nwithin an eGFR/ACR category have a wide range of absolute\nrisks for each of the adverse outcomes of interest."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "nice_p15_c02",
+        "fused_score": 0.01536797,
+        "cosine_rank": 6,
+        "bm25_rank": 3,
+        "cosine_sim": 0.790016,
+        "bm25_score": 16.708806,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "1.3 Frequency of monitoring",
+        "page_number": 15,
+        "page_range": [
+          15,
+          17
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "progression is often non-linear) \n• other risk factors, including heart failure, diabetes and hypertension \n• changes to their treatment (such as renin–angiotensin–aldosterone system \n[RAAS] antagonists, NSAIDs and diuretics)\n\n• intercurrent illness (for example acute kidney injury) \n• whether they have chosen conservative management of CKD. [2021] \nTable 2 Minimum number of monitoring checks (eGFRcreatinine) per year for adults, children and young people with or \nat risk of chronic kidney disease \nNote: ACR monitoring should be individualised based on a person's individual \ncharacteristics, risk of progression and whether a change in ACR is likely to lead to a \nchange in management. \nACR category A1: normal to \nmildly increased (less than \n3 mg/mmol) \nACR category A2: \nmoderately increased \n(3 to 30 mg/mmol) \nACR category A3: \nseverely increased \n(over 30 mg/mmol) \nGFR category G1: normal and high (90 \nml/min/1.73 m2 or over) \n0 to 1 \n1 or more \nGFR category G2: mild reduction related \nto normal range for a young adult (60 to \n89 ml/min/1.73 m2) \n0 to 1 \n1 or more \nGFR category G3a: mild to moderate \nreduction (45 to 59 ml/min/1.73 m2) \nGFR category G3b: moderate to severe \nreduction (30 to 44 ml/min/1.73 m2) \n1 to 2 \n2 or more \nGFR category G4: severe reduction (15 \nto 29 ml/min/1.73 m2) \nGFR category G5: kidney failure (under \n15 ml/min/1.73 m2) \n4 or more \n4 or more \nAbbreviations: ACR, albumin creatinine ratio; GFR, glomerular filtration rate. \nFor a short explanation of why the committee made these recommendations and how \nthey might affect practice, see the rationale and impact section on frequency of \nmonitoring. \nFull details of the evidence and the committee's discussion are in evidence review E: \noptimal monitoring frequency and evidence review N: defining clinically significant \ndecline in eGFR in terms of risk of kidney disease progression. \nDefining progression in adults \n1.3.5 \nDefine accelerated progression of CKD in adults as: \n• a sustained decrease in GFR of 25% or more and a change in GFR category"
+      }
+    ]
+  },
+  {
+    "query_id": "q03",
+    "query": "What clinic blood pressure target should adults with CKD and an ACR of 70 mg/mmol or more aim for?",
+    "expected_chunk_ids": [
+      "nice_p23_c02"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "nice_p23_c02",
+        "fused_score": 0.01639344,
+        "cosine_rank": 1,
+        "bm25_rank": 1,
+        "cosine_sim": 0.88353,
+        "bm25_score": 44.24314,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "1.6 Pharmacotherapy",
+        "page_number": 23,
+        "page_range": [
+          23,
+          28
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "NICE's guideline on hypertension in adults recommends using clinic blood pressure for \nmonitoring response to lifestyle changes or medical treatment (see recommendation \n1.4.15).\n\n1.6.1 \nIn adults with CKD and an ACR under 70 mg/mmol, aim for a clinic systolic blood \npressure below 140 mmHg (target range 120 to 139 mmHg) and a clinic diastolic \nblood pressure below 90 mmHg. [2021] \n1.6.2 \nIn adults with CKD and an ACR of 70 mg/mmol or more, aim for a clinic systolic \nblood pressure below 130 mmHg (target range 120 to 129 mmHg) and a clinic \ndiastolic blood pressure below 80 mmHg. [2021] \n1.6.3 \nIn children and young people with CKD and an ACR of 70 mg/mol or more, aim for \na clinic systolic blood pressure below the 50th percentile for height. [2021] \nFor a short explanation of why the committee made these recommendations and how \nthey might affect practice, see the rationale and impact section on pharmacotherapy \nfor blood pressure control. \nFull details of the evidence and the committee's discussion are in evidence review G: \noptimal blood pressure targets. \nTreating hypertension \n1.6.4 \nFollow the recommendations on treating hypertension in NICE's guideline on \nhypertension for adults with CKD, hypertension and an ACR of 30 mg/mmol or \nless (ACR categories A1 and A2). [2014, amended 2021] \n1.6.5 \nOffer an angiotensin-receptor blocker (ARB) or an angiotensin-converting \nenzyme (ACE) inhibitor (titrated to the highest licensed dose that the person can \ntolerate) to adults, children and young people with CKD who have hypertension \nand an ACR over 30 mg/mmol (ACR category A3 or above). [2021] \nTreating CKD in adults, children, and young people with related \npersistent proteinuria \nSee also: \n• NICE's guideline on type 1 diabetes in adults"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "nice_p23_c04",
+        "fused_score": 0.01579861,
+        "cosine_rank": 3,
+        "bm25_rank": 4,
+        "cosine_sim": 0.783348,
+        "bm25_score": 16.873356,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "1.6 Pharmacotherapy",
+        "page_number": 23,
+        "page_range": [
+          23,
+          28
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "young people with CKD and diabetes (type 1 or 2), offer an ARB \nor an ACE inhibitor (titrated to the highest licensed dose that they can tolerate) if \nACR is 3 mg/mmol or more. [2021]\n\n1.6.11 \nFor children and young people with CKD but without diabetes: \n• offer an ARB or an ACE inhibitor if ACR (titrated to the highest licensed dose \nthat they can tolerate) is 70 mg/mol or more \n• monitor in line with recommendations 1.3.1 and 1.3.4 if ACR is above 30 but \nbelow 70 mg/mmol; consider discussing with a nephrologist if eGFR declines \nor ACR increases. [2021] \nMedicines optimisation \n1.6.12 \nWhen offering medicines to lower proteinuria to people with frailty or \ncomorbidities, or who are taking many other prescribed medicines, follow the \nrecommendations in NICE's guideline on medicines optimisation to ensure the \nbest possible outcomes. Seek specialist advice if needed, for example from a \nconsultant in care of the elderly, or from a kidney physician if the person asks \nabout contraception. [2021] \nFor a short explanation of why the committee made the 2021 recommendations and \nhow they might affect practice, see the rationale and impact section on \npharmacotherapy for proteinuria and choice of antihypertensive agent. \nFull details of the evidence and the committee's discussion are in evidence review H: \ninterventions to lower proteinuria. \nRenin–angiotensin system antagonists for adults \n1.6.13 \nDo not offer a combination of renin–angiotensin system antagonists to adults with \nCKD. [2014] \n1.6.14 \nExplain to adults with CKD (and their family members or carers, as appropriate) \nwho are prescribed renin–angiotensin system antagonists about the importance \nof: \n• achieving the optimal tolerated dose of renin–angiotensin system antagonists \nand"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "nice_p51_c15",
+        "fused_score": 0.01555288,
+        "cosine_rank": 4,
+        "bm25_rank": 5,
+        "cosine_sim": 0.779163,
+        "bm25_score": 16.543528,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "Terms used in this guideline",
+        "page_number": 51,
+        "page_range": [
+          51,
+          73
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "The committee agreed that it is important to discuss with a person with CKD what risk \nmeans. They added additional recommendations on providing information about risk, using \njargon-free language, allowing enough time for discussions and documenting any \ndecisions made.\n\nHow the recommendations might affect practice \nIf the 4-variable Kidney Failure Risk Equation can be built into laboratory computer \nsystems, as part of how eGFR and ACR results are returned to GPs, there should be no \ndifficulty in implementing the recommendations. Because the calculation requires both an \neGFR and ACR value, it can only be produced if the GP requests both those \nmeasurements. These recommendations are intended to provide additional information to \nsupplement eGFR and ACR values, rather than changing how often these values are \nrequested by GPs. \nThere may be particular difficulties for laboratories that store eGFR and ACR values on \nseparate systems that cannot automatically communicate. In this situation, calculations \nmay have to be done manually. However, this is still likely to be a more efficient system \nthan calculations being carried out routinely by GPs. Overall, the referral criteria are \npredicted to slightly reduce monitoring costs but, excluding costs associated with dialysis, \noverall there should be no substantial impact on resource use. \nThere may be an implementation period before the risk equation results are available to all \nGPs. Until then, some GPs may have to continue to base referral decisions on eGFR and \nACR values independently, as is currently done, without providing patients with a \nquantitative assessment of their risk of needing renal replacement therapy. The faster \nthese recommendations can be routinely adopted the less time it will be necessary for \nthese 2 parallel approaches to both be in use. \nReturn to recommendations \nPharmacotherapy for blood pressure control \nRecommendations 1.6.1 to 1.6.3 \nWhy the committee made the recommendations \nResults from a meta-analysis (including the SPRINT trial) showed no meaningful difference \nbetween standard and more intensive blood pressure targets for adults with CKD. The \n2014 guideline recommended maintaining systolic blood pressure below 140 mmHg and \ndiastolic blood pressure below 90 mmHg. This is consistent with clinical practice and with \nthe NICE guideline on managing hypertension for people aged under 80. The committee \nnoted that although there is limited evidence on blood pressure targets in people with CKD"
+      },
+      {
+        "rank": 4,
+        "chunk_id": "nice_p23_c03",
+        "fused_score": 0.01536797,
+        "cosine_rank": 6,
+        "bm25_rank": 3,
+        "cosine_sim": 0.772299,
+        "bm25_score": 19.318838,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "1.6 Pharmacotherapy",
+        "page_number": 23,
+        "page_range": [
+          23,
+          28
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "30 mg/mmol (ACR category A3 or above). [2021] \nTreating CKD in adults, children, and young people with related \npersistent proteinuria \nSee also: \n• NICE's guideline on type 1 diabetes in adults\n\n• NICE's guideline on type 2 diabetes in adults \n• NICE's guideline on type 1 and type 2 diabetes in children and young people. \nAdults \n1.6.6 \nFor adults with CKD and diabetes (type 1 or type 2) offer an ARB or an ACE \ninhibitor (titrated to the highest licensed dose that the person can tolerate) if ACR \nis 3 mg/mmol or more. [2021] \n1.6.7 \nFor adults with CKD but without diabetes: \n• refer for nephrology assessment and offer an ARB or an ACE inhibitor \n(titrated to the highest licensed dose that they can tolerate), if ACR is 70 mg/\nmmol or more \n• monitor in line with recommendations 1.3.1 and 1.3.4 if ACR is above 30 but \nbelow 70 mg/mmol; consider discussing with a nephrologist if eGFR declines \nor ACR increases. [2021] \n1.6.8 \nFor SGLT2 inhibitors recommended as options in NICE technology appraisal \nguidance as an add-on to optimised standard care for some adults with CKD, see \nthe guidance on: \n• dapagliflozin (TA1075, 2025) \n• empagliflozin (TA942, 2023). \n1.6.9 \nFinerenone is recommended as an option in NICE technology appraisal guidance \nas an add-on to optimised standard care for some adults with stage 3 and 4 CKD \n(with ACR 3 mg/mmol or more) associated with type 2 diabetes. For full details, \nsee the guidance on finerenone (TA877, 2023). \nChildren and young people \n1.6.10 \nFor children and young people with CKD and diabetes (type 1 or 2), offer an ARB \nor an ACE inhibitor (titrated to the highest licensed dose that they can tolerate) if \nACR is 3 mg/mmol or more. [2021]"
+      },
+      {
+        "rank": 5,
+        "chunk_id": "kdigo_p97_c02",
+        "fused_score": 0.01476923,
+        "cosine_rank": 5,
+        "bm25_rank": 15,
+        "cosine_sim": 0.778323,
+        "bm25_score": 15.150314,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.4 Blood pressure control",
+        "page_number": 97,
+        "page_range": [
+          97,
+          97
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "By aiming for an SBP\n<120 mm Hg, more adults with CKD will achieve an SBP\n<130 mm Hg, even if they do not meet the <120 mm Hg\ntarget.\n\nObservationally, on average, each 20 mm Hg higher than\nusual SBP and 10 mm Hg higher diastolic BP is associated with\nan approximate doubling of cardiovascular risk, with no lower\nlimit down to at least 115/75 mm Hg.497 Data from the Systolic\nBlood Pressure Intervention Trial (SPRINT) support the SBP\ntarget of <120 mm Hg (when measured using a standardized\noffice BP measurement) to reduce cardiovascular risk in\nadults aged >75 years, or aged >50 years with 1 or more of\nthe following risk factors: clinical or subclinical CVD (other\nthan stroke), eGFR 20–60 ml/min per 1.73 m2, or ≥15% 10year cardiovascular risk.498 Compared with a target of 140\nmm Hg, this approach reduces the risk of major adverse\ncardiovascular events (MACE) by one-quarter (hazard ratio\n[HR]: 0.75; 95% CI: 0.64–0.89), and that relative benefit was\nsimilar in people with and without CKD. The SPRINT trial\nexcluded people with diabetes, but cardiovascular benefits of\nintensive BP lowering on risk of stroke and heart failure are\nclearly apparent in people with diabetes in individual patient\nlevel data meta-analysis of intensive versus standard BPlowering trials.499\nStandardized BP monitoring can be challenging to offer in a\nclinic setting due to the time required500; however, it is\nconsidered potentially hazardous to apply the recommended\nSBP target of <120 mm Hg to BP measurements obtained in a\nnonstandardized manner.500 A practical solution to ensure the\nidentification of high BP is by using home-based monitoring\n(or telemonitoring). Trials have shown that 2 morning and\nevening BP measurements taken during the first week of every\nmonth can be used to titrate antihypertensive medication and\nreduce BP more than “usual care” approaches.501\nPeople who are frail, have limited life expectancy, or have a\nhistory of falls and fractures may have increased risk of additional events if BP targets of <120 are achieved. Postural\nhypotension in these people is associated with adverse outcomes, and thus weighing the benefits of some attenuation of\neGFR decline versus the life-changing impact of falls, fractures,\nand other events should be considered in choosing specific\ntargets. Special considerations\nPediatric considerations."
+      }
+    ]
+  },
+  {
+    "query_id": "q04",
+    "query": "What daily protein intake is recommended for adults with CKD stages G3 to G5?",
+    "expected_chunk_ids": [
+      "kdigo_p93_c01"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "kdigo_p93_c01",
+        "fused_score": 0.01639344,
+        "cosine_rank": 1,
+        "bm25_rank": 1,
+        "cosine_sim": 0.893745,
+        "bm25_score": 23.250377,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.3.1 Protein intake",
+        "page_number": 93,
+        "page_range": [
+          93,
+          95
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "3.3.1 Protein intake\nRecommendation 3.3.1.1: We suggest maintaining a\nprotein intake of 0.8 g/kg body weight/d in adults\nwith CKD G3–G5 (2C). Practice Point 3.3.1.1: Avoid high protein intake (>1.3 g/kg\nbody weight/d) in adults with CKD at risk of progression. Practice Point 3.3.1.2: In adults with CKD who are willing\nand able, and who are at risk of kidney failure, consider\nprescribing, under close supervision, a very low–protein\ndiet (0.3–0.4 g/kg body weight/d) supplemented with\nessential amino acids or ketoacid analogs (up to 0.6 g/kg\nbody weight/d). Practice Point 3.3.1.3: Do not prescribe low- or very low–\nprotein diets in metabolically unstable people with CKD. This recommendation places a higher value on slowing the\nrate of GFR decline without the challenges associated with\nadherence to lower-protein diets, potential adverse effects, and\nthe contraindications in people with sarcopenia, cachexia, or\nundernutrition. The Work Group judged that many wellinformed people with CKD G3–G5 would choose to implement\nthis recommendation. Key information\nBalance of benefits and harms. The Work Group considered\nthat maintaining a protein intake of 0.8 g/kg body weight per\nday in adults in the absence of indications for a higher or\nlower protein intake was congruent with a person’s culture\nand QoL. Considerations for protein restriction in the context\nof individual preferences, true impact on CKD progression\nbased on etiology, and other factors need to be considered\nand weighed against any potential adverse impacts, such as\nmalnutrition. In many societies, most adults and older adults consume\nmore protein than recommended, with average protein intakes\nof 1.2 g/kg/d.453,454 There is general agreement that, in the\nabsence of intercurrent disease, the protein requirements for\npeople with CKD are not different from those of healthy\nsubjects.455 The Work Group thus suggests maintaining a\nprotein intake of 0.8 g/kg body weight/d, a target consistent\nwith the WHO Recommended Dietary Allowances for the\ngeneral population.456,457 Figure 1923 shows some examples\nof\nthe\namount\nof\nprotein\nin\ngrams\nthat\nwould\nbe\nrecommended based on body weight."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "kdigo_p93_c02",
+        "fused_score": 0.01579861,
+        "cosine_rank": 3,
+        "bm25_rank": 4,
+        "cosine_sim": 0.844319,
+        "bm25_score": 15.025687,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.3.1 Protein intake",
+        "page_number": 93,
+        "page_range": [
+          93,
+          95
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": ", a target consistent\nwith the WHO Recommended Dietary Allowances for the\ngeneral population.456,457 Figure 1923 shows some examples\nof\nthe\namount\nof\nprotein\nin\ngrams\nthat\nwould\nbe\nrecommended based on body weight.\n\nClinicians should\nadvise people with CKD not to confuse grams of protein per\nday with the weight of food in grams (i.e., 100 g of meat\ncontains only approximately 25 g of protein; Figure 2023). Unlike carbohydrates and fats, excess dietary proteins\ncannot be stored in the body and are catabolized, leading to\naccumulation of protein waste products such as urea and\nother uremic toxins. As CKD progresses, these byproducts\naccumulate and affect organ function. High-protein intake\nalso contributes to increased intraglomerular pressure and\nglomerular hyperfiltration, which, in turn, may lead to glomerulosclerosis\nand\ntubulointerstitial\ninjury.458,459\nProgressive decline in kidney function is also associated\nwith a spontaneous loss of appetite potentially leading to\ninadequate protein and energy intake.460 The Work Group\ntherefore encourages maintaining protein intake in adults\nwith CKD within the recommended range around 0.8 g/kg\nbody weight/d, and particularly avoiding excess protein\nintakes (>1.3 g/kg of body weight/d), which may be\nharmful for the kidney.455 There is observational evidence\nsuggesting that excess protein intake may accelerate kidney\nfunctional decline.461–463\nThe protein type, not only the quantity, may also be\nrelevant. Table 21 briefly summarizes the impact of plantbased diets in people with CKD.464–470 In another cohort\nstudy of older subjects (N ¼ 291, mean age 76 years) with\neGFR <60 ml/min per 1.73 m2, there was no significant\nassociation between vegetable protein intake and change in\neGFR.460 Observational studies452,464,465 and an RCT466\nhave associated a higher plant-based protein relative to\nanimal-based protein consumption or adherence to plantbased protein dominant diets with slower eGFR decline\nover time and lower risk of death; no study so far has\nassessed the measures of patient preferences.471 It is unclear\nwhether\nthe\nassociations\nare attributed\nto plant-based\nprotein intake per se or to other nutrients or lifestyle habits\nthat\naccompany\nthe\nplant-based\nprotein\nintervention;\nhowever, there is biological plausibility. A crossover study of\n10 healthy individuals fed for 3 weeks evaluated the effect\nof a plant-based protein diet versus an animal-based protein\ndiet on kidney function parameters. Both diets provided the\nsame amount of total protein per day."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "kdigo_p96_c01",
+        "fused_score": 0.01560794,
+        "cosine_rank": 5,
+        "bm25_rank": 2,
+        "cosine_sim": 0.82968,
+        "bm25_score": 18.990222,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.3.2 Sodium intake",
+        "page_number": 96,
+        "page_range": [
+          96,
+          96
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "empowers people with CKD and supports self-care management. People put a large value on diet, cultural preferences,\nand QoL; however, adherence to a low-protein diet remains\nchallenging, may impact social and psychological well-being,\nand given that most of the trials for protein restriction were\nconducted before RASi and SGLT2i were implemented, may\nnot be worth the sacrifice/change in lifestyle. The impact of\nprotein restriction and the use of non–animal-based protein\ndiets should be evaluated in the context of new care paradigms to ascertain the incremental gain of these strategies\nrelative to the efforts and costs. Special considerations\nPediatric considerations. Practice Point 3.3.1.4: Do not restrict protein intake in\nchildren with CKD due to the risk of growth impairment. The target protein and energy intake in children with CKD\nG2–G5 should be at the upper end of the normal range for\nhealthy children to promote optimal growth. Children with CKD likely have similar resting energy\nexpenditure to healthy children and should have total energy\nrequirements in the normal range.483 As in adults, protein\nrestriction was considered for children with CKD in the past. Two RCTs have compared low-protein versus normal-protein\ndiets in children with CKD.484,485 One found poorer growth\nfor those on a low-protein diet, and the other found no\ndifference in eGFR between the groups. A 2007 Cochrane\nmeta-analysis concluded that there was uncertainty over the\npossible harm of strict low-protein diets on growth in young\ninfants.486 The 2009 KDOQI guidelines and the 2020 Pediatric\nRenal Nutrition Taskforce suggest maintaining an intake of\ndietary protein at 100%–140% of the dietary reference intake\n(DRI) or the SDI for ideal body weight in children with CKD\nG3 and at 100%–120% of the DRI/SDI in children with CKD\nG4–G5.487,488\nOlder adults. Practice Point 3.3.1.5: In older adults with underlying\nconditions such as frailty and sarcopenia, consider higher\nprotein and calorie dietary targets. In older adults with CKD, nutritional management should\nconsider potential challenges stemming from simultaneous\nand potentially conflicting risks of CKD progression and\nmalnutrition/protein-energy wasting. In older adults, protein\ntargets should be set after careful individual assessment to\nidentify the most urgent clinical challenge."
+      },
+      {
+        "rank": 4,
+        "chunk_id": "kdigo_dm_p64_c08",
+        "fused_score": 0.01494886,
+        "cosine_rank": 2,
+        "bm25_rank": 22,
+        "cosine_sim": 0.848339,
+        "bm25_score": 12.39958,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "3.1 Nutrition intake",
+        "page_number": 64,
+        "page_range": [
+          64,
+          70
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "75\n60\n80\n64\n85\n68\n90\n72\n95\n76\n100\n80\nFigure 16 | Protein guideline for adults with diabetes and chronic kidney disease (CKD) not treated with dialysis. wt, weight.\nchapter 3\n\nin those with diabetes and CKD, and thus the Work Group\nextrapolated data from recommendations of the WHO for\nprotein intake for the general population.263\nThe Work Group also considered the potential harmful\nimpact of very low–protein intake (0.4–0.6 g/kg/d), which\ncould lead to malnutrition in those with CKD. In addition,\ndifferences in both amount and type of protein intake (animal\nvs. vegetable), affordability, availability, and cultural factors\nacross various countries were considered.279 Although observational studies have reported that high consumption of red\nand processed meat is associated with increased risk of CKD\nprogression and mortality, fruit and vegetable intake were\nassociated with decline in progression of kidney disease.280–282\nGiven that these benefits have not been corroborated in clinical\ntrials, the Work Group did not make any specific recommendations for the type of protein intake in those with diabetes and\nCKD. Also, no existing evidence supports different recommendations based on the severity of kidney disease. Thus, the\ncurrent recommendation applies to all in the CKD population\nnot treated with dialysis, and Practice Point 3.1.2 provides\nguidance for those on dialysis. Overall, these recommendations\nare also similar to the KDIGO 2012 CKD guideline and the\nKidney Disease Outcomes Quality Initiative (KDOQI) 2020\nnutrition guidelines.283,284\nPractice Point 3.1.2: Patients treated with hemodialysis,\nand particularly peritoneal dialysis, should consume between 1.0 and 1.2 g protein/kg (weight)/d. Dialysis has long been known to cause a catabolic\nresponse. Amino acid losses during both hemodialysis, and\nparticularly peritoneal dialysis, are well-documented. Uremia\nitself causes depressed appetite, increased catabolism, and\ndecreased muscle mass.285 Recommendations for these patients are based on nitrogen balance studies, presence of\nuremia, and malnutrition.286 Additionally, a slightly higher\nprotein intake in patients with diabetes treated with dialysis\nmay help avoid hypoglycemia, given their decreased ability for\ngluconeogenesis. This practice point mirrors guidance from\nthe KDOQI 2020 nutrition guidelines.284\nRecommendation 3.1.2: We suggest that sodium\nintake be <2 g of sodium per day (or <90 mmol of\nsodium per day, or <5 g of sodium chloride per day)\nin patients with diabetes and CKD (2C)."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "kdigo_dm_p64_c03",
+        "fused_score": 0.01471565,
+        "cosine_rank": 6,
+        "bm25_rank": 13,
+        "cosine_sim": 0.819103,
+        "bm25_score": 13.602713,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "3.1 Nutrition intake",
+        "page_number": 64,
+        "page_range": [
+          64,
+          70
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "Such dramatically restrictive diets will, if\nfollowed, lead to significant weight loss, which may or may\nnot be desirable, and will probably result in a decrease in\nchapter 3\n\nquality of life for those attempting such limitations. In\ncountries or individuals with relatively low protein intakes,\nthe possibility of malnutrition from protein and calorie deficit\nis possible. Patients with advanced CKD may naturally\ndecrease their oral intake, leading to malnutrition. It may be\ndesirable to increase protein intake recommendations in\ncertain individuals. Additionally, protein intake on a diabetic\ndiet is especially crucial to avoid episodes of hypoglycemia;\nlimiting it in the diet may make such potentially dangerous\nepisodes more common. Some diets advocate protein intake greater than 0.8 g/kg/d,\nespecially to reduce carbohydrate intake or promote weight\nloss. However, long-term effects of high-protein diets (especially >1.0 g/kg/d) on kidney function are not known and\ncould potentially cause harm by requiring increased kidney\nexcretion of amino acids.263 A high protein intake could also\nincrease acid load and precipitate or worsen metabolic\nacidosis, particularly in those with lower levels of kidney\nfunction. Dietary recommendations should take into account\nindividual nutrition needs such as age, weight, physical activity, and comorbidities, including for those patients who\nmay need a higher protein diet at early stages to allow for a\nreduction of carbohydrates to better manage their diabetes. Quality of evidence. The overall quality of the evidence is\nlow. In addition to the concerns about bias exhibited in these\ntrials (i.e., study limitations, imprecision, and inconsistency),\nthe evidence is indirect, as it is derived from general diabetes\nand general CKD population trials. This recommendation is based upon the WHO recommendation for protein intake for the general population.263 A\nCochrane systematic review on a very low–protein diet (0.3–\n0.4 g/kg/d) compared to a low-protein diet (0.5–0.6 g/kg/d)\nor normal-protein diet (≥0.8 g/kg/d) for 12 months found\nthat it likely had little or no effect on death and/or kidney\nfailure (moderate-quality evidence). The quality of the evidence was downgraded because of imprecision and inconsistency.264 The question whether to use a very low–protein\ndiet combined with keto acids in diabetes was not included\nin the original literature review. Despite the high burden of diabetes and CKD, few studies\nhave examined the clinical impact of diet modification in this\npatient population. An exhaustive literature search failed to\nshow more than weak to very weak evidence that limiting\nprotein intake to less than normal recommendations slowed\nthe progression of kidney failure or decreased mortality."
+      }
+    ]
+  },
+  {
+    "query_id": "q05",
+    "query": "How often should HbA1c be monitored in a patient with diabetes and CKD?",
+    "expected_chunk_ids": [
+      "kdigo_dm_p56_c06"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "kdigo_dm_p56_c06",
+        "fused_score": 0.01631412,
+        "cosine_rank": 1,
+        "bm25_rank": 2,
+        "cosine_sim": 0.868603,
+        "bm25_score": 10.662089,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "2.1 Glycemic monitoring",
+        "page_number": 56,
+        "page_range": [
+          56,
+          59
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "-stimulating agents\nIron supplements\nBlood\nglucose\nHemoglobin\nHemoglobin A1c\nFigure 10 | Effects of chronic kidney disease (CKD)–related factors on glycated hemoglobin (HbA1c).\nchapter 2\n\nPractice Point 2.1.1: Monitoring long-term glycemic control by HbA1c twice per year is reasonable for patients with\ndiabetes. HbA1c may be measured as often as 4 times per\nyear if the glycemic target is not met or after a change in\nglucose-lowering therapy. HbA1c monitoring facilitates control of diabetes to achieve glycemic targets that prevent diabetic complications. In\nboth T1D or T2D, lower achieved levels of HbA1c <7%\n(<53 mmol/mol) versus 8%–9% (64–75 mmol/mol) reduce\nrisk of overall microvascular complications, including nephropathy and retinopathy, and macrovascular complications\nin some RCTs.189–193 The potential harm of monitoring by\nHbA1c is that it may underestimate (more commonly) or\noverestimate (less commonly) the actual degree of glycemia\ncontrol compared to directly measured blood glucose in\nadvanced CKD. No advantages of glycated albumin or\nfructosamine over HbA1c are known for glycemic monitoring in CKD. Frequency of HbA1c testing is recommended\nas often as 4 times per year to align with a 10–12-week time\nperiod for which it reflects ambient glycemia according to\nnormal duration of red blood cell survival. In the judgment\nof the Work Group, it is reasonable to test HbA1c twice per\nyear in many patients who are stable and achieving glycemic\ngoals. Measuring HbA1c more frequently would be reasonable\nin\npatients\nwith\nadjustments\nin\nglucose-lowering\nmedication, changes in lifestyle factors, or marked changes\nin measured blood glucose values, or those who are less\nconcerned about the burden or costs of more frequent laboratory testing.226\nPractice Point 2.1.2: Accuracy and precision of HbA1c\nmeasurement\ndeclines\nwith\nadvanced\nCKD\n(G4–G5),\nparticularly among patients treated by dialysis, in whom\nHbA1c measurements have low reliability."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "kdigo_dm_p56_c01",
+        "fused_score": 0.01576793,
+        "cosine_rank": 2,
+        "bm25_rank": 7,
+        "cosine_sim": 0.837871,
+        "bm25_score": 9.499183,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "2.1 Glycemic monitoring",
+        "page_number": 56,
+        "page_range": [
+          56,
+          59
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "Chapter 2: Glycemic monitoring and targets in\npatients with diabetes and CKD\n2.1 Glycemic monitoring\nRecommendation 2.1.1: We recommend using\nhemoglobin A1c (HbA1c) to monitor glycemic\ncontrol in patients with diabetes and CKD (1C). This recommendation places a higher value on the potential\nbenefits that may accrue through accurate assessment of longterm glycemic control, which in turn may maximize the benefits and minimize the harms of glucose-lowering treatment. The\nrecommendation places a lower value on inaccuracy of the\nHbA1c measurement as compared with directly measured blood\nglucose in advanced CKD. This recommendation applies to\npatients with T1D or T2D. Key information\nBalance of benefits and harms. HbA1c measurement is the\nstandard of care for long-term glycemic monitoring in T1D\nand T2D. Long-term glycemic monitoring allows patients to\nassess their diabetes control over time. Assessment of diabetes\ncontrol is required to achieve glycemic targets. Glycemic\ntargets are set to prevent diabetic complications and avoid\nhypoglycemia. In RCTs, targeting lower HbA1c values using\nglucose-lowering medications has been proven to reduce risks\nof microvascular diabetes complications (i.e., kidney disease,\nretinopathy, neuropathy) and, in some studies, also macrovascular\ndiabetes\ncomplications\n(i.e.,\ncardiovascular\nevents).189–193\nThe National Glycated Hemoglobin Standardization Program (NGSP) established a certification process to benchmark\ncalibration\nof\nHbA1c\nmeasurements.194\nThe\nInternational Federation of Clinical Chemistry Working\nGroup on HbA1c Standardization developed specific criteria\nfor HbA1c analyses based upon 2 reference methods—mass\nspectroscopy and capillary electrophoresis with ultravioletvisible detection. Proficiency testing data show that over\n97% of assays from participating laboratories that use these\nmethods provide results within 6% of the target values of the\nNGSP.195 HbA1c is also often measured by point-of-care instruments, for which proficiency testing data are not sufficient\nto provide such assurance. Glycated albumin and fructosamine have been proposed as\ncandidates for alternative long-term glycemic monitoring. These biomarkers reflect glycemia in a briefer timeframe (2–4\nweeks) than HbA1c due to their shorter survival time in\nblood."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "kdigo_dm_p56_c08",
+        "fused_score": 0.01545894,
+        "cosine_rank": 3,
+        "bm25_rank": 9,
+        "cosine_sim": 0.837334,
+        "bm25_score": 9.303777,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "2.1 Glycemic monitoring",
+        "page_number": 56,
+        "page_range": [
+          56,
+          59
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "adjustment\nof\nHbA1c\ntargets\naccordingly.230,231 GMI may be useful for patients with\nadvanced CKD, including those treated with dialysis, for whom\nreliability of HbA1c is low.\n\nIt should be noted that the assay bias\nof HbA1c relative to GMI could potentially change over time\nwithin a patient, particularly when there are clinical changes\nthat affect red blood cell turnover or protein glycation. In these\nsituations, GMI needs to be re-established regularly. Practice Point 2.1.4: Daily glycemic monitoring with CGM\nor self-monitoring of blood glucose (SMBG) may help\nprevent hypoglycemia and improve glycemic control when\nglucose-lowering therapies associated with risk of hypoglycemia are used. In addition to long-term glycemic control, minute-tominute glycemic variability and episodes of hypoglycemia\nare important therapeutic targets for people with diabetes and\nCKD, especially those with T1D and those treated with\nCKD G4–G5\nincluding treatment by\ndialysis or kidney transplant\nCKD G1–G3b\nPopulation\nGMI\nReliability\nFrequency\nHbA1c\nMeasure\nYes\nYes\n• Twice per year\n• Up to 4 times per year if not achieving\n  target or change in therapy\n• Twice per year\n• Up to 4 times per year if not achieving\n  target or change in therapy\nHigh\nOccasionally useful\nLow\nLikely useful\nFigure 11 | Frequency of glycated hemoglobin (HbA1c) measurement and use of glucose management indicator (GMI) in chronic\nkidney disease (CKD). G1–G3b, estimated glomerular filtration rate (eGFR) ≥30 ml/min per 1.73 m2; G4–G5, eGFR <30 ml/min per 1.73 m2.\nchapter 2"
+      },
+      {
+        "rank": 4,
+        "chunk_id": "kdigo_dm_p60_c05",
+        "fused_score": 0.01448413,
+        "cosine_rank": 12,
+        "bm25_rank": 3,
+        "cosine_sim": 0.78404,
+        "bm25_score": 10.555451,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "2.2 Glycemic targets",
+        "page_number": 60,
+        "page_range": [
+          60,
+          63
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "Notably, however, lower HbA1c targets may not necessarily\nlead to a significant increase in hypoglycemia rates when\nattained\nusing\nmedications\nwith\na\nlower\nrisk\nof\nhypoglycemia.\n\nData from RCTs support the recommendation of targeting\nan individualized HbA1c level of <6.5% to <8.0% in patients\nwith diabetes and CKD, compared with higher HbA1c targets. HbA1c targets in this range are associated with better overall\nsurvival and cardiovascular outcomes, along with decreased\nincidence of moderately increased albuminuria and other\nmicrovascular outcomes, such as retinopathy. HbA1c levels in\nthis range may also be associated with lower risk of progression to advanced CKD and kidney failure. However, the benefits of more-stringent glycemic control\n(i.e., lower HbA1c targets) compared with less-stringent\nglycemic control (i.e., higher HbA1c targets) manifest over\nmany years of treatment.191,248,249 In addition, morestringent glycemic control compared with less-stringent\nglycemic control increases the risk of hypoglycemia.240 Individual patient factors modify both anticipated benefits and\nanticipated\nrisks\nof\nmore-stringent\nglycemic\ncontrol\n(Figure 14). For example, younger patients with few\ncomorbidities, mild-to-moderate CKD, and longer life expectancy may anticipate substantial cumulative long-term\nbenefits of stringent glycemic control and therefore prefer\na lower HbA1c target. Patients who are treated with medications that do not cause substantial hypoglycemia, who\nhave preserved hypoglycemia awareness and resources to\ndetect and intervene early in the course of hypoglycemia,\nand who have demonstrated an ability to attain stringent\nHbA1c targets without hypoglycemia may also prefer a lower\nHbA1c target. Patients with opposite characteristics may\nprefer higher HbA1c targets. A flexible approach allows each\npatient to optimize these tradeoffs, whereas a “one-size-fitsall” single HbA1c target may offer insufficient long-term\norgan protection for some patients and place others at undue risk of hypoglycemia. Therefore, individualization of\nHbA1c targets in patients with diabetes and CKD should be\nan interactive process that includes individual assessment of\nrisk, life expectancy, disease/therapy burden, and patient\npreferences. Quality of evidence. A systematic review with 3 comparisons examining the effects of lower (#7.0%, #6.5%,\nand #6.0%) versus higher (standard of care) HbA1c targets\nin patients with diabetes and CKD was undertaken."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "kdigo_dm_p56_c04",
+        "fused_score": 0.01430829,
+        "cosine_rank": 4,
+        "bm25_rank": 29,
+        "cosine_sim": 0.834532,
+        "bm25_score": 7.822593,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "2.1 Glycemic monitoring",
+        "page_number": 56,
+        "page_range": [
+          56,
+          59
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "There was low-quality evidence from studies that\nchapter 2\n\naimed to determine whether CGM would be more effective\nthan HbA1c for glycemic monitoring in people with CKD, as\nit derives from observational studies. The evidence to support\nthe use of alternative biomarkers to HbA1c is of very low\nquality, as it derives from observational studies with inconsistency in findings. These studies were appraised using an\nadapted Quality Assessment of Diagnostic Accuracy Studies\n(QUADAS)-2 tool,222 as there is no agreed-upon tool to\nexamine the quality of evidence from these studies. Values and preferences. The Work Group judged that patients with T1D or T2D and CKD would consider the benefits\nof\ndetecting\nclinically\nrelevant\nhyperglycemia\nor overtreatment to low glycemic levels through long-term glycemic\nmonitoring by HbA1c as critically important. The Work\nGroup also judged that the limitations of HbA1c, including\nunderestimation or overestimation of the actual degree of\nglycemic control compared to directly measured blood\nglucose levels, would be important to patients. In the judgment of the Work Group, most but not all patients with\ndiabetes and CKD would choose long-term glycemic monitoring by HbA1c despite these limitations. The recommendation is strong; however, some patients may choose not to\nmonitor by HbA1c or follow the suggested schedule of\ntesting, especially those with advanced CKD, anemia, or\ntreatment by red blood cell transfusions, erythropoiesisstimulating agents, or iron supplements. Resource use and costs. Long-term glycemic monitoring by\nHbA1c is relatively inexpensive and widely available. To the\nextent that HbA1c measurement aids in achieving diabetes\ncontrolinpatients with CKD, including thosewith kidney failure\ntreated by dialysis or kidney transplant, this recommendation is\nlikely cost-effective, but economic analyses have not been performed and would be influenced by testing frequency and\nconsequent resource utilization and clinical outcomes. Considerations for implementation. Patients with T1D or\nT2D and CKD likely benefit from glycemic monitoring by\nHbA1c. This recommendation is applicable to adults and\nchildren of all race/ethnicity groups, both sexes, and to patients\nwith kidney failure treated by dialysis or kidney transplant."
+      }
+    ]
+  },
+  {
+    "query_id": "q06",
+    "query": "Which GFR category corresponds to kidney failure, and what is its eGFR cutoff?",
+    "expected_chunk_ids": [
+      "kdigo_p15_c19"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "nice_p51_c02",
+        "fused_score": 0.01639344,
+        "cosine_rank": 1,
+        "bm25_rank": 1,
+        "cosine_sim": 0.769929,
+        "bm25_score": 14.156195,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "Terms used in this guideline",
+        "page_number": 51,
+        "page_range": [
+          51,
+          73
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "Classification of CKD \nCKD is classified according to estimated GFR (eGFR) and albumin:creatinine ratio (ACR)\n\n(see table 1), using 'G' to denote the GFR category (G1 to G5, which have the same GFR \nthresholds as the CKD stages 1 to 5 recommended previously) and 'A' for the ACR \ncategory (A1 to A3), for example: \n• A person with an eGFR of 25 ml/min/1.73 m\n2 and an ACR of 15 mg/mmol has CKD \nG4A2. \n• A person with an eGFR of 50 ml/min/1.73 m\n2 and an ACR of 35 mg/mmol has CKD \nG3aA3. \n• An eGFR of less than 15 ml/min/1.73 m\n2 (GFR category G5) is referred to as kidney \nfailure. \nGlomerular filtration rate (GFR) \nThis is abbreviated in the following way in this guideline: \n• GFR: either a measured or an estimated GFR \n• eGFR: estimated GFR (without indicating the method of estimation) \n• eGFRcreatinine: an estimation of GFR using serum creatinine \n4-variable Kidney Failure Risk Equation \nA person's 5-year risk of needing renal replacement therapy (defined as the need for \ndialysis or transplant) is estimated, as in Major 2019, as: \nIn the above, eGFR is reported in ml/min/1.73 m\n2 and ACR in mg/mmol. Where the term \n'male' is used, this should be replaced by a 1 if the person being assessed is male, and a 0 \nif they are female. This equation and its coefficients are validated in a UK population, and it \nis important to use this version, and not a version validated in another country."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "kdigo_p71_c01",
+        "fused_score": 0.0156994,
+        "cosine_rank": 4,
+        "bm25_rank": 3,
+        "cosine_sim": 0.749537,
+        "bm25_score": 13.248389,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "1.2.4 Selection of GFR estimating equations",
+        "page_number": 71,
+        "page_range": [
+          71,
+          74
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "Special considerations\nPediatric considerations. Practice Point 1.2.3.3: Laboratories measuring creatinine in\ninfants or small children must ensure their quality control\nprocess include the lowest end of the expected range of\nvalues for the group of interest. Practice Point 1.2.3.4: Consider the consistent use of\nenzymatic creatinine assays in children, given the higher\nrelative contribution of non-creatinine chromogens to\nmeasured creatinine in children when using the Jaffe assay,\nand the high prevalence of icteric and hemolyzed samples\nin the neonatal period. Practice Point 1.2.3.5: An eGFRcr level <90 ml/min per\n1.73 m2 can be flagged as “low” in children and adolescents\nover the age of 2 years. In the KDIGO 2012 Clinical Practice Guideline for the\nEvaluation and Management of Chronic Kidney Disease,1 a\ncutoff of 60 ml/min per 1.73 m2 was chosen to define “low”\nGFR for children. In this update, we advise increasing the\ncutoff to 90 ml/min per 1.73 m2 for children and adolescents. In children and adolescents, a reduced GFR is likely to\ndeteriorate further and, therefore, warrants closer monitoring\nand early intervention. Children with lower-than-normal GFR\noften experience deterioration in GFR during periods of rapid\ngrowth in adolescence.224 Those with subnormal GFR during\nadolescence are more likely to eventually experience clinically\nimportant low GFR later in life. Even mild decreases in\neGFR (i.e., CKD G2) are associated with poor kidney\noutcomes. In a US study of over 7 million children captured\nby electronic health record data, 8600 had CKD G2. At 10\nyears from cohort entry, the rate of reaching kidney failure\nor a 50% decline in eGFR ranged from around 10%\n(nonglomerular CKD) to around 40% (glomerular CKD).225\nFurthermore, eGFR between 60 and 90 ml/min per 1.73 m2\nis sometimes associated with impaired linear growth and\nwith hyperparathyroidism in children and adolescents.226,227\nA higher cutoff defining low GFR for children and adolescents also reflects their longer life expectancy. Early intervention may have profound protection of GFR."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "nice_p13_c02",
+        "fused_score": 0.01426768,
+        "cosine_rank": 12,
+        "bm25_rank": 6,
+        "cosine_sim": 0.740747,
+        "bm25_score": 10.756455,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "1.2 Classification of CKD in adults",
+        "page_number": 13,
+        "page_range": [
+          13,
+          14
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": ".73 m2) \nModerate risk \nHigh risk \nVery high risk \nGFR category G3b: moderate to severe \nreduction (30 to 44 ml/min/1.73 m2) \nHigh risk \nVery high risk \nVery high risk\n\nACR category A1: normal to \nmildly increased (less than 3 \nmg/mmol) \nACR category A2: \nmoderately increased \n(3 to 30 mg/mmol) \nACR category A3: \nseverely increased \n(over 30 mg/mmol) \nGFR category G4: severe reduction (15 \nto 29 ml/min/1.73 m2) \nVery high risk \nVery high risk \nVery high risk \nGFR category G5: kidney failure (under \n15 ml/min/1.73 m2) \nVery high risk \nVery high risk \nVery high risk \nAdapted with permission from the KDIGO 2012 clinical practice guideline for the evaluation \nand management of chronic kidney disease. \nAbbreviations: ACR, albumin creatinine ratio; CKD, chronic kidney disease; GFR, glomerular \nfiltration rate. \nInvestigating the cause of CKD and determining the risk of \nadverse outcomes \n1.2.3 \nAgree a plan to establish the cause of CKD during an informed discussion with \nthe person with CKD, particularly if the cause may be treatable (for example, \nurinary tract obstruction, medicines that can adversely affect kidney function or \nglomerular disease). [2014] \n1.2.4 \nUse the person's GFR and ACR categories (see table 1) to indicate their risk of \nadverse outcomes (for example, CKD progression, acute kidney injury, all-cause \nmortality and cardiovascular events) and discuss this with them. [2014] \nIndications for renal ultrasound in adults \n1.2.5 \nOffer a renal ultrasound scan to all adults with CKD who: \n• have accelerated progression of CKD (see recommendation 1.3.5) \n• have visible or persistent invisible haematuria \n• have symptoms of urinary tract obstruction \n• have a family history of polycystic kidney disease and are older than 20 \n• have a GFR of less than 30 ml/min/1.73 m\n2 (GFR category G4 or G5)"
+      },
+      {
+        "rank": 4,
+        "chunk_id": "kdigo_p15_c42",
+        "fused_score": 0.01419776,
+        "cosine_rank": 7,
+        "bm25_rank": 20,
+        "cosine_sim": 0.745739,
+        "bm25_score": 8.660158,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "foreword",
+        "page_number": 15,
+        "page_range": [
+          15,
+          33
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "of chronic kidney disease (CKD) staging by estimated glomerular filtration rate by creatinine (eGFRcr) and\nalbumin-to-creatinine ratio (ACR) categories and risks for 10 common complications in multivariable-adjusted analyses.\n\nNumbers\nreflect the adjusted hazard ratio compared with the reference cell. Adjustment variables included age, sex, smoking status (current, former, or\nnever), systolic blood pressure, total cholesterol, high-density lipoprotein cholesterol, body mass index, use of antihypertensive medications,\nand a medical history of diabetes, coronary heart disease, stroke, heart failure, atrial fibrillation, peripheral artery disease, cancer, and chronic\nobstructive pulmonary disease, where relevant. The colors were determined for each outcome separately using the following rule: the\npercentile shaded the darkest green color corresponds to the proportion of cells in the grid without CKD (e.g., 6 of 35 cells with eGFR ≥60 ml/\nmin per 1.73 m2 and ACR <30 mg/g [<3 mg/mmol]), and the percentile shaded the darkest red color corresponds to proportion expected to be\nat highest risk (e.g., 11 of 35 cells with eGFR <15 ml/min per 1.73 m2 and albumin-to-creatinine ratio 1000þ mg/g [100þ mg/mmol]). In this\nmanner, the numbers of green and red cells are consistent across outcomes, but the patterns are allowed to differ. ref, reference cell. Reproduced with permission from JAMA, Writing Group for the CKD Prognosis Consortium; Grams ME, Coresh J, Matsushita K, et al. Estimated\nglomerular filtration rate, albuminuria, and adverse outcomes: an individual-participant data meta-analysis. JAMA. 2023;330(13):1266–1277.12\nCopyright ª 2023 American Medical Association. All rights reserved.\nrelative and absolute risks associated with CKD\n\nCKD staging by eGFRcr-cys and ACR and risk for adverse\nevents\nWithin the CKD-PC collaboration, 720,736 individuals had\nmeasures of blood cystatin C in addition to having eGFRcr\nand ACR. The replacement of eGFRcr with eGFRcr-cys in the\nheatmap led to several changes in the risk distributions."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "kdigo_p15_c46",
+        "fused_score": 0.01414493,
+        "cosine_rank": 9,
+        "bm25_rank": 15,
+        "cosine_sim": 0.743972,
+        "bm25_score": 9.111646,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "foreword",
+        "page_number": 15,
+        "page_range": [
+          15,
+          33
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "chronic kidney disease (CKD) staging by estimated glomerular filtration rate by creatinine and cystatin C\n(eGFRcr-cys) and albumin-to-creatinine ratio categories and risks for 10 common complications in multivariable-adjusted analyses.\n\nNumbers reflect the adjusted hazard ratio compared with the reference cell. Adjustment variables included age, sex, smoking status (current,\nformer, or never), systolic blood pressure, total cholesterol, high-density lipoprotein cholesterol, body mass index, use of antihypertensive\nmedications, and a medical history of diabetes, coronary heart disease, stroke, heart failure, atrial fibrillation, peripheral artery disease, cancer,\nand chronic obstructive pulmonary disease, where relevant. The colors were determined for each outcome separately using the following rule:\nthe percentile shaded the darkest green color corresponds to the proportion of cells in the grid without CKD (e.g., 6 of 24 cells), and the\npercentile shaded the darkest red color corresponds to proportion expected to be at highest risk (e.g., 5 of 24 cells). In this manner, the numbers\nof green and red cells are consistent across outcomes, but the patterns are allowed to differ. ref, reference cell. Reproduced with permission\nfrom JAMA, Writing Group for the CKD Prognosis Consortium; Grams ME, Coresh J, Matsushita K, et al. Estimated glomerular filtration rate,\nalbuminuria, and adverse outcomes: an individual-participant data meta-analysis. JAMA. 2023;330(13):1266–1277.12 Copyright ª 2023 American\nMedical Association. All rights reserved.\nrelative and absolute risks associated with CKD"
+      }
+    ]
+  },
+  {
+    "query_id": "q07",
+    "query": "When does NICE recommend offering an SGLT2 inhibitor (dapagliflozin) to adults with CKD?",
+    "expected_chunk_ids": [
+      "nice_p23_c03"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "nice_p77_c01",
+        "fused_score": 0.01595302,
+        "cosine_rank": 1,
+        "bm25_rank": 7,
+        "cosine_sim": 0.862672,
+        "bm25_score": 12.499036,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "Update information",
+        "page_number": 77,
+        "page_range": [
+          77,
+          78
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "Update information \nNovember 2021: We reviewed the evidence on SGLT2 inhibitors for adults with type 2 \ndiabetes and chronic kidney disease and made new recommendations, which are in the \nsection on chronic kidney disease in the NICE guideline on type 2 diabetes in adults. We \nalso clarified the use of the term 'male' in the 4-variable Kidney Failure Risk Equation. \nAugust 2021: This guideline is an update of NICE guideline CG182 (published July 2014), \nNICE guideline CG157 (published March 2013) and NICE guideline NG8 (published June \n2015) and will replace them. \nWe have reviewed the evidence and made new recommendations on the assessment and \nmanagement of CKD, management of hyperphosphataemia in people with CKD and the \nmanagement of anaemia for people with CKD. These recommendations are marked \n[2021]. \nWe have also made some changes without an evidence review: \n• We have updated some wording to bring the language and style up to date, without \nchanging the meaning. \n• We have updated some recommendations to bring them in line with current \nterminology and practice. \n• We have combined, clarified or reworded some recommendations to make them \nclearer and to improve ease of reading. \nIn recommendations ending [2006], [2006, amended 2011], [2006, amended 2015], \n[2008], [2008, amended 2014], or [2014], we have not reviewed the evidence. In some \ncases minor changes have been made – for example, to update links, or bring the language \nand style up to date – without changing the intent of the recommendation. \nMinor changes after publication \nAugust 2025: We added links to relevant technology appraisal guidance in the sections on \npharmacotherapy and managing anaemia. \nSeptember 2024: We added links to relevant technology appraisal guidance in the\n\nsections on pharmacotherapy and managing anaemia. \nNovember 2023: We added a link to NICE's guideline on hypertension to recommendation \n1.6.4. \nISBN: 978-1-4731-4233-6"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "nice_p23_c03",
+        "fused_score": 0.01585553,
+        "cosine_rank": 4,
+        "bm25_rank": 1,
+        "cosine_sim": 0.805011,
+        "bm25_score": 21.675841,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "1.6 Pharmacotherapy",
+        "page_number": 23,
+        "page_range": [
+          23,
+          28
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "30 mg/mmol (ACR category A3 or above). [2021] \nTreating CKD in adults, children, and young people with related \npersistent proteinuria \nSee also: \n• NICE's guideline on type 1 diabetes in adults\n\n• NICE's guideline on type 2 diabetes in adults \n• NICE's guideline on type 1 and type 2 diabetes in children and young people. \nAdults \n1.6.6 \nFor adults with CKD and diabetes (type 1 or type 2) offer an ARB or an ACE \ninhibitor (titrated to the highest licensed dose that the person can tolerate) if ACR \nis 3 mg/mmol or more. [2021] \n1.6.7 \nFor adults with CKD but without diabetes: \n• refer for nephrology assessment and offer an ARB or an ACE inhibitor \n(titrated to the highest licensed dose that they can tolerate), if ACR is 70 mg/\nmmol or more \n• monitor in line with recommendations 1.3.1 and 1.3.4 if ACR is above 30 but \nbelow 70 mg/mmol; consider discussing with a nephrologist if eGFR declines \nor ACR increases. [2021] \n1.6.8 \nFor SGLT2 inhibitors recommended as options in NICE technology appraisal \nguidance as an add-on to optimised standard care for some adults with CKD, see \nthe guidance on: \n• dapagliflozin (TA1075, 2025) \n• empagliflozin (TA942, 2023). \n1.6.9 \nFinerenone is recommended as an option in NICE technology appraisal guidance \nas an add-on to optimised standard care for some adults with stage 3 and 4 CKD \n(with ACR 3 mg/mmol or more) associated with type 2 diabetes. For full details, \nsee the guidance on finerenone (TA877, 2023). \nChildren and young people \n1.6.10 \nFor children and young people with CKD and diabetes (type 1 or 2), offer an ARB \nor an ACE inhibitor (titrated to the highest licensed dose that they can tolerate) if \nACR is 3 mg/mmol or more. [2021]"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "kdigo_p99_c01",
+        "fused_score": 0.01477273,
+        "cosine_rank": 6,
+        "bm25_rank": 12,
+        "cosine_sim": 0.801971,
+        "bm25_score": 11.111441,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.7 Sodium-glucose cotransporter-2 inhibitors",
+        "page_number": 99,
+        "page_range": [
+          99,
+          103
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "eGFR <30 ml/min per 1.73 m2, compared with those who\ncontinue.508,509 In addition, a recent individual patient level\ndata meta-analysis demonstrated a benefit in delaying KRT\nin patients with eGFR <30 ml/min per 1.73 m2.510\n3.7 Sodium-glucose cotransporter-2 inhibitors\n(SGLT2i)\nThe Work Group concurs with the KDIGO 2022 Clinical\nPractice Guideline for Diabetes Management in Chronic\nKidney Disease, which stated: “We recommend treating patients with type 2 diabetes (T2D), CKD, and an eGFR ≥20 ml/\nmin per 1.73 m2 with an SGLT2i (1A).”23 However, in this\nguideline, we offer a more general 1A recommendation for\nadults with CKD. We also highlight practice points from\nthe KDIGO Diabetes guideline for diabetes management in\nCKD, which are also relevant for people with CKD without\ndiabetes:\nRecommendation 3.7.1: We recommend treating\npatients with type 2 diabetes (T2D), CKD, and an\neGFR ≥20 ml/min per 1.73 m2 with an SGLT2i (1A). Practice Point 3.7.1: Once an SGLT2i is initiated, it is\nreasonable to continue an SGLT2i even if the eGFR falls\nbelow 20 ml/min per 1.73 m2, unless it is not tolerated\nor KRT is initiated. Practice Point 3.7.2: It is reasonable to withhold SGLT2i\nduring times of prolonged fasting, surgery, or critical\nmedical illness (when people may be at greater risk for\nketosis). Recommendation 3.7.2: We recommend treating\nadults with CKD with an SGLT2i for the following\n(1A):\n\u0003 eGFR ≥20 ml/min per 1.73 m2 with urine ACR ≥200\nmg/g (≥20 mg/mmol), or\n\u0003 heart failure, irrespective of level of albuminuria. Practice Point 3.7.3: SGLT2i initiation or use does not\nnecessitate alteration of frequency of CKD monitoring and\nthe reversible decrease in eGFR on initiation is generally\nnot an indication to discontinue therapy. Use of SGLT2i in people with T2D is recommended in previous\nguidelines irrespective of level of albuminuria."
+      },
+      {
+        "rank": 4,
+        "chunk_id": "kdigo_dm_p38_c35",
+        "fused_score": 0.01469941,
+        "cosine_rank": 2,
+        "bm25_rank": 28,
+        "cosine_sim": 0.820667,
+        "bm25_score": 8.970759,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "1.3 Sodium–glucose cotransporter-2 inhibitors",
+        "page_number": 38,
+        "page_range": [
+          38,
+          48
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "Most guidelines suggest initial therapy with metformin, whereas the ESC guideline recommends initial therapy\nwith an SGLT2i for patients with high CVD risk.\n\nThe current\nKDIGO guideline recommends using an SGLT2i for most\npatients with T2D, CKD, and an eGFR ≥20 ml/min per 1.73\nm2 and using metformin for patients with T2D, CKD, and an\neGFR ≥30 ml/min per 1.73 m2. Sequencing of interventions\nshould be individualized to address most pressing individual\nclinical needs (Section 1.1). The 2019 ESC guideline provided a Class I recommendation to use SGLT2i for patients with T2D and ASCVD or at\nhigh/very high cardiovascular risk (which includes target organ damage such as CKD).144 The difference between the\nESC/EASD\nrecommendation\nand\nthe\ncurrent\nKDIGO\nrecommendation may stem from different judgments about\nthe importance of the population studied in the landmark\nclinical trials. Thus, the evidence is particularly strong for the\npopulation corresponding to the CREDENCE and DAPACKD studies (ACR >200–300 mg/g [>20–30 mg/mmol]\nand eGFR >25–30 and <75–90 ml/min per 1.73 m2. In\ncontrast, the current evidence benefit seen for patients with\nless albumin excretion comes from cardiovascular outcome\ntrials with secondary kidney outcomes; however, EMPAKIDNEY also enrolled patients with CKD without albuminuria, and these results will be informative when published. The efficacy and safety of SGLT2i has not been established\nin T1D. Use of SGLT2i treatment in the US remains offlabel, as the FDA has not approved its use in T1D. In\nEurope, the European Commission has approved dapagliflozin and sotagliflozin for use in T1D as an adjunct to insulin in 2019. However, the drugmaker of dapagliflozin\nwithdrew its T1D indication in 2021, citing concerns about\ndiabetic ketoacidosis. Dapagliflozin remains approved in\nJapan for T1D. Practice Point 1.3.1: The recommendation for SGLT2i is for\nkidney and cardiovascular protection and SGLT2i have been\nshown to have safety and benefit in CKD patients, even for\nthose without T2D. Thus, if patients are already being\ntreated with other glucose-lowering agents, an SGLT2i can\nbe added to the current treatment regimen (Figure 6148)."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "nice_p23_c02",
+        "fused_score": 0.0127451,
+        "cosine_rank": 24,
+        "bm25_rank": 8,
+        "cosine_sim": 0.764576,
+        "bm25_score": 12.159098,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "1.6 Pharmacotherapy",
+        "page_number": 23,
+        "page_range": [
+          23,
+          28
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "NICE's guideline on hypertension in adults recommends using clinic blood pressure for \nmonitoring response to lifestyle changes or medical treatment (see recommendation \n1.4.15).\n\n1.6.1 \nIn adults with CKD and an ACR under 70 mg/mmol, aim for a clinic systolic blood \npressure below 140 mmHg (target range 120 to 139 mmHg) and a clinic diastolic \nblood pressure below 90 mmHg. [2021] \n1.6.2 \nIn adults with CKD and an ACR of 70 mg/mmol or more, aim for a clinic systolic \nblood pressure below 130 mmHg (target range 120 to 129 mmHg) and a clinic \ndiastolic blood pressure below 80 mmHg. [2021] \n1.6.3 \nIn children and young people with CKD and an ACR of 70 mg/mol or more, aim for \na clinic systolic blood pressure below the 50th percentile for height. [2021] \nFor a short explanation of why the committee made these recommendations and how \nthey might affect practice, see the rationale and impact section on pharmacotherapy \nfor blood pressure control. \nFull details of the evidence and the committee's discussion are in evidence review G: \noptimal blood pressure targets. \nTreating hypertension \n1.6.4 \nFollow the recommendations on treating hypertension in NICE's guideline on \nhypertension for adults with CKD, hypertension and an ACR of 30 mg/mmol or \nless (ACR categories A1 and A2). [2014, amended 2021] \n1.6.5 \nOffer an angiotensin-receptor blocker (ARB) or an angiotensin-converting \nenzyme (ACE) inhibitor (titrated to the highest licensed dose that the person can \ntolerate) to adults, children and young people with CKD who have hypertension \nand an ACR over 30 mg/mmol (ACR category A3 or above). [2021] \nTreating CKD in adults, children, and young people with related \npersistent proteinuria \nSee also: \n• NICE's guideline on type 1 diabetes in adults"
+      }
+    ]
+  },
+  {
+    "query_id": "q08",
+    "query": "What blood pressure target is recommended for adults with CKD and albuminuria?",
+    "expected_chunk_ids": [
+      "nice_p23_c02",
+      "kdigo_p97_c01",
+      "kdigo_p97_c02"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "nice_p23_c02",
+        "fused_score": 0.01639344,
+        "cosine_rank": 1,
+        "bm25_rank": 1,
+        "cosine_sim": 0.846915,
+        "bm25_score": 15.101942,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "1.6 Pharmacotherapy",
+        "page_number": 23,
+        "page_range": [
+          23,
+          28
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "NICE's guideline on hypertension in adults recommends using clinic blood pressure for \nmonitoring response to lifestyle changes or medical treatment (see recommendation \n1.4.15).\n\n1.6.1 \nIn adults with CKD and an ACR under 70 mg/mmol, aim for a clinic systolic blood \npressure below 140 mmHg (target range 120 to 139 mmHg) and a clinic diastolic \nblood pressure below 90 mmHg. [2021] \n1.6.2 \nIn adults with CKD and an ACR of 70 mg/mmol or more, aim for a clinic systolic \nblood pressure below 130 mmHg (target range 120 to 129 mmHg) and a clinic \ndiastolic blood pressure below 80 mmHg. [2021] \n1.6.3 \nIn children and young people with CKD and an ACR of 70 mg/mol or more, aim for \na clinic systolic blood pressure below the 50th percentile for height. [2021] \nFor a short explanation of why the committee made these recommendations and how \nthey might affect practice, see the rationale and impact section on pharmacotherapy \nfor blood pressure control. \nFull details of the evidence and the committee's discussion are in evidence review G: \noptimal blood pressure targets. \nTreating hypertension \n1.6.4 \nFollow the recommendations on treating hypertension in NICE's guideline on \nhypertension for adults with CKD, hypertension and an ACR of 30 mg/mmol or \nless (ACR categories A1 and A2). [2014, amended 2021] \n1.6.5 \nOffer an angiotensin-receptor blocker (ARB) or an angiotensin-converting \nenzyme (ACE) inhibitor (titrated to the highest licensed dose that the person can \ntolerate) to adults, children and young people with CKD who have hypertension \nand an ACR over 30 mg/mmol (ACR category A3 or above). [2021] \nTreating CKD in adults, children, and young people with related \npersistent proteinuria \nSee also: \n• NICE's guideline on type 1 diabetes in adults"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "kdigo_p97_c01",
+        "fused_score": 0.01594982,
+        "cosine_rank": 3,
+        "bm25_rank": 2,
+        "cosine_sim": 0.816559,
+        "bm25_score": 14.971308,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.4 Blood pressure control",
+        "page_number": 97,
+        "page_range": [
+          97,
+          97
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "≥3 mm Hg over 24 hours while on a high salt diet, when\ncompared with a controlled salt diet). That sensitivity may\nincrease further in those who are small for gestational age.496\nChildren with CKD often have underlying tubular conditions that predispose them to numerous electrolyte losses,\nincluding sodium. For these children, a supplemented rather\nthan restricted sodium intake will be required. For non–saltwasting children, salt intake should be limited to the agebased Recommended Daily Intake. 3.4 Blood pressure control\nThe Work Group concurs with the KDIGO 2021 Clinical\nPractice Guideline for the Management of Blood Pressure in\nChronic Kidney Disease, which encourages individualized BP\ntargets and use of agents according to age, coexistent CVD, and\nother comorbidities; risk of progression of CKD; and tolerance\nto treatments.21 We highlight the following guidance:\nRecommendation 3.4.1: We suggest that adults\nwith high BP and CKD be treated with a target\nsystolic blood pressure (SBP) of <120 mm Hg,\nwhen tolerated, using standardized office BP\nmeasurement (2B). Practice Point 3.4.1: Consider less intensive BP-lowering\ntherapy in people with frailty, high risk of falls and fractures, very limited life expectancy, or symptomatic postural\nhypotension. RCTs have not demonstrated that intensive BP-lowering\nresults in meaningful reductions in the risk of kidney failure,\nbut the RCT evidence supporting important cardiovascular\nbenefits should encourage such a strategy. By aiming for an SBP\n<120 mm Hg, more adults with CKD will achieve an SBP\n<130 mm Hg, even if they do not meet the <120 mm Hg\ntarget."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "nice_p51_c16",
+        "fused_score": 0.0156994,
+        "cosine_rank": 4,
+        "bm25_rank": 3,
+        "cosine_sim": 0.812688,
+        "bm25_score": 14.457582,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "Terms used in this guideline",
+        "page_number": 51,
+        "page_range": [
+          51,
+          73
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "This is consistent with clinical practice and with \nthe NICE guideline on managing hypertension for people aged under 80. The committee \nnoted that although there is limited evidence on blood pressure targets in people with CKD\n\nand proteinuria, it is important to maintain a systolic blood pressure below 130 mmHg and \na diastolic pressure below 80 mmHg. \nThe committee agreed that none of the evidence they had seen warranted changing the \nrecommendations. They also noted that intensive blood pressure targets only result in a \nmarginal reduction in stroke and kidney failure, but put a large burden on patients in terms \nof polypharmacy and associated risks and side effects (such as falls). \nThe committee agreed that a useful target for blood pressure in children and young people \nwith CKD and proteinuria is a systolic blood pressure below the 50th percentile for height. \nThe committee agreed that particular care had to be taken with people who were frail or \nwho had multiple morbidities. However, the NICE guideline on hypertension already covers \nthis group, so the committee did not make new recommendations. \nHow the recommendations might affect practice \nThe recommendations for adults are consistent with current practice and should not have \nan impact on resources. The recommendation for blood pressure targets in children and \nyoung people may have some cost implications, although the committee did not think they \nwould be significant. \nReturn to recommendations \nPharmacotherapy for proteinuria and choice of \nantihypertensive agent \nRecommendations 1.6.5 to 1.6.12 \nWhy the committee made the recommendations \nThe interventions recommended are intended to improve a range of outcomes, including \nrates of progression to end-stage renal disease. There was evidence for adults, but not for \nchildren and young people. Paediatric experts on the committee agreed that the evidence \nfor adults was also applicable to children and young people. Therefore, the committee did \nnot make separate recommendations for different age groups."
+      },
+      {
+        "rank": 4,
+        "chunk_id": "kdigo_p97_c02",
+        "fused_score": 0.01551567,
+        "cosine_rank": 2,
+        "bm25_rank": 11,
+        "cosine_sim": 0.81719,
+        "bm25_score": 11.638475,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.4 Blood pressure control",
+        "page_number": 97,
+        "page_range": [
+          97,
+          97
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "By aiming for an SBP\n<120 mm Hg, more adults with CKD will achieve an SBP\n<130 mm Hg, even if they do not meet the <120 mm Hg\ntarget.\n\nObservationally, on average, each 20 mm Hg higher than\nusual SBP and 10 mm Hg higher diastolic BP is associated with\nan approximate doubling of cardiovascular risk, with no lower\nlimit down to at least 115/75 mm Hg.497 Data from the Systolic\nBlood Pressure Intervention Trial (SPRINT) support the SBP\ntarget of <120 mm Hg (when measured using a standardized\noffice BP measurement) to reduce cardiovascular risk in\nadults aged >75 years, or aged >50 years with 1 or more of\nthe following risk factors: clinical or subclinical CVD (other\nthan stroke), eGFR 20–60 ml/min per 1.73 m2, or ≥15% 10year cardiovascular risk.498 Compared with a target of 140\nmm Hg, this approach reduces the risk of major adverse\ncardiovascular events (MACE) by one-quarter (hazard ratio\n[HR]: 0.75; 95% CI: 0.64–0.89), and that relative benefit was\nsimilar in people with and without CKD. The SPRINT trial\nexcluded people with diabetes, but cardiovascular benefits of\nintensive BP lowering on risk of stroke and heart failure are\nclearly apparent in people with diabetes in individual patient\nlevel data meta-analysis of intensive versus standard BPlowering trials.499\nStandardized BP monitoring can be challenging to offer in a\nclinic setting due to the time required500; however, it is\nconsidered potentially hazardous to apply the recommended\nSBP target of <120 mm Hg to BP measurements obtained in a\nnonstandardized manner.500 A practical solution to ensure the\nidentification of high BP is by using home-based monitoring\n(or telemonitoring). Trials have shown that 2 morning and\nevening BP measurements taken during the first week of every\nmonth can be used to titrate antihypertensive medication and\nreduce BP more than “usual care” approaches.501\nPeople who are frail, have limited life expectancy, or have a\nhistory of falls and fractures may have increased risk of additional events if BP targets of <120 are achieved. Postural\nhypotension in these people is associated with adverse outcomes, and thus weighing the benefits of some attenuation of\neGFR decline versus the life-changing impact of falls, fractures,\nand other events should be considered in choosing specific\ntargets. Special considerations\nPediatric considerations."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "kdigo_p98_c01",
+        "fused_score": 0.01531469,
+        "cosine_rank": 5,
+        "bm25_rank": 6,
+        "cosine_sim": 0.807954,
+        "bm25_score": 12.950777,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.6 Renin-angiotensin system inhibitors",
+        "page_number": 98,
+        "page_range": [
+          98,
+          98
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "the BP guideline (the previous guideline suggested a target\n<90th percentile). Although office BP may be higher than\nBP measured by ABPM, this is not universally the case. Given the evidence that intensive BP control may slow CKD\nprogression together with the very low risk of adverse\neffects of intensive BP lowering in children,228 we consider\nthat more intensive BP lowering targeting around the 50th\npercentile is reasonable. However, a target even lower than\nthe 50th percentile has not been shown to offer additional\nbenefits. Recent trial data found that using a target of office\nauscultatory SBP at 50th to 75th percentile versus intensive\ncontrol to below the 40th percentile did not result in\nsignificant differences in left ventricular mass index.229\n3.5 Glycemic control\nPlease refer to the KDIGO 2022 Clinical Practice Guideline\nfor Diabetes Management in Chronic Kidney Disease for\nspecific recommendations, practice points, and research\nrecommendations. 3.6 Renin-angiotensin system inhibitors\nThe Work Group highlights recommendations from the\nKDIGO 2021 Clinical Practice Guideline for the Management\nof Blood Pressure in Chronic Kidney Disease and selected\npractice points for treatment with RASi from the KDIGO 2021\nClinical Practice Guideline for the Management of Blood\nPressure in Chronic Kidney Disease21 and the KDIGO 2022\nClinical Practice Guideline for Diabetes Management in\nChronic Kidney Disease.23 The Work Group considers\nseveral recommendations to apply even in the absence of\nhigh BP and has adapted the recommendations from the BP\nguideline to remove this requirement. Key recommendations\nand practice points are highlighted:\nRecommendation 3.6.1: We recommend starting\nrenin-angiotensin-system inhibitors (RASi) (angiotensin-converting enzyme inhibitor [ACEi] or\nangiotensin II receptor blocker [ARB]) for people\nwith CKD and severely increased albuminuria (G1–\nG4, A3) without diabetes (1B). Recommendation 3.6.2:We suggeststartingRASi (ACEi\nor ARB) for people with CKD and moderately increased\nalbuminuria (G1–G4, A2) without diabetes (2C). Recommendation 3.6.3: We recommend starting\nRASi (ACEi or ARB) for people with CKD and\nmoderately-to-severely increased albuminuria\n(G1–G4, A2 and A3) with diabetes (1B)."
+      }
+    ]
+  },
+  {
+    "query_id": "q09",
+    "query": "How should serum potassium be monitored when treating with finerenone (a nonsteroidal MRA)?",
+    "expected_chunk_ids": [
+      "kdigo_p104_c05",
+      "kdigo_p104_c06",
+      "kdigo_dm_p49_c04",
+      "kdigo_dm_p49_c08"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "kdigo_dm_p49_c16",
+        "fused_score": 0.01623731,
+        "cosine_rank": 1,
+        "bm25_rank": 3,
+        "cosine_sim": 0.886703,
+        "bm25_score": 25.100372,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "1.4 Mineralocorticoid receptor antagonists (MRA)",
+        "page_number": 49,
+        "page_range": [
+          49,
+          53
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "Finerenone\nwas\ncontinued\nwith\nserum\npotassium #5.5 mmol/l.\n\nWith serum potassium >5.5 mmol/\nl, the drug was temporarily withheld and serum potassium\nwas rechecked within 72 hours. Use of dietary potassium\nrestriction and concomitant medications, such as diuretics\nand dietary potassium binders, was allowed, and the drug was\nreinitiated if and when potassium returned to #5.0 mmol/l. Clinicians should follow a similar approach to selecting and\nmonitoring patients for nonsteroidal MRA therapy, increasing\nthe likelihood that the acceptable adverse-event profile seen in\nthe FIDELIO-DKD and FIGARO-DKD trials is maintained\nwhen applied to clinical practice (Figure 9). K+\nK\nl/l\no\nm\nm\n 8.4\n≤\n\n+ 4.9–5.5 mmol/l\nK+ >5.5 mmol/l\n  - 10 mg daily if eGFR 25–59 ml/min per 1.73 m2\n  - 20 mg daily if eGFR ≥60 ml/min per 1.73 m2\n• Monitor K+ at 1 month after initiation and then every 4\n  months\n• Increase dose to 20 mg daily, if on 10 mg daily\n• Restart 10 mg daily if previously held for hyperkalemia and\n  K+ now ≤5.0 mmol/l\n• Monitor K+ every 4 months\n• Consider adjustments to diet or concomitant\n  medications to mitigate hyperkalemia\n• Recheck K+\n• Consider reinitiation if/when K+ ≤5.0 mmol/l\nFigure 9 | Serum potassium monitoring during treatment with finerenone. Adapted from the protocols of Finerenone in Reducing Kidney\nFailure and Disease Progression in Diabetic Kidney Disease (FIDELIO-DKD) and Finerenone in Reducing Cardiovascular Mortality and Morbidity\nin Diabetic Kidney Disease (FIGARO-DKD). The United States Food and Drug Administration (FDA) has approved initiation of Kþ <5.0 mmol/l.\nThis figure is guided by trial design and the FDA label and may be different in other countries. Serum creatinine/estimated glomerular filtration\nrate (eGFR) should be monitored concurrently with serum potassium.\nchapter 1"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "kdigo_dm_p49_c13",
+        "fused_score": 0.01620836,
+        "cosine_rank": 2,
+        "bm25_rank": 1,
+        "cosine_sim": 0.883889,
+        "bm25_score": 25.635594,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "1.4 Mineralocorticoid receptor antagonists (MRA)",
+        "page_number": 49,
+        "page_range": [
+          49,
+          53
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "Treatment should not be initiated if serum potassium is\nelevated (4.8 mmol/l was the threshold at screening in the\nfinerenone trials, but per FDA label, serum potassium should\nnot be >5 mmol/l).\n\nMost incidents of hyperkalemia can be\nmanaged with treatment pauses of 72 hours, as the drug has a\nshort half-life, and if needed, general procedures to manage\npotassium can be applied as described in Practice Point 1.4.3. On average, there was only a small reduction in systolic\nblood pressure (3 mm Hg) with finerenone compared to\nplacebo, and no effect on HbA1c, no increase in hypo- or\nhyperglycemia, and no sexual side effects due to the specificity\nfor the MRA.162,164 Beneficial effects of finerenone were\nsimilar (no significant heterogeneity) among participants who\nwere also treated with SGLT2i or GLP-1 RA at baseline, and\nthere is potentially a lower risk of hyperkalemia when finerenone is combined with an SGLT2i.165 This suggests that\nagents could be combined, but randomized studies have not\nexplicitly tested whether the benefits of these different agents\nare additive. Steroidal and nonsteroidal MRA should not be\ncombined due to risk of hyperkalemia. Steroidal MRA are currently contraindicated in pregnancy. For nonsteroidal MRA, there is no experience with pregnancy,\nso women who are planning for pregnancy or who become\npregnant on treatment should have the drug discontinued. Rationale\nAdding an MRA to current standard of care, including ACEi\nor ARB treatment, has been proven to be an effective strategy\nto reduce albuminuria in patients with diabetes and CKD. The steroidal MRA, spironolactone and eplerenone, have\nbeen shown to effectively reduce albuminuria, but data\ndemonstrating that these MRA reduce the risk of clinical\noutcomes are not available. The more recently developed\nnonsteroidal MRA, finerenone and esaxerenone, also reduce\nalbuminuria, and finerenone reduced the risk of kidney and\ncardiovascular outcomes in 2 pivotal outcome trials. Practice Point 1.4.1: Nonsteroidal MRA are most appropriate\nfor patients with T2D who are at high risk of CKD progression\nand cardiovascular events, as demonstrated by persistent\nalbuminuria despite other standard-of-care therapies.\nchapter 1"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "kdigo_p104_c06",
+        "fused_score": 0.0157265,
+        "cosine_rank": 3,
+        "bm25_rank": 5,
+        "cosine_sim": 0.8659,
+        "bm25_score": 24.326388,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.8 Mineralocorticoid receptor antagonists (MRA)",
+        "page_number": 104,
+        "page_range": [
+          104,
+          105
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "Practice\nGuideline\nfor\nDiabetes Management in Chronic Kidney Disease.23\nTrials assessing the effect of combining an SGLT2i and\nfinerenone compared with either alone are ongoing (ClinicalTrials.gov Identifier: NCT05254002).\n\nAdequately powered, large-scale, clinical outcome, placebo-controlled trials\nof steroidal and ns-MRAs have not been conducted in\npeople with causes of CKD not related to diabetes, but are\nongoing.537\nK+ ≤4.8 mmol/l\nK+ 4.9–5.5 mmol/l\nK+ >5.5 mmol/l\n• Initiate finerenone\n  - 10 mg daily if eGFR 25–59 ml/min/1.73 m2\n  - 20 mg daily if eGFR ≥60 ml/min/1.73 m2\n• Monitor K+ at 1 month after initiation and then every 4\n  months\n• Increase dose to 20 mg daily, if on 10 mg daily\n• Restart 10 mg daily if previously held for hyperkalemia and\n  K+ now ≤5.0 mmol/l\n• Continue finerenone 10 mg or 20 mg\n• Monitor K+ every 4 months\n• Hold finerenone\n• Consider adjustments to diet or concomitant\n  medications to mitigate hyperkalemia\n• Recheck K+\n• Consider reinitiation if/when K+ ≤5.0 mmol/l\nFigure 26 | Serum potassium monitoring during treatment with a nonsteroidal mineralocorticoid receptor antagonist (MRA)\n(finerenone). Adapted from the protocols of Finerenone in Reducing Kidney Failure and Disease Progression in Diabetic Kidney Disease (FIDELIODKD) and Finerenone in Reducing Cardiovascular Mortality and Morbidity in Diabetic Kidney Disease (FIGARO-DKD). The Work Group considers\nthese potassium thresholds to be conservative, and it may be considered appropriate to continue MRAs in people with potassium of 5.5–6.0 mmol/\nl. This algorithm could be used for steroidal MRA. The US Food and Drug Administration (FDA) has approved initiation of Kþ < 5.0 mmol/l. This\nfigure is guided by trial design and the FDA label and may be different in other countries. Serum creatinine/estimated glomerular filtration rate\n(eGFR) should be monitored concurrently with serum potassium. Reproduced from Kidney Disease: Improving Global Outcomes Diabetes Work\nGroup. KDIGO 2022 Clinical Practice Guideline for Diabetes Management in Chronic Kidney Disease. Kidney Int. 2022;102:S1–S127.23\nchapter 3"
+      },
+      {
+        "rank": 4,
+        "chunk_id": "kdigo_dm_p49_c12",
+        "fused_score": 0.01560794,
+        "cosine_rank": 5,
+        "bm25_rank": 2,
+        "cosine_sim": 0.834235,
+        "bm25_score": 25.428165,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "1.4 Mineralocorticoid receptor antagonists (MRA)",
+        "page_number": 49,
+        "page_range": [
+          49,
+          53
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "mg/mmol]), which represent a larger proportion of\npeople with T2D with increased CVD risk but at lower risk of\nCKD progression.176–178 The relative and absolute benefits of a\nnonsteroidal MRA are less clear for this subpopulation.\n\nSome\npatients who meet current serum potassium eligibility criteria\nfor a nonsteroidal MRA (Practice Point 1.4.3) but have a\nhistory of severe hyperkalemia or highly variable serum potassium may choose to avoid the added risk of hyperkalemia. Regulatory approvals for nonsteroidal MRA are recent or\npending, and limited data are currently available to confirm\nthe benefits and risks of this class of drugs in routine clinical\npractice. Only finerenone has been rigorously evaluated with\nregard to clinical outcomes. Cost may pose a barrier for some\npatients, particularly when used in combination with other\nindicated medications, and formal cost-effectiveness evaluations are not yet available. Resource use and costs. At the time of writing, nonsteroidal\nMRA are not yet available in many countries and the process\nof seeking registration with regulatory bodies is underway. Consequently, the cost of these drugs has yet to be determined, but it is very likely that as novel therapeutic agents,\nthey will be priced significantly higher than generic medications. The costs of nonsteroidal MRA may be prohibitive, and\ntherefore their use may have a lower priority in low-resource\nsettings, where efforts will be made to optimize the use of less\nexpensive drugs. Monitoring of potassium during treatment is\nalready indicated for patients with CKD treated with an ACEi\nor ARB; an increased rate of hyperkalemia may lead to higher\nhealthcare costs due to more frequent patient visits. Considerations for implementation. Nonsteroidal MRA have\nbeen most rigorously tested in patients with CKD and T2D\nwith residual cardiorenal risk, as evidenced by albuminuria\n(≥30 mg/g [≥3 mg/mmol]) despite treatment with standard\nof care, including maximal tolerated RAS blockade, and are\ntherefore recommended for this population. So far, only\nfinerenone has demonstrated clinical cardiovascular and\nkidney benefits. Nonsteroidal MRA can cause hyperkalemia,\nand treatment dose and monitoring should be in accordance\nwith the clinical trials, as described in Practice Point 1.4.3. Treatment should not be initiated if serum potassium is\nelevated (4.8 mmol/l was the threshold at screening in the\nfinerenone trials, but per FDA label, serum potassium should\nnot be >5 mmol/l)."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "kdigo_dm_p49_c15",
+        "fused_score": 0.01529356,
+        "cosine_rank": 6,
+        "bm25_rank": 4,
+        "cosine_sim": 0.822979,
+        "bm25_score": 24.911907,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "1.4 Mineralocorticoid receptor antagonists (MRA)",
+        "page_number": 49,
+        "page_range": [
+          49,
+          53
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "SGLT2i were not standard of care when the\nFIDELIO-DKD and FIGARO-DKD trials were initiated.\n\nHowever, 877 participants were using an SGLT2i at baseline,\nand the cardiovascular effects of finerenone, compared with\nplacebo, appeared to be at least as beneficial among people\nusing versus not using an SGLT2i.165 It is also possible that\nSGLT2i may reduce the risk of hyperkalemia for patients\ntreated\nconcomitantly\nwith\na\nRASi\nand\nnonsteroidal\nMRA.165\nThese\ndata,\ncombined\nwith\ncomplementary\nmechanisms of action, suggest that the benefits of SGLT2i\nand finerenone may be additive. Therefore, patients with\nT2D and CKD who are treated with both a RASi and an\nSGLT2i and meet criteria for finerenone (including residual\nalbuminuria and normal serum potassium) are appropriate\ncandidates for treatment with finerenone (Figure 2). In\naddition, finerenone may be added to a RASi alone for patients who do not tolerate or are not candidates for an\nSGLT2i.163\nPractice Point 1.4.3: To mitigate risk of hyperkalemia,\nselect patients with consistently normal serum potassium\nconcentration and monitor serum potassium regularly after initiation of a nonsteroidal MRA. MRA are known to increase serum potassium concentration and risk of hyperkalemia. To mitigate this risk, the\nFIDELIO-DKD and FIGARO-DKD trials restricted eligibility\nto patients with normal serum potassium concentration (after\nmaximizing\nRASi)\nand\nimplemented\na\nstandardized\npotassium-monitoring protocol. These approaches yielded\nacceptable rates of hyperkalemia with few attributable serious\nadverse events. Specifically, the FIDELIO-DKD and FIGARODKD trial protocols mandated a serum potassium concentration consistently #4.8 mmol/l during screening. While\nsome participants had a slightly higher serum potassium of\n4.9–5.0 mmol/l at randomization, selection was primarily\nbased on a concentration #4.8 mmol/l, and patient selection\nin clinical practice should focus on patients who consistently\nmeet this target. In the FIDELIO-DKD and FIGARO-DKD\ntrials, serum potassium was checked 1 month after drug\ninitiation, 4 months after drug initiation, and every 4 months\nthereafter. Finerenone\nwas\ncontinued\nwith\nserum\npotassium #5.5 mmol/l."
+      }
+    ]
+  },
+  {
+    "query_id": "q10",
+    "query": "Which drug class is first-line for a patient with CKD, hypertension, and proteinuria?",
+    "expected_chunk_ids": [
+      "nice_p23_c04",
+      "kdigo_p98_c01",
+      "kdigo_p98_c02"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "kdigo_p91_c02",
+        "fused_score": 0.01609079,
+        "cosine_rank": 1,
+        "bm25_rank": 5,
+        "cosine_sim": 0.737713,
+        "bm25_score": 14.162865,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.2.1 Avoiding use of tobacco products",
+        "page_number": 91,
+        "page_range": [
+          91,
+          91
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "the\nKDIGO\n2021\nClinical\nPractice\nGuideline\nfor\nthe\nManagement of Blood Pressure in Chronic Kidney Disease21\nand KDIGO 2022 Clinical Practice Guideline for Diabetes\nManagement in Chronic Kidney Disease23 for full details.\n\nHealthy diet\nWeight management\nStop use of\ntobacco products\nPhysical activity\nSGLT2i\ncontinue until dialysis\nor transplant\nAim for SBP <120 mm Hg \nRAS inhibitor* at maximum \ntolerated dose (if HTN)\nStatin-based therapy\nmoderate- or\nhigh-intensity statin\nManage hyperglycemia\nas per the KDIGO\nDiabetes Guideline,\nincluding use of\nGLP-1 RA where indicated\nUse ns-MRA in\npeople with diabetes\nand an indication\nfor use\nDihydropyridine CCB\nand/or diuretic if\nneeded to achieve\nindividualized\nBP target\nAntiplatelet\nagent for\nclinical ASCVD\nASCVD risk, lipids\nBP\nLifestyle\nFirst-line\ndrug therapy for\nmost patients\n+\nTargeted therapies\nfor complications\nSteroidal MRA if needed\nfor resistant hypertension\nif eGFR ≥45\nEzetimibe, PCSK9i\nindicated based on\nASCVD risk and lipids\nManage anemia,\nCKD-MBD, acidosis,\nand potassium\nabnormalities,\nwhere indicated\nUse the same principles\nto diagnose and manage\nASCVD and atrial fibrillation\nas in people without CKD\nRegular\nrisk factor\nreassessment\n(every 3–6\nmonths)\nFigure 18 | Holistic approach to chronic kidney disease (CKD) treatment and risk modification. *Angiotensin-converting enzyme inhibitor\nor angiotensin II receptor blocker should be first-line therapy for blood pressure (BP) control when albuminuria is present; otherwise\ndihydropyridine calcium channel blocker (CCB) or diuretic can also be considered. All 3 classes are often needed to attain BP targets. Icons\npresented indicate the following benefits: blood pressure cuff ¼ blood pressure–lowering; glucometer ¼ glucose-lowering; heart ¼ heart\nprotection; kidney ¼ kidney protection; scale ¼ weight management."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "kdigo_dm_p30_c08",
+        "fused_score": 0.01579861,
+        "cosine_rank": 3,
+        "bm25_rank": 4,
+        "cosine_sim": 0.735948,
+        "bm25_score": 14.298927,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "1.1 Comprehensive diabetes and CKD management",
+        "page_number": 30,
+        "page_range": [
+          30,
+          32
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "of new therapies and multifactorial intervention should be tested in broader populations with CKD and\ndiabetes including T1D, dialysis, and kidney transplant\ntreated patients.\n\u0003 Studies should be initiated to evaluate the concept of precision medicine in diabetes and CKD.\n\nShould all patients\nreceive the same management/treatment approach to\ncomprehensive care, or should it be tailored based on the\nindividual CKD/diabetes type and risk profile?\nt\nn\ne\nm\ne\ng\na\nn\na\nm\nt\nh\ng\nie\nW\nt\nei\nd\ny\nh\ntla\ne\nH\nSmoking cessation\nPhysical activity\nMetformin\n(if eGFR ≥30)\nSGLT2i\n(Initiate eGFR ≥20;\ncontinue until dialysis\nor transplant)\nRAS inhibitor at maximum\ntolerated dose (if HTN*)\nModerate- or\nhigh-intensity statin\nGLP-1 RA if needed to\nachieve individualized\nglycemic target\nNonsteroidal MRA† if \nACR ≥30 mg/g\n[≥3 mg/mmol]\nand normal potassium\nDihydropyridine CCB\nand/or diuretic* if\nneeded to achieve\nindividualized\nBP target\nAntiplatelet\nagent for\nclinical ASCVD\nLifestyle\nFirst-line\ndrug therapy\nAdditional\nrisk-based\ntherapy\nOther glucose-lowering\ndrugs if needed to\nachieve individualized\nglycemic target\nSteroidal MRA if\nneeded for resistant\nhypertension\nif eGFR ≥45\nEzetimibe, PCSK9i,\nor icosapent ethyl if\nindicated based on\nASCVD risk and lipids\nRegular\nrisk factor\nreassessment\n(every 3–6\nmonths)\nT2D only\nAll patients\n(T1D and T2D)\nRegular reassessment\nof glycemia, albuminuria,\nBP, CVD risk, and lipids\nFigure 2 | Holistic approach for improving outcomes in patients with diabetes and chronic kidney disease. *Angiotensin-converting\nezyme inhibitor (ACEi) or angiotensin II receptor blocker (ARB) should be first-line therapy for hypertension (HTN) when albuminuria is present,\notherwise dihydropyridine calcium channel blocker (CCB) or diuretic can also be considered; all 3 classes are often needed to attain blood\npressure (BP) targets. †Finerenone is currently the only nonsteroidal mineralocorticoid receptor antagonist (MRA) with proven clinical kidney\nand cardiovascular benefits."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "nice_p23_c04",
+        "fused_score": 0.01529032,
+        "cosine_rank": 2,
+        "bm25_rank": 15,
+        "cosine_sim": 0.736103,
+        "bm25_score": 10.555701,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "1.6 Pharmacotherapy",
+        "page_number": 23,
+        "page_range": [
+          23,
+          28
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "young people with CKD and diabetes (type 1 or 2), offer an ARB \nor an ACE inhibitor (titrated to the highest licensed dose that they can tolerate) if \nACR is 3 mg/mmol or more. [2021]\n\n1.6.11 \nFor children and young people with CKD but without diabetes: \n• offer an ARB or an ACE inhibitor if ACR (titrated to the highest licensed dose \nthat they can tolerate) is 70 mg/mol or more \n• monitor in line with recommendations 1.3.1 and 1.3.4 if ACR is above 30 but \nbelow 70 mg/mmol; consider discussing with a nephrologist if eGFR declines \nor ACR increases. [2021] \nMedicines optimisation \n1.6.12 \nWhen offering medicines to lower proteinuria to people with frailty or \ncomorbidities, or who are taking many other prescribed medicines, follow the \nrecommendations in NICE's guideline on medicines optimisation to ensure the \nbest possible outcomes. Seek specialist advice if needed, for example from a \nconsultant in care of the elderly, or from a kidney physician if the person asks \nabout contraception. [2021] \nFor a short explanation of why the committee made the 2021 recommendations and \nhow they might affect practice, see the rationale and impact section on \npharmacotherapy for proteinuria and choice of antihypertensive agent. \nFull details of the evidence and the committee's discussion are in evidence review H: \ninterventions to lower proteinuria. \nRenin–angiotensin system antagonists for adults \n1.6.13 \nDo not offer a combination of renin–angiotensin system antagonists to adults with \nCKD. [2014] \n1.6.14 \nExplain to adults with CKD (and their family members or carers, as appropriate) \nwho are prescribed renin–angiotensin system antagonists about the importance \nof: \n• achieving the optimal tolerated dose of renin–angiotensin system antagonists \nand"
+      },
+      {
+        "rank": 4,
+        "chunk_id": "kdigo_dm_p30_c05",
+        "fused_score": 0.01506296,
+        "cosine_rank": 9,
+        "bm25_rank": 1,
+        "cosine_sim": 0.72293,
+        "bm25_score": 15.650689,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "1.1 Comprehensive diabetes and CKD management",
+        "page_number": 30,
+        "page_range": [
+          30,
+          32
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "However, this\nguideline defers pharmacologic glucose-lowering treatment of\nT1D, based on insulin, to existing guidelines from diabetes\norganizations.\n\nSimilarly, the Work Group addressed care for\npatients with all severities of CKD, patients with a kidney\nLifestyle\nand selfmanagement\nAdditional\ndrugs with\nheart and\nkidney\nprotection\nFirst-line\ndrug\ntherapy\nLipid management\nBlood\npressure control\nStatin\nGlycemic\ncontrol\nSGLT2 inhibitor\n(T2D)\nRAS blockade\n(HTN)\nMetformin\n(T2D)\nDiet\nAdditional\nrisk factor\ncontrol\nDiabetes with CKD\nAntiplatelet therapies\n(ASCVD)\nns-MRA\n(T2D)\nGLP-1 RA\n(T2D)\nSmoking cessation\nWeight\nExercise\nRegular\nrisk factor\nreassessment\n(every 3–6\nmonths)\nFigure 1 | Kidney–heart risk factor management. People with diabetes and chronic kidney disease (CKD) should be treated with a\ncomprehensive approach to improve kidney and cardiovascular outcomes. This approach should include a foundation of lifestyle modification\nand self-management for all patients, upon which are layered first-line drug therapies according to clinical characteristics (in parentheses),\nadditional drugs with proven kidney and heart protection as guided by assessments of residual risk, and additional interventions as needed to\nfurther control risk factors. Glycemic control is based on insulin for type 1 diabetes (T1D) and a combination of metformin and sodium–glucose\ncotransporter-2 inhibitors (SGLT2i) for type 2 diabetes (T2D). Metformin may be given when estimated glomerular filtration rate (eGFR)\n≥30 ml/min per 1.73 m2, and SGLT2i should be initiated when eGFR is ≥20 ml/min per 1.73 m2 and continued as tolerated, until dialysis or\ntransplantation is initiated. Renin–angiotensin system (RAS) inhibition is recommended for patients with albuminuria and hypertension (HTN). A statin is recommended for all patients with T1D or T2D and CKD. Glucagon-like peptide-1 receptor agonists (GLP-1 RA) are preferred glucoselowering drugs for people T2D if SGLT2i and metformin are insufficient to meet glycemic targets or if they are unable to use SGLT2i or\nmetformin."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "kdigo_dm_p49_c14",
+        "fused_score": 0.01397243,
+        "cosine_rank": 16,
+        "bm25_rank": 3,
+        "cosine_sim": 0.718023,
+        "bm25_score": 14.519977,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "1.4 Mineralocorticoid receptor antagonists (MRA)",
+        "page_number": 49,
+        "page_range": [
+          49,
+          53
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "Point 1.4.1: Nonsteroidal MRA are most appropriate\nfor patients with T2D who are at high risk of CKD progression\nand cardiovascular events, as demonstrated by persistent\nalbuminuria despite other standard-of-care therapies.\nchapter 1\n\nThe FIDELIO-DKD and FIGARO-DKD trials enrolled\npeople with T2D and CKD who were treated with standard of\ncare at the time the trials were initiated, which included a RASi\nand appropriate medications to control glycemia and blood\npressure.162,164 Importantly, eligibility required that participants have albuminuria (ACR ≥30 mg/g [≥3 mg/mmol])\ndespite these standard interventions. Patients with T2D and\nalbuminuria are known to be at high risk of CKD progression\nand cardiovascular events, and the FIDELIO-DKD and\nFIGARO-DKD trials demonstrated that finerenone reduced\nthese events (particularly CKD progression and heart failure)\namong such patients. Therefore, the most logical application of\nfinerenone is to patients with high residual risks of CKD\nprogression and cardiovascular events, as evidenced by the\npresence of albuminuria (ACR ≥30 mg/g [≥3 mg/mmol])\ndespite lifestyle modifications and first-line drug therapies. Practice Point 1.4.2. A nonsteroidal MRA can be added to a\nRASi and an SGLT2i for treatment of T2D and CKD. This guideline issues a strong recommendation for use of\nan SGLT2i in the treatment of people with T2D and CKD,\npositioning SGLT2i as first-line drug therapy to prevent\nCKD progression and cardiovascular events regardless of\nglycemia (Figures 1 and 2). This recommendation is based\non numerous clinical trials that now provide strong evidence\nof efficacy and safety (see Balance of benefits and harms\nsection of Recommendation 1.3.1) and applies to most patients with T2D and CKD for whom a nonsteroidal MRA is\nalso suggested. SGLT2i were not standard of care when the\nFIDELIO-DKD and FIGARO-DKD trials were initiated."
+      }
+    ]
+  },
+  {
+    "query_id": "q11",
+    "query": "Can metformin be used in a patient with CKD, and down to what eGFR?",
+    "expected_chunk_ids": [
+      "kdigo_dm_p78_c03"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "kdigo_dm_p78_c03",
+        "fused_score": 0.01623731,
+        "cosine_rank": 1,
+        "bm25_rank": 3,
+        "cosine_sim": 0.835069,
+        "bm25_score": 12.211871,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "4.1 Metformin",
+        "page_number": 78,
+        "page_range": [
+          78,
+          81
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "1.73 m2,346 and their benefits of reducing albuminuria and slowing eGFR decline (see Section 4.3).346,347 Other\nclasses of glucose-lowering agents may also be used, considering the patient factors detailed in Figure 25.\n\nDPP-4 inhibitors lower blood glucose with low risk of hypoglycemia\nbut have not been shown to improve kidney or cardiovascular\noutcomes and should not be used in combination with GLP-1\nRA.348 All glucose-lowering medications should be selected\nand dosed according to eGFR.349 For example, sulfonylureas\nthat are long-acting or cleared by the kidney should be\navoided at low eGFRs.349\n4.1 Metformin\nRecommendation 4.1.1: We recommend treating\npatients with T2D, CKD, and an eGFR ≥30 ml/min\nper 1.73 m2 with metformin (1B). This recommendation places a high value on the efficacy of\nmetformin in lowering HbA1c level, its widespread availability\nand low cost, its good safety profile, and its potential benefits in\nweight gain prevention and cardiovascular protection. The\nrecommendation places a low value on the lack of evidence that\nmetformin has any kidney protective effects or mortality benefits\nin the CKD population. Key information\nBalance of benefits and harms. Metformin is an effective\nantiglycemic agent and has been shown to be effective in\nreducing HbA1c in patients with T2D, with low risks for\nhypoglycemia in both the general population and patients\nwith CKD."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "kdigo_dm_p76_c02",
+        "fused_score": 0.01620836,
+        "cosine_rank": 2,
+        "bm25_rank": 1,
+        "cosine_sim": 0.828558,
+        "bm25_score": 13.158048,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "Chapter 4: Glucose-lowering therapies in patients",
+        "page_number": 76,
+        "page_range": [
+          76,
+          77
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "Practice Point 4.2: Most patients with T2D, CKD, and\neGFR ≥30 ml/min per 1.73 m2 would benefit from treatment with both metformin and an SGLT2i.\n\nBoth metformin (see Section 4.1) and SGLT2i agents (see\nSection 1.3) are preferred glucose-lowering medications for\npatients with T2D, CKD, and suitable eGFR. Metformin and\nSGLT2i each reduce the risk of developing diabetes complications with a low risk of hypoglycemia. Metformin has been\nproven to be a safe, effective, and inexpensive foundation for\nglycemic control in T2D, with modest long-term benefits for\nthe prevention of diabetes complications. In comparison,\nSGLT2i have weaker effects on HbA1c, particularly with an\neGFR <60 ml/min per 1.73 m2, but they have large effects on\nreducing CKD progression and CVD events, especially heart\nfailure, which appear to be independent of eGFR.92,97\nIn most patients with T2D, CKD, and an eGFR ≥30 ml/\nmin per 1.73 m2, metformin and an SGLT2i can be used safely\nand effectively together. Metformin should not be used for\nGLP-1 receptor agonist\n(preferred)\nDPP-4 inhibitor\nInsulin\nSulfonylurea\nTZD\nAlpha-glucosidase inhibitor\nFirst-line therapy\nLifestyle therapy\nAdditional drug therapy as\nneeded for glycemic control\n• Guided by patient preferences, comorbidities,\n  eGFR, and cost\n• Includes patients with eGFR < 30 ml/min per\n  1.73 m2 or treated with dialysis\n• See Figure 25\nPhysical activity\nNutrition\nWeight loss\nSGLT2 inhibitor\nMetformin\n+\nDiscontinue\nDiscontinue\nReduce dose\nDiscontinue\nDo not initiate\neGFR\n< 45\neGFR\n< 30\nsis\nylai\nD\nsis\nylai\nD\neGFR\n< 20\nFigure 23 | Treatment algorithm for selecting glucose-lowering drugs for patients with type 2 diabetes (T2D) and chronic kidney\ndisease (CKD). Kidney icon indicates estimated glomerular filtration rate (eGFR; ml/min per 1.73 m2); dialysis machine icon indicates dialysis."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "kdigo_dm_p78_c02",
+        "fused_score": 0.01560794,
+        "cosine_rank": 5,
+        "bm25_rank": 2,
+        "cosine_sim": 0.815924,
+        "bm25_score": 12.47871,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "4.1 Metformin",
+        "page_number": 78,
+        "page_range": [
+          78,
+          81
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "For\npatients who have little or no need for pharmacologic agents\nto control glycemia, or who cannot tolerate metformin,\ntreatment with an SGLT2i alone is reasonable in order to\nreduce risks of CKD progression and CVD events.\n\nMetformin should be initiated in patients with T2D and an\neGFR ≥30 ml/min per 1.73 m2 and should be discontinued\nwhen eGFR falls below 30 ml/min per 1.73 m2 to reduce risk\nof lactic acidosis (Figure 23; Sections 1.3 and 4.1).143 SGLT2i\ncan be initiated for patients with an eGFR ≥20 ml/min per\n1.73 m2 (see Section 1.3). For patients whose eGFR subsequently declines below these initiation thresholds, the SGLT2i\ncan be continued until initiation of kidney replacement\ntherapy, in accordance with the approach studied in the\nCREDENCE and DAPA-CKD trials.93,94\nPractice Point 4.3: Patient preferences, comorbidities,\neGFR, and cost should guide selection of additional drugs\nto manage glycemia, when needed, with glucagon-like\npeptide-1 receptor agonist (GLP-1 RA) generally preferred\n(Figure 25). Some patients with T2D will not achieve glycemic targets\nwith lifestyle therapy, metformin, and SGLT2i, or they will\nnot be able to use these interventions due to intolerances, low\neGFR, or other restrictions. Glucose-lowering agents other\nthan metformin and SGLT2i will likely be needed in these\nsituations. GLP-1 RA are generally preferred because of their\ndemonstrated cardiovascular benefits, particularly among\npatients with established ASCVD even with eGFR <60 ml/\nmin per 1.73 m2,346 and their benefits of reducing albuminuria and slowing eGFR decline (see Section 4.3).346,347 Other\nclasses of glucose-lowering agents may also be used, considering the patient factors detailed in Figure 25."
+      },
+      {
+        "rank": 4,
+        "chunk_id": "kdigo_dm_p78_c08",
+        "fused_score": 0.0152207,
+        "cosine_rank": 3,
+        "bm25_rank": 13,
+        "cosine_sim": 0.818271,
+        "bm25_score": 10.401275,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "4.1 Metformin",
+        "page_number": 78,
+        "page_range": [
+          78,
+          81
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "ptidase-4 inhibitor; eGFR, estimated glomerular filtration rate; GLP1RA, glucagon-like\npeptide-1 receptor agonist; SU, sulfonylurea; TZD, thiazolidinedione.\nchapter 4\n\ngeneral population. The systematic review did not demonstrate any advantage of metformin over sulfonylureas in terms\nof all-cause mortality or microvascular complications.352\nThere was even a suggestion in the UKPDS that early addition of metformin in sulfonylurea-treated patients was associated with an increased risk of diabetes-related death of 96%\n(95% CI: 2%–275%, P ¼ 0.039).245\nMetformin is not metabolized and is excreted unchanged\nin the urine, with a half-life of about 5 hours.354 Phenformin,\nwhich was a related biguanide, was withdrawn from the\nmarket in 1977 because of its association with lactic acidosis. Consequently, the FDA applied a boxed warning to metformin, cautioning against its use in CKD in which the drug\nexcretion may be impaired, thereby increasing the risk of\nlactic acid accumulation.355 However, the association between\nmetformin and lactic acidosis had been inconsistent, with\nliterature reviews even refuting this concern,356 including in\npatients with an eGFR of 30–60 ml/min per 1.73 m2.357\nConsequently, the FDA revised its warning regarding metformin\nuse\nin patients with\nCKD, switching\nfrom a\ncreatinine-based restriction to include eligible patients with\nmoderate CKD and an eGFR ≥30 ml/min per 1.73 m2.358\nAlthough the effect of heart protection with metformin\nuse is studied mainly in the general population, evidence of\nthis benefit in patients with CKD, especially those with\nreduced eGFR, is less consistent. A systematic review\nconsidered the association of all-cause mortality and MACE\nwith treatment regimens that included metformin in patient\npopulations for which metformin use is traditionally taken\nwith precautions.359 There were no RCTs, and only observational studies were included in the analysis of the CKD\ncohort. All-cause mortality was found to be 22% lower for\npatients\non\nmetformin\ntreatment\nthan\nfor\nthose\nnot\nreceiving it (HR: 0.78; 95% CI: 0.63–0.96), whereas there\nwas no difference in MACE-related diagnoses with metformin use in 1 study."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "kdigo_dm_p78_c01",
+        "fused_score": 0.01499322,
+        "cosine_rank": 7,
+        "bm25_rank": 6,
+        "cosine_sim": 0.812746,
+        "bm25_score": 11.166656,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "4.1 Metformin",
+        "page_number": 78,
+        "page_range": [
+          78,
+          81
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "eGFR <30 ml/min per 1.73 m2, whereas SGLT2i can be used\nfor patients with eGFR as low as 20 ml/min per 1.73 m2 for\nthe cardiovascular and kidney benefits as part of comprehensive care of patients with CKD. The majority of the participants in the SGLT2i cardiovascular outcome trials were\nalso treated with metformin, and many patients with T2D\nrequire more than 1 glucose-lowering medication to meet\nglycemic targets. The combination of metformin and an\nSGLT2i is logical because they have different mechanisms of\naction, and neither carries increased risk of hypoglycemia. Even when glycemic targets are achieved on metformin, an\nSGLT2i should be added in these patients for the beneficial\neffect on CKD progression and CVD risk (see Section 1.3). For patients with T2D, CKD, and an eGFR ≥30 ml/min\nper 1.73 m2 not currently treated with glucose-lowering drugs\n(i.e., “drug naïve” patients), there are no high-quality data\ncomparing initiation of glucose-lowering therapy with metformin first versus an SGLT2i first. Given the historical role of\nmetformin as the initial drug treatment for T2D, and the fact\nthat most patients in cardiovascular outcome trials treated\nwith SGLT2i were first treated with metformin, it is logical to\ninitiate metformin first for most patients, with the anticipation that SGLT2i should be added soon after. When\nsequencing multiple beneficial therapies, it is critical to ensure\ntimely follow-up and institution of step-wise plans, avoiding\ntreatment inertia (see Chapter 1). Initial combination therapy\nis also a reasonable option when education and monitoring\nfor multiple potential adverse effects are feasible. Using low\ndoses of both an SGLT2i and metformin may be a practical\napproach to managing glycemia, delivering the kidney and\nheart protection benefits of an SGLT2i (which do not appear\nto be dose dependent), and minimizing drug exposure. For\npatients who have little or no need for pharmacologic agents\nto control glycemia, or who cannot tolerate metformin,\ntreatment with an SGLT2i alone is reasonable in order to\nreduce risks of CKD progression and CVD events."
+      }
+    ]
+  },
+  {
+    "query_id": "q12",
+    "query": "What is the diagnostic threshold for albuminuria in CKD?",
+    "expected_chunk_ids": [
+      "kdigo_p15_c20",
+      "nice_p13_c01",
+      "nice_p13_c02"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "nice_p29_c01",
+        "fused_score": 0.0157265,
+        "cosine_rank": 3,
+        "bm25_rank": 5,
+        "cosine_sim": 0.752555,
+        "bm25_score": 11.475923,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "1.7 Diagnosing and assessing anaemia",
+        "page_number": 29,
+        "page_range": [
+          29,
+          29
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "1.7 Diagnosing and assessing anaemia \nDiagnostic role of haemoglobin levels \n1.7.1 \nConsider investigating and managing anaemia in adults, children and young \npeople with CKD if: \n• their haemoglobin (Hb) level falls to 110 g/litre or less (or 105 g/litre or less if \nyounger than 2 years) or \n• they develop symptoms attributable to anaemia (such as tiredness, \nshortness of breath, lethargy and palpitations). [2011] \nDiagnostic role of glomerular filtration rate \n1.7.2 \nIn adults, children and young people with anaemia (see recommendation 1.7.3): \n• If eGFR is above 60 ml/min/1.73 m\n2, investigate other causes of anaemia as it \nis unlikely to be caused by CKD. \n• If eGFR is between 30 and 60 ml/min/1.73 m\n2: \n－ investigate other causes of anaemia, but \n－ use clinical judgement to decide how extensive this investigation should \nbe, because the anaemia may be caused by CKD. \n• If eGFR is below 30 ml/min/1.73 m\n2, think about other causes of anaemia but \nnote that anaemia is often caused by CKD. [2021] \nFor a short explanation of why the committee made the 2021 recommendation and \nhow it might affect practice, see the rationale and impact section on diagnostic role of \nglomerular filtration rate. \nFull details of the evidence and the committee's discussion are in evidence review I: \neGFR threshold for the investigation of anaemia due to CKD."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "nice_p51_c19",
+        "fused_score": 0.015625,
+        "cosine_rank": 4,
+        "bm25_rank": 4,
+        "cosine_sim": 0.752402,
+        "bm25_score": 11.562635,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "Terms used in this guideline",
+        "page_number": 51,
+        "page_range": [
+          51,
+          73
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "However, healthcare professionals should still use their clinical \njudgement and think about people's circumstances when deciding whether further\n\nassessment is needed. \nOnly 1 study included people with diabetes, and no studies included children and young \npeople. However, the recommendations still apply to these populations, because other \ncauses of anaemia would be ruled out before attributing the anaemia to CKD. \nThe committee noted a need for further research on the diagnostic test accuracy of \ndifferent eGFR thresholds, particularly for eGFR thresholds of 30 and 60 ml/min/1.73 m\n2. \nThey highlighted that in clinical practice, an eGFR threshold of 45 ml/min/1.73 m\n2 can also \ntrigger investigation into anaemia due to CKD, but limited evidence was identified for the \ndiagnostic accuracy of this threshold. The committee made a recommendation for \nresearch on the diagnostic accuracy of these specific eGFR thresholds for determining the \nlikelihood of anaemia being CKD related. \nHow the recommendations might affect practice \nThese recommendations should not increase the cost to primary care, because they \nreflect current practice and act as cautions for healthcare professionals to explore the \ncause of anaemia. They may reduce costs by ensuring that the correct cause of anaemia is \nidentified more quickly with appropriate investigations. \nReturn to recommendations \nOptimal Hb levels \nRecommendation 1.9.11 \nWhy the committee made the recommendation \nIn the 2015 guideline, an aspirational Hb range between 100 and 120 g/litre was \nrecommended for adults, young people and children aged 2 years and over. For children \nunder 2 years, the Hb range was between 95 and 115 g/litre. These were based on \nevidence for adults. In 2020, the committee reviewed the evidence specifically for children \nand young people. The only evidence for this population came from a single small lowquality study, comparing the effects of a high and low Hb target on left ventricular mass \nindex. No difference in effect was found. Given the lack of evidence, the committee \nagreed that the recommendations made in 2015 should not be changed."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "kdigo_p83_c14",
+        "fused_score": 0.01529032,
+        "cosine_rank": 2,
+        "bm25_rank": 15,
+        "cosine_sim": 0.753572,
+        "bm25_score": 8.420351,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "2.2 Risk prediction in people with CKD",
+        "page_number": 83,
+        "page_range": [
+          83,
+          87
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "failure risk threshold\nof >40% can be used to determine the modality education,\ntiming of preparation for kidney replacement therapy\n(KRT) including vascular access planning or referral for\ntransplantation, in addition to eGFR-based criteria and\nother clinical considerations.\n\nThe appropriate timing for modality education, timing of\nvascular access planning, or referral for transplantation in a\nperson with low or declining GFR can be difficult to predict. Vascular access planning in all adults with CKD G4 would\nlead to the unnecessary placement of fistulae, whereas waiting\nuntil eGFR falls below 15 ml/min per 1.73 m2 may lead to\ninappropriate overuse of central venous catheters at dialysis\ninitiation. Studies have described the potential utility of riskbased thresholds in planning for dialysis access specifically\nand found acceptable specificity and positive predictive values\nfor the risk-based threshold criteria as compared with eGFR\nalone. The Work Group noted that the KDOQI vascular access guideline (2019) currently recommend a risk-based\nthreshold >50% or eGFR <15 ml/min per 1.73 m2 for\ninitiation of vascular access planning, while acknowledging\nthat access to surgeons and primary failure to maturation\nrates may vary by patient and by center.423\nBased on current evidence, a threshold of >40% risk or an\neGFR of 15 ml/min per 1.73 m2 is acceptable to use for\ninitiating vascular access referral. Lower risk thresholds, such\nas >20%, can optimize sensitivity, can be used to initiate\nmodality education, and may be appropriate for presurgical\nvascular access planning or referral for transplantation in\ncenters with longer wait times. Practice Point 2.2.4: Note that risk prediction equations\ndeveloped for use in people with CKD G3–G5, may not be\nvalid for use in those with CKD G1–G2. The Work Group recognizes that the progression of CKD\ncan occur at all severities, and that in earlier stages of disease\n(G1–G3), large declines in eGFR can occur in 2- to 5-year\ntime frames without reaching kidney failure (Figure 16424). Risk prediction models developed in populations with later\nstages of CKD are not accurate in CKD G1–G2, whereas\nalternative, accurate, externally validated risk prediction\nequations have been developed for predicting 40% decline in\neGFR or kidney failure at all stages of CKD."
+      },
+      {
+        "rank": 4,
+        "chunk_id": "kdigo_p81_c01",
+        "fused_score": 0.01483141,
+        "cosine_rank": 6,
+        "bm25_rank": 11,
+        "cosine_sim": 0.751001,
+        "bm25_score": 9.131947,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "2.1 Overview on monitoring for progression of CKD",
+        "page_number": 81,
+        "page_range": [
+          81,
+          82
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "Chapter 2: Risk assessment in people with CKD\n2.1 Overview on monitoring for progression of CKD\nbased upon GFR and ACR categories\nPractice Point 2.1.1: Assess albuminuria in adults, or\nalbuminuria/proteinuria in children, and GFR at least\nannually in people with CKD. Monitoring CKD through the surveillance of albuminuria\nand GFR serves to update staging for prognosis, identify\ntiming of intervention strategies, and assess the effectiveness\nof specific treatments. No clear threshold defines a clinically\nrelevant change in GFR or albuminuria, as any worsening\ncould reflect deterioration in kidney health. However, overinterpretation of small changes in these measures may lead to\nunnecessary changes in clinical management that could be\nunhelpful or even deleterious. Education for healthcare providers and people with CKD about the variability of specific\nlaboratory measurements in kidney disease is important to\nfacilitate\nunderstanding\nand\nto\nmitigate\ninappropriate\nchanges in treatment strategies due to nonclinically significant\nfluctuations in either positive or negative directions. There is an expected variability in GFR caused by both\nbiological and analytical factors of the biomarkers used\n(Figure 12). We have chosen to consider the 95% CI of test\nreproducibility for both eGFR and ACR as an important\nfactor for determining thresholds for clinical evaluation. The initial evaluation of an observed change in either eGFR\nor ACR should be to repeat the test(s) so as to determine if\nthe observed change is clinically significant progression of\nCKD or is within biological and analytical variability of the\ntest. Special considerations\nPediatric considerations."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "kdigo_p83_c12",
+        "fused_score": 0.01438803,
+        "cosine_rank": 1,
+        "bm25_rank": 43,
+        "cosine_sim": 0.755468,
+        "bm25_score": 5.850035,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "2.2 Risk prediction in people with CKD",
+        "page_number": 83,
+        "page_range": [
+          83,
+          87
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "small fraction of the CKD population is at\nhigh risk for progression to kidney failure, those people with\nlower risks of progression to kidney failure may be effectively\nmanaged in primary care settings with guideline-based\ntreatments to delay CKD progression (Figure 15).\n\nReferral\ncriteria for nephrology services that include a risk threshold\nof 3%–5% over 5 years have been examined retrospectively\nand have also been implemented prospectively in several\nhealthcare settings.420,421\nIn settings within Canada and the UK, retrospective\nstudies have found that the use of these risk thresholds has\navoided harms from nonreferral or delayed referral of those\nprogressing to kidney failure.412 In addition, prospective\nevaluation has demonstrated a reduction in nephrology\neGFR-based criteria\nRisk-based criteria\nTransition from\nprimary care to\nnephrology care\nTransition from\nnephrology care to\ninterprofessional care\nAccess and\ntransplant\nplanning\neGFR\n90\n60\n30\n20\n≤10\nKidney\nfailure\nKF risk ≥3%–5%\n5 years\nKF risk ≥10%\n2 years\nKF risk ≥40%\n2 years\neGFR 30–60\neGFR <30\neGFR <20\nFigure 15 | Transition from an estimated glomerular filtration rate (eGFR)-based to a risk-based approach to chronic kidney disease\ncare. KF, kidney failure.\nchapter 2"
+      }
+    ]
+  },
+  {
+    "query_id": "q13",
+    "query": "How soon should potassium be rechecked after starting a mineralocorticoid receptor antagonist?",
+    "expected_chunk_ids": [
+      "kdigo_p104_c04",
+      "kdigo_p104_c05"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "kdigo_dm_p33_c10",
+        "fused_score": 0.01582324,
+        "cosine_rank": 1,
+        "bm25_rank": 9,
+        "cosine_sim": 0.767033,
+        "bm25_score": 13.610165,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "1.2 Renin-angiotensin system (RAS) blockade",
+        "page_number": 33,
+        "page_range": [
+          33,
+          37
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "In addition, RAS blockade inhibits\nthe action of aldosterone, leading to a greater propensity for\nhyperkalemia.\n\nAn increase in serum creatinine, if it occurs,\nwill typically happen during the first 2 weeks of treatment\ninitiation, and it should stabilize within 2–4 weeks in the\nsetting of normal sodium and fluid intake.61 Therefore, patients should be monitored for symptomatic hypotension,\nhyperkalemia, and excessive rise in serum creatinine within\n2–4 weeks after initiating or making a change in the dose of\nthe drug, depending on resource availability and patient\npreferences. Earlier laboratory monitoring (e.g., within 1\nweek) may be indicated for patients at high risk of hyperkalemia due to low eGFR, history of hyperkalemia, or\nborderline high serum potassium concentration. Conversely,\na longer time period for laboratory monitoring (e.g., after\ninitiation but not dose titration) may be considered for patients at low risk of hyperkalemia (e.g., patients with normal\neGFR and serum potassium level). Practice Point 1.2.3: Continue ACEi or ARB therapy unless\nserum creatinine rises by more than 30% within 4 weeks\nfollowing initiation of treatment or an increase in dose\n(Figure 4). The rise in serum creatinine should not be a deterrent in\nusing ACEi or ARB therapy in patients with diabetes and\nInitiate ACEi or ARB\nIncrease dose of ACEi or ARB\nor continue on maximally\ntolerated dose\nMonitor serum creatinine and potassium\n(within 2–4 weeks after starting or changing dose)\n< 30% increase\nin creatinine\n> 30% increase\nin creatinine\nNormokalemia\nHyperkalemia\n• Review for causes of AKI\n• Correct volume depletion\n• Reassess concomitant medications\n  (e.g., diuretics, NSAIDs)\n• Consider renal artery stenosis\n• Review concurrent drugs\n• Moderate potassium intake\n• Consider:\n   - diuretics\n   - sodium bicarbonate\n   - potassium binders\nReduce dose or stop ACEi or ARB\nFigure 4 | Monitoring of serum creatinine and potassium during angiotensin-converting enzyme inhibitor (ACEi) or angiotensin II\nreceptor blocker (ARB) treatment—dose adjustment and monitoring of side effects. AKI, acute kidney injury; NSAID, nonsteroidal\nanti-inflammatory drug.\nchapter 1"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "nice_p23_c05",
+        "fused_score": 0.01555288,
+        "cosine_rank": 4,
+        "bm25_rank": 5,
+        "cosine_sim": 0.741588,
+        "bm25_score": 15.286187,
+        "document_name": "NICE NG203 - Chronic kidney disease: assessment and management",
+        "section_title": "1.6 Pharmacotherapy",
+        "page_number": 23,
+        "page_range": [
+          23,
+          28
+        ],
+        "source_url": "https://www.nice.org.uk/guidance/ng203",
+        "text": "with CKD (and their family members or carers, as appropriate) \nwho are prescribed renin–angiotensin system antagonists about the importance \nof: \n• achieving the optimal tolerated dose of renin–angiotensin system antagonists \nand\n\n• monitoring eGFR and serum potassium in achieving this safely. [2008] \n1.6.15 \nMeasure serum potassium concentrations and estimate the GFR before starting \nrenin–angiotensin system antagonists in adults with CKD. Repeat these \nmeasurements between 1 and 2 weeks after starting renin–angiotensin system \nantagonists and after each dose increase. [2008] \n1.6.16 \nDo not routinely offer a renin–angiotensin system antagonist to adults with CKD if \ntheir pretreatment serum potassium concentration is greater than 5.0 mmol/litre. \n[2008, amended 2014] \n1.6.17 \nIf an adult cannot use renin–angiotensin system antagonists because of \nhyperkalaemia: \n• assess for and treat any other factors that promote hyperkalaemia and \n• recheck serum potassium concentration. [2008] \n1.6.18 \nBe aware that more frequent monitoring of serum potassium concentration may \nbe needed if medicines known to promote hyperkalaemia are prescribed \nalongside renin–angiotensin system antagonists. [2008] \n1.6.19 \nStop renin–angiotensin system antagonists in adults if the serum potassium \nconcentration increases to 6.0 mmol/litre or more and other medicines known to \npromote hyperkalaemia have been discontinued. [2008] \n1.6.20 \nFor medicines recommended as options in NICE technology appraisal guidance \nfor treating persistent hyperkalaemia in some adults with categories G3b to G5 \nCKD, see the guidance on: \n• sodium zirconium cyclosilicate (TA599, 2022) \n• patiromer (TA623, 2020). \n1.6.21 \nAfter introducing or increasing the dose of renin–angiotensin system antagonists \nin adults, do not modify the dose if either: \n• the GFR decrease from pretreatment baseline is less than 25% or"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "kdigo_dm_p49_c16",
+        "fused_score": 0.01533646,
+        "cosine_rank": 3,
+        "bm25_rank": 11,
+        "cosine_sim": 0.752597,
+        "bm25_score": 12.94471,
+        "document_name": "KDIGO 2022 Diabetes Management in CKD",
+        "section_title": "1.4 Mineralocorticoid receptor antagonists (MRA)",
+        "page_number": 49,
+        "page_range": [
+          49,
+          53
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2022/10/KDIGO-2022-Clinical-Practice-Guideline-for-Diabetes-Management-in-CKD.pdf",
+        "text": "Finerenone\nwas\ncontinued\nwith\nserum\npotassium #5.5 mmol/l.\n\nWith serum potassium >5.5 mmol/\nl, the drug was temporarily withheld and serum potassium\nwas rechecked within 72 hours. Use of dietary potassium\nrestriction and concomitant medications, such as diuretics\nand dietary potassium binders, was allowed, and the drug was\nreinitiated if and when potassium returned to #5.0 mmol/l. Clinicians should follow a similar approach to selecting and\nmonitoring patients for nonsteroidal MRA therapy, increasing\nthe likelihood that the acceptable adverse-event profile seen in\nthe FIDELIO-DKD and FIGARO-DKD trials is maintained\nwhen applied to clinical practice (Figure 9). K+\nK\nl/l\no\nm\nm\n 8.4\n≤\n\n+ 4.9–5.5 mmol/l\nK+ >5.5 mmol/l\n  - 10 mg daily if eGFR 25–59 ml/min per 1.73 m2\n  - 20 mg daily if eGFR ≥60 ml/min per 1.73 m2\n• Monitor K+ at 1 month after initiation and then every 4\n  months\n• Increase dose to 20 mg daily, if on 10 mg daily\n• Restart 10 mg daily if previously held for hyperkalemia and\n  K+ now ≤5.0 mmol/l\n• Monitor K+ every 4 months\n• Consider adjustments to diet or concomitant\n  medications to mitigate hyperkalemia\n• Recheck K+\n• Consider reinitiation if/when K+ ≤5.0 mmol/l\nFigure 9 | Serum potassium monitoring during treatment with finerenone. Adapted from the protocols of Finerenone in Reducing Kidney\nFailure and Disease Progression in Diabetic Kidney Disease (FIDELIO-DKD) and Finerenone in Reducing Cardiovascular Mortality and Morbidity\nin Diabetic Kidney Disease (FIGARO-DKD). The United States Food and Drug Administration (FDA) has approved initiation of Kþ <5.0 mmol/l.\nThis figure is guided by trial design and the FDA label and may be different in other countries. Serum creatinine/estimated glomerular filtration\nrate (eGFR) should be monitored concurrently with serum potassium.\nchapter 1"
+      },
+      {
+        "rank": 4,
+        "chunk_id": "kdigo_p104_c06",
+        "fused_score": 0.01515152,
+        "cosine_rank": 6,
+        "bm25_rank": 6,
+        "cosine_sim": 0.73597,
+        "bm25_score": 14.754583,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.8 Mineralocorticoid receptor antagonists (MRA)",
+        "page_number": 104,
+        "page_range": [
+          104,
+          105
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "Practice\nGuideline\nfor\nDiabetes Management in Chronic Kidney Disease.23\nTrials assessing the effect of combining an SGLT2i and\nfinerenone compared with either alone are ongoing (ClinicalTrials.gov Identifier: NCT05254002).\n\nAdequately powered, large-scale, clinical outcome, placebo-controlled trials\nof steroidal and ns-MRAs have not been conducted in\npeople with causes of CKD not related to diabetes, but are\nongoing.537\nK+ ≤4.8 mmol/l\nK+ 4.9–5.5 mmol/l\nK+ >5.5 mmol/l\n• Initiate finerenone\n  - 10 mg daily if eGFR 25–59 ml/min/1.73 m2\n  - 20 mg daily if eGFR ≥60 ml/min/1.73 m2\n• Monitor K+ at 1 month after initiation and then every 4\n  months\n• Increase dose to 20 mg daily, if on 10 mg daily\n• Restart 10 mg daily if previously held for hyperkalemia and\n  K+ now ≤5.0 mmol/l\n• Continue finerenone 10 mg or 20 mg\n• Monitor K+ every 4 months\n• Hold finerenone\n• Consider adjustments to diet or concomitant\n  medications to mitigate hyperkalemia\n• Recheck K+\n• Consider reinitiation if/when K+ ≤5.0 mmol/l\nFigure 26 | Serum potassium monitoring during treatment with a nonsteroidal mineralocorticoid receptor antagonist (MRA)\n(finerenone). Adapted from the protocols of Finerenone in Reducing Kidney Failure and Disease Progression in Diabetic Kidney Disease (FIDELIODKD) and Finerenone in Reducing Cardiovascular Mortality and Morbidity in Diabetic Kidney Disease (FIGARO-DKD). The Work Group considers\nthese potassium thresholds to be conservative, and it may be considered appropriate to continue MRAs in people with potassium of 5.5–6.0 mmol/\nl. This algorithm could be used for steroidal MRA. The US Food and Drug Administration (FDA) has approved initiation of Kþ < 5.0 mmol/l. This\nfigure is guided by trial design and the FDA label and may be different in other countries. Serum creatinine/estimated glomerular filtration rate\n(eGFR) should be monitored concurrently with serum potassium. Reproduced from Kidney Disease: Improving Global Outcomes Diabetes Work\nGroup. KDIGO 2022 Clinical Practice Guideline for Diabetes Management in Chronic Kidney Disease. Kidney Int. 2022;102:S1–S127.23\nchapter 3"
+      },
+      {
+        "rank": 5,
+        "chunk_id": "kdigo_p104_c04",
+        "fused_score": 0.01513526,
+        "cosine_rank": 7,
+        "bm25_rank": 4,
+        "cosine_sim": 0.734809,
+        "bm25_score": 15.349758,
+        "document_name": "KDIGO 2024 CKD Guideline",
+        "section_title": "3.8 Mineralocorticoid receptor antagonists (MRA)",
+        "page_number": 104,
+        "page_range": [
+          104,
+          105
+        ],
+        "source_url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf",
+        "text": "Empagliflozin in patients\nwith chronic kidney disease, volume 388, issue 2, Copyright ª 2023 Massachusetts Medical Society. Reprinted with permission from\nMassachusetts Medical Society.403\nchapter 3\n\nRecommendation 3.8.1: We suggest a nonsteroidal\nmineralocorticoid receptor antagonist with proven\nkidney or cardiovascular benefit for adults with T2D,\nan eGFR >25 ml/min per 1.73 m2, normal serum\npotassium concentration, and albuminuria (>30 mg/\ng [>3 mg/mmol]) despite maximum tolerated dose\nof RAS inhibitor (RASi) (2A). Practice Point 3.8.1: Nonsteroidal MRA are most\nappropriate for adults with T2D who are at high risk of\nCKD progression and cardiovascular events, as\ndemonstrated by persistent albuminuria despite other\nstandard-of-care therapies. Practice Point 3.8.2: A nonsteroidal MRA may be added\nto a RASi and an SGLT2i for treatment of T2D and CKD\nin adults. Practice Point 3.8.3: To mitigate risk of hyperkalemia, select people with consistently normal serum\npotassium concentration and monitor serum potassium\nregularly after initiation of a nonsteroidal MRA\n(Figure 26). Practice Point 3.8.4: The choice of a nonsteroidal MRA\nshould prioritize agents with documented kidney or\ncardiovascular benefits. Practice Point 3.8.5: A steroidal MRA may be used for\ntreatment of heart failure, hyperaldosteronism, or refractory hypertension, but may cause hyperkalemia or a\nreversible decline in glomerular filtration, particularly\namong people with a low GFR. MRAs reduce BP and albuminuria in people with CKD531\nand are part of recommended care for heart failure with\nreduced\nejection\nfraction.532\nThe\nlarge\nFinerenone\nin\nReducing Kidney Failure and Disease Progression in Diabetic\nKidney\nDisease\n(FIDELIO-DKD)533\nand\nFinerenone\nin\nReducing Cardiovascular Mortality and Morbidity in Diabetic\nKidney Disease (FIGARO-DKD)534 placebo-controlled trials\nand their pooled analysis (FIDELITY)535 demonstrated that\nthe\nnonsteroidal\nMRA\n(ns-MRA)\nfinerenone\nreduced\ncardiovascular risk in people with CKD and T2D (HR: 0.86;\n95% CI: 0.78–0.95)."
+      }
+    ]
+  },
+  {
+    "query_id": "q14",
+    "query": "Should asymptomatic adults be screened for chronic kidney disease?",
+    "expected_chunk_ids": [
+      "uspstf_p2_c01",
+      "uspstf_p2_c02"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "uspstf_p2_c02",
+        "fused_score": 0.01616291,
+        "cosine_rank": 1,
+        "bm25_rank": 4,
+        "cosine_sim": 0.822414,
+        "bm25_score": 10.918354,
+        "document_name": "USPSTF Screening for Chronic Kidney Disease",
+        "section_title": "Balance of Harms and Benefits",
+        "page_number": 2,
+        "page_range": [
+          2,
+          2
+        ],
+        "source_url": "https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/ZRz9nTrjKkRtNTe6hgPze-",
+        "text": "Screening for chronic kidney disease: clinical summary of U.S. Preventive Services Task Force Recommendation. SCREENING FOR CHRONIC KIDNEY DISEASE\nCLINICAL SUMMARY OF U.S.\n\nPREVENTIVE SERVICES TASK FORCE RECOMMENDATION\nPopulation\nRecommendation\nRisk Assessment\nScreening Tests\nOther Relevant USPSTF\nRecommendations\nBalance of Harms and Benefits\nThere is no generally accepted risk assessment tool for CKD or risk for complications of CKD. Diabetes and hypertension \nare well-established risk factors with strong links to CKD. Other risk factors for CKD include older age, cardiovascular \ndisease, obesity, and family history. Although there is insufficient evidence to recommend routine screening, the tests often suggested for screening that are \nfeasible in primary care include testing the urine for protein (microalbuminuria or macroalbuminuria) and testing the \nblood for serum creatinine to estimate glomerular filtration rate. The USPSTF could not determine the balance between the benefits and harms of screening for CKD in asymptomatic adults. The USPSTF has made recommendations on screening for diabetes, hypertension, and obesity, as well as aspirin use for the \nprevention of cardiovascular disease. These recommendations are available at www.uspreventiveservicestaskforce.org. Asymptomatic adults without diagnosed chronic kidney disease (CKD)\nNo recommendation. Grade: I (Insufficient Evidence)\nFor a summary of the evidence systematically reviewed in making this recommendation, the full recommendation statement, and supporting documents, please \ngo to www.uspreventiveservicestaskforce.org. Clinical Guideline\n568 16 October 2012 Annals of Internal Medicine Volume 157 • Number 8"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "uspstf_p1_c02",
+        "fused_score": 0.01605223,
+        "cosine_rank": 2,
+        "bm25_rank": 3,
+        "cosine_sim": 0.818715,
+        "bm25_score": 11.366444,
+        "document_name": "USPSTF Screening for Chronic Kidney Disease",
+        "section_title": "Benefits of Detection and Early Intervention",
+        "page_number": 1,
+        "page_range": [
+          1,
+          1
+        ],
+        "source_url": "https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/ZRz9nTrjKkRtNTe6hgPze-",
+        "text": "Testing for and\nmonitoring CKD for the purpose of chronic disease\nmanagement (including testing and monitoring patients\nwith diabetes or hypertension) are not covered by this\nrecommendation.\n\nSee the Clinical Considerations section for suggestions\nfor practice regarding the I statement. See the Figure for a\nsummary of the recommendation and suggestions for clinical practice and Appendix Tables 1 and 2 (available at\nwww.annals.org) for the USPSTF grades and classification\nof levels of certainty about net benefit. RATIONALE\nImportance\nApproximately 11% of U.S. adults have CKD, many\nof whom are elderly. The condition is usually asymptomatic until its advanced stages. Most cases of CKD are associated with diabetes or hypertension. Detection\nChronic kidney disease is defined as decreased kidney\nfunction or kidney damage that persists for at least 3\nmonths. No studies have assessed the sensitivity and specificity of screening for CKD with tests for estimated GFR,\nmicroalbuminuria, or macroalbuminuria. Benefits of Detection and Early Intervention\nand Treatment\nEvidence that routine screening for CKD improves\nclinical outcomes for asymptomatic adults is inadequate. See also:\nPrint\nSummary for Patients. . . . . . . . . . . . . . . . . . . . . . . I-50\nWeb-Only\nConsumer Fact Sheet\nCME quiz (preview on page I-30)\nClinical Guideline"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "uspstf_p1_c01",
+        "fused_score": 0.01602914,
+        "cosine_rank": 3,
+        "bm25_rank": 1,
+        "cosine_sim": 0.810396,
+        "bm25_score": 11.649084,
+        "document_name": "USPSTF Screening for Chronic Kidney Disease",
+        "section_title": "Benefits of Detection and Early Intervention",
+        "page_number": 1,
+        "page_range": [
+          1,
+          1
+        ],
+        "source_url": "https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/ZRz9nTrjKkRtNTe6hgPze-",
+        "text": "Screening for Chronic Kidney Disease: U.S. Preventive Services Task\nForce Recommendation Statement\nVirginia A. Moyer, MD, MPH, on behalf of the U.S. Preventive Services Task Force*\nDescription: New U.S. Preventive Services Task Force (USPSTF)\nrecommendation statement on screening for chronic kidney disease\n(CKD). Methods: The USPSTF reviewed evidence on screening for CKD,\nincluding evidence on screening, accuracy of screening, early treatment, and harms of screening and early treatment. Population: This recommendation applies to asymptomatic adults\nwithout diagnosed CKD. Testing for and monitoring CKD for the\npurpose of chronic disease management (including testing and\nmonitoring patients with diabetes or hypertension) are not covered\nby this recommendation. Recommendation: The USPSTF concludes that the evidence is insufficient to assess the balance of benefits and harms of routine\nscreening for CKD in asymptomatic adults (I statement). Ann Intern Med. 2012;157:567-570. For author affiliation, see end of text.\n* For a list of USPSTF members, see the Appendix (available at www.annals\n.org). This article was published at www.annals.org on 28 August 2012. T\nhe U.S. Preventive Services Task Force (USPSTF) makes\nrecommendations about the effectiveness of specific clinical\npreventive services for patients without related signs or\nsymptoms. It bases its recommendations on the evidence of both the\nbenefits and harms of the service and an assessment of the\nbalance. The USPSTF does not consider the costs of providing\na service in this assessment. The USPSTF recognizes that clinical decisions involve\nmore considerations than evidence alone. Clinicians should\nunderstand the evidence but individualize decision making to\nthe specific patient or situation. Similarly, the USPSTF notes\nthat policy and coverage decisions involve considerations in\naddition to the evidence of clinical benefits and harms. SUMMARY OF RECOMMENDATION AND EVIDENCE\nThe USPSTF concludes that the evidence is insufficient to assess the balance of benefits and harms of routine\nscreening for chronic kidney disease (CKD) in asymptomatic adults (I statement). Common tests considered for CKD screening include\ncreatinine-derived estimates of glomerular filtration rate\n(GFR) and urine testing for albumin. Testing for and\nmonitoring CKD for the purpose of chronic disease\nmanagement (including testing and monitoring patients\nwith diabetes or hypertension) are not covered by this\nrecommendation."
+      },
+      {
+        "rank": 4,
+        "chunk_id": "uspstf_p2_c01",
+        "fused_score": 0.01577621,
+        "cosine_rank": 4,
+        "bm25_rank": 2,
+        "cosine_sim": 0.801989,
+        "bm25_score": 11.571245,
+        "document_name": "USPSTF Screening for Chronic Kidney Disease",
+        "section_title": "Balance of Harms and Benefits",
+        "page_number": 2,
+        "page_range": [
+          2,
+          2
+        ],
+        "source_url": "https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/ZRz9nTrjKkRtNTe6hgPze-",
+        "text": "Harms of Detection and Early Intervention\nand Treatment\nEvidence on the harms of screening for CKD is inadequate. However, convincing evidence shows that medications used to treat early CKD may have adverse effects. USPSTF Assessment\nThe USPSTF concludes that the evidence on routine\nscreening for CKD in asymptomatic adults is lacking, and\nthat the balance of benefits and harms cannot be\ndetermined. CLINICAL CONSIDERATIONS\nPatient Population Under Consideration\nThis recommendation applies to asymptomatic adults\nwithout diagnosed CKD. Testing for and monitoring\nCKD for the purpose of chronic disease management (including monitoring patients with diabetes or hypertension)\nare not covered by this recommendation. Suggestions for Practice Regarding the I Statement\nPotential Preventable Burden and Benefits\nChronic kidney disease is very prevalent; in 2011,\n11% of the U.S. general population had the condition. However, most affected persons have risk factors for CKD,\nparticularly older age, diabetes, and hypertension. It is usually asymptomatic until its advanced stages. Although there\nis no evidence on the benefits and harms of screening in\nthe general population of asymptomatic adults, evidence\nshows that specific treatments for patients with diabetes\nreduce risk for advanced CKD. The American Diabetes\nAssociation recommends screening for CKD in all patients\nwith diabetes. The USPSTF found very limited evidence\nabout whether knowledge of CKD status in patients with\nisolated hypertension (those who do not also have diabetes\nor cardiovascular disease) helps in making treatment decisions. However, several organizations recommend screening patients who are being treated for hypertension, including the National Institutes of Health’s Joint National\nCommittee on Prevention, Detection, Evaluation, and\nTreatment of High Blood Pressure. Potential Harms\nFor adults without diabetes or hypertension, risk for\nCKD and subsequent adverse outcomes from it are small. How many persons with a positive screening test result\nwho will be confirmed to have CKD is unknown. There\nare no studies on the benefits of early treatment in persons\nwithout diabetes or hypertension. Persons who have positive results on a screening test but do not have CKD may\nexperience the harms associated with interventions and\ntreatments without the potential for benefit. Current Practice\nSerum creatinine testing is widely done for various\nreasons in clinical practice, including chronic disease\nFigure. Screening for chronic kidney disease: clinical summary of U.S. Preventive Services Task Force Recommendation. SCREENING FOR CHRONIC KIDNEY DISEASE\nCLINICAL SUMMARY OF U.S."
+      },
+      {
+        "rank": 5,
+        "chunk_id": "uspstf_p3_c03",
+        "fused_score": 0.01455669,
+        "cosine_rank": 9,
+        "bm25_rank": 8,
+        "cosine_sim": 0.743515,
+        "bm25_score": 8.001743,
+        "document_name": "USPSTF Screening for Chronic Kidney Disease",
+        "section_title": "DISCUSSION",
+        "page_number": 3,
+        "page_range": [
+          3,
+          3
+        ],
+        "source_url": "https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/ZRz9nTrjKkRtNTe6hgPze-",
+        "text": "Effectiveness of Early Detection and Treatment\nNo studies directly evaluate the effectiveness of screening for CKD. Treatment of early stages of CKD is targeted\nto associated conditions, primarily using medications to\ncontrol hypertension, diabetes, and cardiovascular disease.\n\nThere are few studies on early treatment of CKD stages 1\nto 3 in persons without chronic diseases (such as hypertension, diabetes, and cardiovascular disease). Evidence shows\nthat identification and treatment of CKD may affect management decisions or health outcomes in patients with established chronic disease, including diabetes, cardiovascular disease, and hypertension, but there is insufficient\nevidence that identification and early treatment of CKD in\nasymptomatic adults without these conditions results in\nimproved health outcomes. Clinical Guideline"
+      }
+    ]
+  },
+  {
+    "query_id": "q15",
+    "query": "Does the USPSTF recommend routine screening for chronic kidney disease?",
+    "expected_chunk_ids": [
+      "uspstf_p1_c01",
+      "uspstf_p2_c01"
+    ],
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "uspstf_p1_c01",
+        "fused_score": 0.01639344,
+        "cosine_rank": 1,
+        "bm25_rank": 1,
+        "cosine_sim": 0.882526,
+        "bm25_score": 24.954068,
+        "document_name": "USPSTF Screening for Chronic Kidney Disease",
+        "section_title": "Benefits of Detection and Early Intervention",
+        "page_number": 1,
+        "page_range": [
+          1,
+          1
+        ],
+        "source_url": "https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/ZRz9nTrjKkRtNTe6hgPze-",
+        "text": "Screening for Chronic Kidney Disease: U.S. Preventive Services Task\nForce Recommendation Statement\nVirginia A. Moyer, MD, MPH, on behalf of the U.S. Preventive Services Task Force*\nDescription: New U.S. Preventive Services Task Force (USPSTF)\nrecommendation statement on screening for chronic kidney disease\n(CKD). Methods: The USPSTF reviewed evidence on screening for CKD,\nincluding evidence on screening, accuracy of screening, early treatment, and harms of screening and early treatment. Population: This recommendation applies to asymptomatic adults\nwithout diagnosed CKD. Testing for and monitoring CKD for the\npurpose of chronic disease management (including testing and\nmonitoring patients with diabetes or hypertension) are not covered\nby this recommendation. Recommendation: The USPSTF concludes that the evidence is insufficient to assess the balance of benefits and harms of routine\nscreening for CKD in asymptomatic adults (I statement). Ann Intern Med. 2012;157:567-570. For author affiliation, see end of text.\n* For a list of USPSTF members, see the Appendix (available at www.annals\n.org). This article was published at www.annals.org on 28 August 2012. T\nhe U.S. Preventive Services Task Force (USPSTF) makes\nrecommendations about the effectiveness of specific clinical\npreventive services for patients without related signs or\nsymptoms. It bases its recommendations on the evidence of both the\nbenefits and harms of the service and an assessment of the\nbalance. The USPSTF does not consider the costs of providing\na service in this assessment. The USPSTF recognizes that clinical decisions involve\nmore considerations than evidence alone. Clinicians should\nunderstand the evidence but individualize decision making to\nthe specific patient or situation. Similarly, the USPSTF notes\nthat policy and coverage decisions involve considerations in\naddition to the evidence of clinical benefits and harms. SUMMARY OF RECOMMENDATION AND EVIDENCE\nThe USPSTF concludes that the evidence is insufficient to assess the balance of benefits and harms of routine\nscreening for chronic kidney disease (CKD) in asymptomatic adults (I statement). Common tests considered for CKD screening include\ncreatinine-derived estimates of glomerular filtration rate\n(GFR) and urine testing for albumin. Testing for and\nmonitoring CKD for the purpose of chronic disease\nmanagement (including testing and monitoring patients\nwith diabetes or hypertension) are not covered by this\nrecommendation."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "uspstf_p2_c02",
+        "fused_score": 0.01612903,
+        "cosine_rank": 2,
+        "bm25_rank": 2,
+        "cosine_sim": 0.849367,
+        "bm25_score": 23.388087,
+        "document_name": "USPSTF Screening for Chronic Kidney Disease",
+        "section_title": "Balance of Harms and Benefits",
+        "page_number": 2,
+        "page_range": [
+          2,
+          2
+        ],
+        "source_url": "https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/ZRz9nTrjKkRtNTe6hgPze-",
+        "text": "Screening for chronic kidney disease: clinical summary of U.S. Preventive Services Task Force Recommendation. SCREENING FOR CHRONIC KIDNEY DISEASE\nCLINICAL SUMMARY OF U.S.\n\nPREVENTIVE SERVICES TASK FORCE RECOMMENDATION\nPopulation\nRecommendation\nRisk Assessment\nScreening Tests\nOther Relevant USPSTF\nRecommendations\nBalance of Harms and Benefits\nThere is no generally accepted risk assessment tool for CKD or risk for complications of CKD. Diabetes and hypertension \nare well-established risk factors with strong links to CKD. Other risk factors for CKD include older age, cardiovascular \ndisease, obesity, and family history. Although there is insufficient evidence to recommend routine screening, the tests often suggested for screening that are \nfeasible in primary care include testing the urine for protein (microalbuminuria or macroalbuminuria) and testing the \nblood for serum creatinine to estimate glomerular filtration rate. The USPSTF could not determine the balance between the benefits and harms of screening for CKD in asymptomatic adults. The USPSTF has made recommendations on screening for diabetes, hypertension, and obesity, as well as aspirin use for the \nprevention of cardiovascular disease. These recommendations are available at www.uspreventiveservicestaskforce.org. Asymptomatic adults without diagnosed chronic kidney disease (CKD)\nNo recommendation. Grade: I (Insufficient Evidence)\nFor a summary of the evidence systematically reviewed in making this recommendation, the full recommendation statement, and supporting documents, please \ngo to www.uspreventiveservicestaskforce.org. Clinical Guideline\n568 16 October 2012 Annals of Internal Medicine Volume 157 • Number 8"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "uspstf_p4_c02",
+        "fused_score": 0.01558872,
+        "cosine_rank": 3,
+        "bm25_rank": 7,
+        "cosine_sim": 0.805936,
+        "bm25_score": 15.111891,
+        "document_name": "USPSTF Screening for Chronic Kidney Disease",
+        "section_title": "RECOMMENDATIONS OF OTHER GROUPS",
+        "page_number": 4,
+        "page_range": [
+          4,
+          6
+        ],
+        "source_url": "https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/ZRz9nTrjKkRtNTe6hgPze-",
+        "text": "ney\nFoundation recommends assessing risk for CKD in all patients and doing the following for those at increased risk:\nmeasure blood pressure, test serum creatinine levels, test\nurinary albumin levels, and examine urine for erythrocytes\nand leukocytes (8).\n\nThe American Diabetes Association\nrecommends annual screening of all persons with diabetes\nusing urinary albumin and serum creatinine testing (9). The National Institutes of Health’s Joint National Committee\non Prevention, Detection, Evaluation, and Treatment of\nHigh Blood Pressure recommends that all persons diagnosed\nwith hypertension should have urinalysis and serum creatinine\ntesting; urine testing for albumin is optional (10). From the U.S. Preventive Services Task Force, Rockville, Maryland. Disclaimer: Recommendations made by the USPSTF are independent of\nthe U.S. government. They should not be construed as an official position of the Agency for Healthcare Research and Quality or the U.S. Department of Health and Human Services. Financial Support: The USPSTF is an independent, voluntary body. The U.S. Congress mandates that the Agency for Healthcare Research\nand Quality support the operations of the USPSTF. Potential Conflicts of Interest: Disclosure forms from USPSTF members can be viewed at www.acponline.org/authors/icmje/ConflictOf\nInterestForms.do?msNum\u0001M12-1735. Requests for Single Reprints: Reprints are available from the USPSTF\nWeb site (www.uspreventiveservicestaskforce.org). References\n1. Fink HA, Ishani A, Taylor BC, Greer NL, MacDonald R, Rossini D, et al. Chronic Kidney Disease Stages 1–3: Screening, Monitoring, and Treatment. Comparative Effectiveness Review 37. AHRQ Publication 11(12)-EHC075-EF. Rockville, MD: Agency for Healthcare Research and Quality; 2012. 2. Fink HA, Ishani A, Taylor BC, Greer NL, MacDonald R, Rossini D, et al. Screening for, monitoring, and treatment of chronic kidney disease stages 1 to 3:\na systematic review for the U.S. Preventive Services Task Force and for an American College of Physicians Clinical Practice Guideline. Ann Intern Med. 2012;\n156:570-81. [PMID: 22508734]\n3. Hsu CY, Lin F, Vittinghoff E, Shlipak MG. Racial differences in the progression from chronic renal insufficiency to end-stage renal disease in the United\nStates. J Am Soc Nephrol. 2003;14:2902-7. [PMID: 14569100]\n4. Xue JL, Eggers PW, Agodoa LY, Foley RN, Collins AJ."
+      },
+      {
+        "rank": 4,
+        "chunk_id": "uspstf_p1_c02",
+        "fused_score": 0.01548295,
+        "cosine_rank": 4,
+        "bm25_rank": 6,
+        "cosine_sim": 0.802742,
+        "bm25_score": 17.261356,
+        "document_name": "USPSTF Screening for Chronic Kidney Disease",
+        "section_title": "Benefits of Detection and Early Intervention",
+        "page_number": 1,
+        "page_range": [
+          1,
+          1
+        ],
+        "source_url": "https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/ZRz9nTrjKkRtNTe6hgPze-",
+        "text": "Testing for and\nmonitoring CKD for the purpose of chronic disease\nmanagement (including testing and monitoring patients\nwith diabetes or hypertension) are not covered by this\nrecommendation.\n\nSee the Clinical Considerations section for suggestions\nfor practice regarding the I statement. See the Figure for a\nsummary of the recommendation and suggestions for clinical practice and Appendix Tables 1 and 2 (available at\nwww.annals.org) for the USPSTF grades and classification\nof levels of certainty about net benefit. RATIONALE\nImportance\nApproximately 11% of U.S. adults have CKD, many\nof whom are elderly. The condition is usually asymptomatic until its advanced stages. Most cases of CKD are associated with diabetes or hypertension. Detection\nChronic kidney disease is defined as decreased kidney\nfunction or kidney damage that persists for at least 3\nmonths. No studies have assessed the sensitivity and specificity of screening for CKD with tests for estimated GFR,\nmicroalbuminuria, or macroalbuminuria. Benefits of Detection and Early Intervention\nand Treatment\nEvidence that routine screening for CKD improves\nclinical outcomes for asymptomatic adults is inadequate. See also:\nPrint\nSummary for Patients. . . . . . . . . . . . . . . . . . . . . . . I-50\nWeb-Only\nConsumer Fact Sheet\nCME quiz (preview on page I-30)\nClinical Guideline"
+      },
+      {
+        "rank": 5,
+        "chunk_id": "uspstf_p3_c02",
+        "fused_score": 0.01538462,
+        "cosine_rank": 5,
+        "bm25_rank": 5,
+        "cosine_sim": 0.790125,
+        "bm25_score": 17.340812,
+        "document_name": "USPSTF Screening for Chronic Kidney Disease",
+        "section_title": "DISCUSSION",
+        "page_number": 3,
+        "page_range": [
+          3,
+          3
+        ],
+        "source_url": "https://www.uspreventiveservicestaskforce.org/home/getfilebytoken/ZRz9nTrjKkRtNTe6hgPze-",
+        "text": "Other reported risk factors include\nolder age, obesity, and family history.\n\nChronic kidney disease is more prevalent in women (12.6%) than in men\n(9.7%) and is similar in white (11.6%) and African American (11.2%) adults (1, 2). African Americans are 3 to 5\ntimes more likely to have end-stage renal disease than white\nAmericans (3, 4). Chronic kidney disease is associated with\nseveral adverse health outcomes in several studies, including\nincreased risk for death, cardiovascular disease, fractures, bone\nloss, infections, cognitive impairment, and frailty. Scope of Review\nThis is a new topic for the USPSTF and was nominated for consideration by several organizations. The\nUSPSTF reviewed evidence on screening for CKD, including evidence on screening, accuracy of screening, early\ntreatment, and harms of screening and early treatment. Accuracy of Screening Tests\nAlthough a 1-time creatinine-derived estimate of GFR\nhighly correlates to a 1-time direct measurement of GFR,\nthe USPSTF could not find any studies on the accuracy of\nscreening (with serum creatinine or urinary albumin) for\nCKD defined as impaired GFR or albuminuria that persists for at least 3 months (1, 2). A few studies provide\nsome information about reliability and false-positive results. Intra-individual variability of urinary albumin is\nhigh; reported coefficients of variance estimates range from\n30% to 50% (5). Body position, exercise, and fever can\naffect urinary albumin excretion (5). Although many\ngroups recommend 1-time urinary albumin testing and\ncalculation of a protein–creatinine ratio, no standard for\ncollection and measurement of urinary albumin or creatinine exists. A study using NHANES (National Health and\nNutrition Examination Survey) data reported that 37% of\npersons with microalbuminuria and a GFR of 60 mL/min\nper 1.73 m2 or greater did not have micro- or macroalbuminuria on repeated testing 2 months later (6). Another\nstudy reported that 59% of participants with diabetes and\npersistent microalbuminuria (defined by repeated abnormal protein–creatinine ratios over a 2-year period) regressed to normal over a subsequent 6-year period (7). Effectiveness of Early Detection and Treatment\nNo studies directly evaluate the effectiveness of screening for CKD. Treatment of early stages of CKD is targeted\nto associated conditions, primarily using medications to\ncontrol hypertension, diabetes, and cardiovascular disease."
+      }
+    ]
+  }
+]

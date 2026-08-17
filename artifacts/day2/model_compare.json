@@ -1,0 +1,298 @@
+{
+  "k": 5,
+  "results": [
+    {
+      "model": "abhinand/MedEmbed-large-v0.1",
+      "label": "MedEmbed-large (medical fine-tune of bge-large)",
+      "k": 5,
+      "n_scored": 15,
+      "precision_at_k": 0.2267,
+      "recall_at_k": 0.7111,
+      "hit_at_k": 0.8667,
+      "oos_max_top1_sim": 0.663,
+      "per_row": [
+        {
+          "id": "q01",
+          "category": "direct",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.822
+        },
+        {
+          "id": "q02",
+          "category": "direct",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.818
+        },
+        {
+          "id": "q03",
+          "category": "direct",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.884
+        },
+        {
+          "id": "q04",
+          "category": "direct",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.894
+        },
+        {
+          "id": "q05",
+          "category": "direct",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.869
+        },
+        {
+          "id": "q06",
+          "category": "direct",
+          "p": 0.0,
+          "r": 0.0,
+          "hit": 0,
+          "top1_sim": 0.77
+        },
+        {
+          "id": "q07",
+          "category": "direct",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.863
+        },
+        {
+          "id": "q08",
+          "category": "multi_source",
+          "p": 0.6,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.847
+        },
+        {
+          "id": "q09",
+          "category": "multi_source",
+          "p": 0.4,
+          "r": 0.5,
+          "hit": 1,
+          "top1_sim": 0.887
+        },
+        {
+          "id": "q10",
+          "category": "multi_source",
+          "p": 0.2,
+          "r": 0.333,
+          "hit": 1,
+          "top1_sim": 0.738
+        },
+        {
+          "id": "q11",
+          "category": "edge",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.835
+        },
+        {
+          "id": "q12",
+          "category": "edge",
+          "p": 0.2,
+          "r": 0.333,
+          "hit": 1,
+          "top1_sim": 0.755
+        },
+        {
+          "id": "q13",
+          "category": "edge",
+          "p": 0.0,
+          "r": 0.0,
+          "hit": 0,
+          "top1_sim": 0.767
+        },
+        {
+          "id": "q14",
+          "category": "screening_refusal",
+          "p": 0.4,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.822
+        },
+        {
+          "id": "q15",
+          "category": "screening_refusal",
+          "p": 0.2,
+          "r": 0.5,
+          "hit": 1,
+          "top1_sim": 0.883
+        }
+      ],
+      "oos": [
+        {
+          "id": "q16",
+          "top1_sim": 0.63
+        },
+        {
+          "id": "q17",
+          "top1_sim": 0.624
+        },
+        {
+          "id": "q18",
+          "top1_sim": 0.663
+        }
+      ]
+    },
+    {
+      "model": "BAAI/bge-large-en-v1.5",
+      "label": "BGE-large-en-v1.5 (general English baseline)",
+      "k": 5,
+      "n_scored": 15,
+      "precision_at_k": 0.2,
+      "recall_at_k": 0.6333,
+      "hit_at_k": 0.7333,
+      "oos_max_top1_sim": 0.657,
+      "per_row": [
+        {
+          "id": "q01",
+          "category": "direct",
+          "p": 0.0,
+          "r": 0.0,
+          "hit": 0,
+          "top1_sim": 0.824
+        },
+        {
+          "id": "q02",
+          "category": "direct",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.825
+        },
+        {
+          "id": "q03",
+          "category": "direct",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.879
+        },
+        {
+          "id": "q04",
+          "category": "direct",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.88
+        },
+        {
+          "id": "q05",
+          "category": "direct",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.882
+        },
+        {
+          "id": "q06",
+          "category": "direct",
+          "p": 0.0,
+          "r": 0.0,
+          "hit": 0,
+          "top1_sim": 0.765
+        },
+        {
+          "id": "q07",
+          "category": "direct",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.834
+        },
+        {
+          "id": "q08",
+          "category": "multi_source",
+          "p": 0.6,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.83
+        },
+        {
+          "id": "q09",
+          "category": "multi_source",
+          "p": 0.4,
+          "r": 0.5,
+          "hit": 1,
+          "top1_sim": 0.856
+        },
+        {
+          "id": "q10",
+          "category": "multi_source",
+          "p": 0.0,
+          "r": 0.0,
+          "hit": 0,
+          "top1_sim": 0.749
+        },
+        {
+          "id": "q11",
+          "category": "edge",
+          "p": 0.2,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.825
+        },
+        {
+          "id": "q12",
+          "category": "edge",
+          "p": 0.0,
+          "r": 0.0,
+          "hit": 0,
+          "top1_sim": 0.768
+        },
+        {
+          "id": "q13",
+          "category": "edge",
+          "p": 0.2,
+          "r": 0.5,
+          "hit": 1,
+          "top1_sim": 0.766
+        },
+        {
+          "id": "q14",
+          "category": "screening_refusal",
+          "p": 0.4,
+          "r": 1.0,
+          "hit": 1,
+          "top1_sim": 0.813
+        },
+        {
+          "id": "q15",
+          "category": "screening_refusal",
+          "p": 0.2,
+          "r": 0.5,
+          "hit": 1,
+          "top1_sim": 0.865
+        }
+      ],
+      "oos": [
+        {
+          "id": "q16",
+          "top1_sim": 0.599
+        },
+        {
+          "id": "q17",
+          "top1_sim": 0.572
+        },
+        {
+          "id": "q18",
+          "top1_sim": 0.657
+        }
+      ]
+    }
+  ],
+  "winner": "abhinand/MedEmbed-large-v0.1"
+}
