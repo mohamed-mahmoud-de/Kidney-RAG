@@ -1,0 +1,24 @@
+# Kidney-RAG — Python dependencies
+# Install with:  pip install -r requirements.txt
+# Python 3.11+ recommended (developed on 3.13).
+
+# PDF parsing
+pymupdf==1.27.2.3
+
+# Chunking / tokenization
+tiktoken==0.13.0
+
+# Embeddings (local medical model) + BM25
+sentence-transformers==5.7.0
+rank-bm25==0.2.2
+numpy==2.2.6
+
+# Vector database
+chromadb==1.5.9
+
+# Notebook execution
+jupyter==1.1.1
+nbconvert==7.17.1
+
+# Env / secrets (only if using an API-based model)
+python-dotenv==1.2.2
