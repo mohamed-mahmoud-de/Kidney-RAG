@@ -18,12 +18,19 @@ env/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# Vector store — regenerable, and big
+# Vector store — regenerable, and big (should never be in git)
 corpus/index/
 corpus/embeddings/
+corpus/chunks/chroma_db/
+corpus/chunks/*.npy
+corpus/chunks/*.sqlite3
 *.chroma
 *.sqlite3
 *.duckdb
+
+# HuggingFace model cache (if user opts into project-local caching)
+.hf_cache/
+.cache/
 
 # OS junk
 .DS_Store

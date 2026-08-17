@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(git ls-files:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git rm --cached:*)",
+      "Bash(git remote:*)",
+      "Bash(python -c:*)",
+      "Bash(python -m jupyter nbconvert:*)",
+      "Bash(python corpus/download_sources.py:*)",
+      "Bash(pip install:*)",
+      "Bash(pip show:*)",
+      "Bash(pip list:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(rm -f:*)",
+      "Bash(rm -rf agenda_img:*)",
+      "Bash(cat .gitignore:*)"
+    ]
+  }
+}
