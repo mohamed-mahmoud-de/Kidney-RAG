@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "name": "CKD RAG retrieval eval set",
+    "version": "1.0",
+    "created": "2026-08-17",
+    "corpus": "corpus/chunks/all_chunks.jsonl (666 chunks, 4 guidelines)",
+    "purpose": "Ground-truth for measuring Precision@k / recall of the retriever. Each question is paired with the chunk_id(s) that genuinely contain the answer, verified by direct text search against the corpus.",
+    "scoring_notes": {
+      "hit": "A retrieved chunk is 'relevant' if its chunk_id is in gold_chunk_ids.",
+      "precision_at_k": "(# gold chunks in top-k) / k",
+      "recall_at_k": "(# gold chunks in top-k) / (# gold_chunk_ids)",
+      "hit_at_k": "1 if any gold chunk appears in top-k else 0",
+      "out_of_scope": "gold_chunk_ids is empty; the correct behavior is a low-confidence / refusal, NOT retrieval of a confident kidney chunk. Scored separately (see expected_behavior).",
+      "gold_is_not_exhaustive": "gold lists the chunks known to answer the question. Other chunks may be partially relevant; these anchors are the minimum a good retriever must surface."
+    },
+    "categories": ["direct", "multi_source", "edge", "screening_refusal", "out_of_scope"]
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "category": "direct",
+      "question": "At what eGFR can an SGLT2 inhibitor be started in a patient with type 2 diabetes and CKD?",
+      "gold_chunk_ids": ["kdigo_p99_c01"],
+      "gold_answer": "eGFR ≥ 20 ml/min per 1.73 m2 (KDIGO 2024 Recommendation 3.7.1).",
+      "source": "KDIGO 2024, §3.7 SGLT2 inhibitors, p99",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q02",
+      "category": "direct",
+      "question": "What ACR value defines severely increased albuminuria (category A3)?",
+      "gold_chunk_ids": ["kdigo_p15_c20"],
+      "gold_answer": "A3 = ACR > 300 mg/g (> 30 mg/mmol) — severely increased albuminuria.",
+      "source": "KDIGO 2024, Table 3 Albuminuria categories, p15 (foreword staging tables)",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q03",
+      "category": "direct",
+      "question": "What clinic blood pressure target should adults with CKD and an ACR of 70 mg/mmol or more aim for?",
+      "gold_chunk_ids": ["nice_p23_c02"],
+      "gold_answer": "Clinic systolic BP below 130 mmHg (target range 120–129) and diastolic below 80 mmHg (NICE 1.6.2).",
+      "source": "NICE NG203, §1.6 Pharmacotherapy, p23",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q04",
+      "category": "direct",
+      "question": "What daily protein intake is recommended for adults with CKD stages G3 to G5?",
+      "gold_chunk_ids": ["kdigo_p93_c01"],
+      "gold_answer": "0.8 g/kg body weight/day in adults with CKD G3–G5 (KDIGO 2024 Rec 3.3.1); avoid > 1.3 g/kg/day.",
+      "source": "KDIGO 2024, §3.3.1 Protein intake, p93",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q05",
+      "category": "direct",
+      "question": "How often should HbA1c be monitored in a patient with diabetes and CKD?",
+      "gold_chunk_ids": ["kdigo_dm_p56_c06"],
+      "gold_answer": "Twice per year is reasonable; up to 4 times per year if glycemic target is not met or after a therapy change.",
+      "source": "KDIGO 2022 Diabetes in CKD, §2.1 Glycemic monitoring, p56",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q06",
+      "category": "direct",
+      "question": "Which GFR category corresponds to kidney failure, and what is its eGFR cutoff?",
+      "gold_chunk_ids": ["kdigo_p15_c19"],
+      "gold_answer": "G5 = eGFR < 15 ml/min per 1.73 m2 (kidney failure).",
+      "source": "KDIGO 2024, Table 2 GFR categories, p15 (foreword staging tables)",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q07",
+      "category": "direct",
+      "question": "When does NICE recommend offering an SGLT2 inhibitor (dapagliflozin) to adults with CKD?",
+      "gold_chunk_ids": ["nice_p23_c03"],
+      "gold_answer": "NICE recommends offering dapagliflozin to adults with CKD meeting defined ACR/eGFR criteria on an optimally-tolerated RAS inhibitor.",
+      "source": "NICE NG203, §1.6 Pharmacotherapy, p23",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q08",
+      "category": "multi_source",
+      "question": "What blood pressure target is recommended for adults with CKD and albuminuria?",
+      "gold_chunk_ids": ["nice_p23_c02", "kdigo_p97_c01", "kdigo_p97_c02"],
+      "gold_answer": "NICE: SBP <130 mmHg if ACR ≥70 mg/mmol; KDIGO 2024: target SBP <120 mmHg (standardized measurement). A good answer surfaces both sources.",
+      "source": "NICE NG203 §1.6 p23 + KDIGO 2024 §3.4 Blood pressure control p97",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q09",
+      "category": "multi_source",
+      "question": "How should serum potassium be monitored when treating with finerenone (a nonsteroidal MRA)?",
+      "gold_chunk_ids": ["kdigo_p104_c05", "kdigo_p104_c06", "kdigo_dm_p49_c04", "kdigo_dm_p49_c08"],
+      "gold_answer": "Select patients with normal serum potassium, monitor K+ after initiation and periodically; hold/withhold if K+ > 5.5 mmol/l. Covered in both KDIGO 2024 §3.8 and KDIGO 2022 §1.4.",
+      "source": "KDIGO 2024 §3.8 MRA p104 + KDIGO 2022 §1.4 MRA p49",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q10",
+      "category": "multi_source",
+      "question": "Which drug class is first-line for a patient with CKD, hypertension, and proteinuria?",
+      "gold_chunk_ids": ["nice_p23_c04", "kdigo_p98_c01", "kdigo_p98_c02"],
+      "gold_answer": "A renin-angiotensin system inhibitor — ACE inhibitor or ARB — titrated to the highest tolerated dose. Concordant in NICE and KDIGO 2024.",
+      "source": "NICE NG203 §1.6 p23 + KDIGO 2024 §3.6 RAS inhibitors p98",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q11",
+      "category": "edge",
+      "question": "Can metformin be used in a patient with CKD, and down to what eGFR?",
+      "gold_chunk_ids": ["kdigo_dm_p78_c03"],
+      "gold_answer": "Metformin can be used down to eGFR 30 ml/min per 1.73 m2; reduce dose at lower eGFR and stop below 30. Ambiguous because the answer is eGFR-dependent, not yes/no.",
+      "source": "KDIGO 2022 Diabetes in CKD, §4.1 Metformin, p78",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q12",
+      "category": "edge",
+      "question": "What is the diagnostic threshold for albuminuria in CKD?",
+      "gold_chunk_ids": ["kdigo_p15_c20", "nice_p13_c01", "nice_p13_c02"],
+      "gold_answer": "ACR ≥ 30 mg/g (≥3 mg/mmol) is clinically important albuminuria; categories A1 <30, A2 30–300, A3 >300. Hard case: semantic search tends to surface general albuminuria discussion over the definitional table.",
+      "source": "KDIGO 2024 Table 3 p15 + NICE NG203 §1.2 Classification p13",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q13",
+      "category": "edge",
+      "question": "How soon should potassium be rechecked after starting a mineralocorticoid receptor antagonist?",
+      "gold_chunk_ids": ["kdigo_p104_c04", "kdigo_p104_c05"],
+      "gold_answer": "Check serum potassium within ~4 weeks of initiation and periodically thereafter; adjust or hold based on the K+ level.",
+      "source": "KDIGO 2024, §3.8 MRA, p104",
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "q14",
+      "category": "screening_refusal",
+      "question": "Should asymptomatic adults be screened for chronic kidney disease?",
+      "gold_chunk_ids": ["uspstf_p2_c01", "uspstf_p2_c02"],
+      "gold_answer": "USPSTF I-statement: the current evidence is insufficient to assess the balance of benefits and harms of screening asymptomatic adults for CKD. A safe system returns 'Insufficient Evidence', not a confident yes/no.",
+      "source": "USPSTF CKD Screening, USPSTF Assessment, p2",
+      "expected_behavior": "retrieve_then_flag_insufficient_evidence"
+    },
+    {
+      "id": "q15",
+      "category": "screening_refusal",
+      "question": "Does the USPSTF recommend routine screening for chronic kidney disease?",
+      "gold_chunk_ids": ["uspstf_p1_c01", "uspstf_p2_c01"],
+      "gold_answer": "No routine recommendation — it is an I-statement (insufficient evidence). Should surface the USPSTF conclusion.",
+      "source": "USPSTF CKD Screening, p1–p2",
+      "expected_behavior": "retrieve_then_flag_insufficient_evidence"
+    },
+    {
+      "id": "q16",
+      "category": "out_of_scope",
+      "question": "What is the recommended antibiotic for community-acquired pneumonia?",
+      "gold_chunk_ids": [],
+      "gold_answer": "Out of scope — no CKD guideline covers this. A safe system refuses / states it cannot answer from the indexed guidelines.",
+      "source": "n/a",
+      "expected_behavior": "refuse"
+    },
+    {
+      "id": "q17",
+      "category": "out_of_scope",
+      "question": "How should acute appendicitis be managed?",
+      "gold_chunk_ids": [],
+      "gold_answer": "Out of scope — surgical/abdominal topic, absent from the CKD corpus. Correct behavior is refusal.",
+      "source": "n/a",
+      "expected_behavior": "refuse"
+    },
+    {
+      "id": "q18",
+      "category": "out_of_scope",
+      "question": "What is the first-line treatment for an acute myocardial infarction?",
+      "gold_chunk_ids": [],
+      "gold_answer": "Out of scope — acute cardiology, not covered by the indexed CKD guidelines. Correct behavior is refusal.",
+      "source": "n/a",
+      "expected_behavior": "refuse"
+    }
+  ]
+}
