@@ -20,5 +20,9 @@ chromadb==1.5.9
 jupyter==1.1.1
 nbconvert==7.17.1
 
-# Env / secrets (only if using an API-based model)
+# Env / secrets
 python-dotenv==1.2.2
+
+# Generation backends (Day 3)
+huggingface_hub>=0.25.0
+google-genai>=2.0.0

@@ -1,0 +1,14 @@
+{
+  "demo_case": "C",
+  "label": "Out-of-scope refusal — pneumonia antibiotic (not in CKD corpus)",
+  "query": "What is the recommended antibiotic for community-acquired pneumonia?",
+  "backend": "huggingface",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "confidence": "insufficient",
+  "refused": true,
+  "gate_reason": "no relevant documents retrieved",
+  "format_valid": null,
+  "output_text": "I can't answer this from the available sources.\nReason: no relevant documents retrieved\nWhat I can do: try rephrasing toward a specific CKD guideline topic, or ask about one of the retrieved-but-unused passages if one seems close.",
+  "hits_used_count": 0,
+  "notes": "Gate-level refusal: top-hit cosine_sim < 0.70 threshold. No LLM call was made — refusal is deterministic and instant. Rehearsed for Day-5 live demo (Case C)."
+}

@@ -49,9 +49,9 @@ Citations must be built **only** from fields present on the retrieved hit object
 
 ### Retrieval-quality gate (uses `hybrid_search` output directly)
 
-Before answering, check the `fused_score` (and `cosine_sim`/`bm25_score` where present) of the top hit(s) actually used:
-- If the top hit's `fused_score` is very low relative to the rest of the result set (i.e., nothing in the pool looks meaningfully relevant — nearly-zero `cosine_rank`/`bm25_rank` overlap), treat this as **condition 1 (no relevant retrieval)** in Refusal Conditions below, even if `hybrid_search` technically returned `k` rows. `hybrid_search` always returns up to `k` results regardless of relevance — a returned hit is not the same as a relevant hit, and score plausibility must be checked before quoting it.
-- Do not surface `fused_score`, `cosine_rank`, or `bm25_rank` numbers to the end user in the Recommendation/Excerpt sections — these are internal grounding-quality signals, not clinical content. They may only be used internally to decide whether to answer or refuse.
+Before answering, check the `cosine_sim` of the top hit(s) actually used:
+- If the top hit's `cosine_sim` is below 0.70 (calibrated refusal threshold), treat this as **condition 1 (no relevant retrieval)** in Refusal Conditions below, even if `hybrid_search` technically returned `k` rows. `hybrid_search` always returns up to `k` results regardless of relevance — a returned hit is not the same as a relevant hit, and score plausibility must be checked before quoting it.
+- Do not surface `cosine_sim`, `fused_score`, `cosine_rank`, or `bm25_rank` numbers to the end user in the Recommendation/Excerpt sections — these are internal grounding-quality signals, not clinical content. They may only be used internally to decide whether to answer or refuse.
 
 ## Refusal Conditions
 
