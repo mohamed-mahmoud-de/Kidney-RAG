@@ -55,3 +55,6 @@ _test_*
 
 # Regenerable model embedding caches
 models/
+
+# Runtime query logs
+logs/

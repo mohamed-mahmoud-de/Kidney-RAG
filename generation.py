@@ -16,9 +16,11 @@ Usage:
 """
 from __future__ import annotations
 
+import json
 import os
 import re
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -49,6 +51,9 @@ MIN_TOP_COSINE = 0.70
 CONFIDENCE_HIGH_THRESHOLD = 0.80
 # Medium = [MIN_TOP_COSINE, CONFIDENCE_HIGH_THRESHOLD)
 # Below MIN_TOP_COSINE → refuse
+
+QUERY_LOG_DIR = Path(__file__).parent / "logs"
+QUERY_LOG_PATH = QUERY_LOG_DIR / "query_log.jsonl"
 
 CLINICAL_DISCLAIMER = (
     "\n\n---\n*This information is retrieved from indexed clinical guidelines "
@@ -186,6 +191,43 @@ def build_refusal(reason: str) -> str:
     )
 
 
+def _log_query(query: str, result: "GenerationResult", backend: str, model: str) -> None:
+    """Append a structured log entry for every query to logs/query_log.jsonl."""
+    QUERY_LOG_DIR.mkdir(exist_ok=True)
+
+    top_hit = result.hits_used[0] if result.hits_used else None
+    entry = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "query": query,
+        "backend": backend,
+        "model": model,
+        "gate_passed": not result.refused,
+        "gate_reason": result.gate_reason,
+        "confidence": result.confidence,
+        "format_valid": result.format_valid,
+        "top_cosine_sim": round(top_hit["cosine_sim"], 4) if top_hit else None,
+        "top_chunk_id": top_hit["chunk_id"] if top_hit else None,
+        "top_document": top_hit["document_name"] if top_hit else None,
+        "top_section": top_hit["section_title"] if top_hit else None,
+        "chunks_used": [
+            {
+                "chunk_id": h["chunk_id"],
+                "cosine_sim": round(h["cosine_sim"], 4),
+                "document_name": h["document_name"],
+                "section_title": h["section_title"],
+                "page_number": h["page_number"],
+            }
+            for h in result.hits_used
+        ],
+        "refused": result.refused,
+        "answer_length": len(result.text),
+        "answer_preview": result.text[:300],
+    }
+
+    with open(QUERY_LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
+
 class KidneyRAGGenerator:
     def __init__(self, retriever, api_key: str | None = None,
                  backend: str = LLM_BACKEND,
@@ -251,10 +293,12 @@ class KidneyRAGGenerator:
 
         if not gate.passed:
             text = build_refusal(gate.reason)
-            return GenerationResult(
+            result = GenerationResult(
                 text=text, refused=True, gate_reason=gate.reason,
                 confidence="insufficient", hits_used=[], format_valid=None,
             )
+            _log_query(query, result, self.backend, self.model)
+            return result
 
         context_block = format_context_block(gate.used_hits)
         user_message = (
@@ -267,7 +311,7 @@ class KidneyRAGGenerator:
         format_valid = validate_output_format(text)
         text += CLINICAL_DISCLAIMER
 
-        return GenerationResult(
+        result = GenerationResult(
             text=text,
             refused=False,
             gate_reason=None,
@@ -275,6 +319,8 @@ class KidneyRAGGenerator:
             hits_used=gate.used_hits,
             format_valid=format_valid,
         )
+        _log_query(query, result, self.backend, self.model)
+        return result
 
 
 if __name__ == "__main__":
