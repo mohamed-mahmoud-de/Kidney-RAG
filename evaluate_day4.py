@@ -250,7 +250,12 @@ def run_adversarial(retriever: HybridRetriever,
         gate = quality_gate(hits)
         answer = None
         if gate.passed and generator is not None:
-            answer = generator.answer(question, k=5).text[:400].replace("\n", " ")
+            try:
+                answer = generator.answer(question, k=5).text[:400].replace("\n", " ")
+            except LLMPoolExhausted:
+                answer = "[pool exhausted — skipped generation]"
+            except Exception as exc:
+                answer = f"[{type(exc).__name__}: {str(exc)[:150]}]"
         rows.append({
             "test": name, "question": question,
             "top_cosine": round(top_cos, 4),
@@ -340,6 +345,10 @@ def main() -> None:
                              "verify calls, preserving Gemini quota for gen.")
     parser.add_argument("--skip-generation", action="store_true",
                         help="Retrieval + gate only. Skips LLM calls entirely.")
+    parser.add_argument("--throttle-s", type=float, default=13.0,
+                        help="Sleep between LLM-touching questions. Default 13s "
+                             "keeps us under Gemini free tier's 5 rpm. Set 0 to "
+                             "disable (paid tier / HF PRO).")
     args = parser.parse_args()
 
     out = Path(args.out_dir); out.mkdir(parents=True, exist_ok=True)
@@ -374,7 +383,9 @@ def main() -> None:
         w.writeheader(); w.writerows(sweep)
     print(f"Wrote threshold_sweep.csv ({len(sweep)} rows)")
 
-    # 2. Per-question eval
+    # 2. Per-question eval. Throttle between questions so free-tier providers
+    # (Gemini: 5 rpm) don't hit rate limits mid-run. Skip the sleep after a
+    # refused-by-gate question — no LLM call was made.
     rows = []
     for i, q in enumerate(questions, 1):
         print(f"  [{i:2d}/{len(questions)}] {q['id']} {q['category']:<20} ", end="", flush=True)
@@ -382,6 +393,11 @@ def main() -> None:
         rows.append(row)
         print(f"cos={row['top_cosine']:.4f} P@k={row['precision_at_k']} "
               f"faith={row['faithfulness']} status={row['answer_status']}")
+        # Simple throttle: 13s between LLM-touching calls keeps us safely
+        # under Gemini free tier's 5 rpm. Configurable via --throttle-s.
+        if args.throttle_s > 0 and row["answer_status"] in {"answered", "refused_by_model"}:
+            if i < len(questions):
+                time.sleep(args.throttle_s)
 
     with (out / "evaluation_log.csv").open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
@@ -424,6 +440,16 @@ def main() -> None:
         json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
     print("\nSUMMARY")
     print(json.dumps(summary, indent=2))
+
+    # 4. Adversarial suite (may pool-exhaust; that's fine, main data is safe)
+    try:
+        adv = run_adversarial(retriever, generator)
+        with (out / "adversarial_results.csv").open("w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=list(adv[0].keys()))
+            w.writeheader(); w.writerows(adv)
+        print(f"Wrote adversarial_results.csv ({len(adv)} rows)")
+    except Exception as exc:
+        print(f"Adversarial suite skipped: {type(exc).__name__}: {str(exc)[:150]}")
 
     # 5. Responsible-AI checklist
     write_responsible_ai_checklist(out, summary)

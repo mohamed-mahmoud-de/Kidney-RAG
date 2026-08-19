@@ -21,20 +21,26 @@ New packages added for Day 3: `huggingface_hub`, `google-genai`, `python-dotenv`
 Create a file named `.env` in the project root (same folder as `generation.py`).
 This file is **gitignored** — never commit it.
 
+> **Day 4 update:** the old `KIDNEY_RAG_BACKEND=gemini/huggingface/anthropic`
+> selector is gone. Kidney-RAG now uses `llm_pool.py` — you add **every key
+> you have** and the pool round-robins them, fails over between providers
+> when one hits a rate limit, and never asks you to pick one. See
+> `.env.example` for the full template.
+
 ```env
-# Pick ONE backend. Gemini is recommended (free, fast, best format compliance).
-KIDNEY_RAG_BACKEND=gemini
+# Gemini — add up to N keys (auto-detected as GOOGLE_API_KEY, _2, _3, ...)
+GOOGLE_API_KEY=your-first-gemini-key
+GOOGLE_API_KEY_2=your-second-gemini-key
 
-# For Gemini (recommended):
-GOOGLE_API_KEY=your_google_ai_studio_key_here
+# HuggingFace — same pattern
+HF_TOKEN=hf_your_first_token
+HF_TOKEN_2=hf_your_second_token
 
-# For HuggingFace (free tier, ~1000 req/day — may run out):
-# KIDNEY_RAG_BACKEND=huggingface
-# HF_TOKEN=hf_your_token_here
-
-# For Anthropic (paid):
-# KIDNEY_RAG_BACKEND=anthropic
+# Anthropic — optional third tier
 # ANTHROPIC_API_KEY=sk-ant-your_key_here
+
+# Optional: change tier order (default gemini,huggingface,anthropic)
+# LLM_POOL_ORDER=gemini,huggingface
 ```
 
 **How to get a Google API key (free):**
@@ -133,7 +139,9 @@ print(result.text)  # "I can't answer this from the available sources..."
 | `ModuleNotFoundError: No module named 'google.genai'` | Run `pip install google-genai` |
 | `ModuleNotFoundError: No module named 'huggingface_hub'` | Run `pip install huggingface_hub` |
 | `ValueError: Set HF_TOKEN env var` | Add `HF_TOKEN=hf_xxx` to your `.env` file |
-| `402 Payment Required` (HuggingFace) | Free tier exhausted. Switch to `KIDNEY_RAG_BACKEND=gemini` in `.env` |
+| `402 Payment Required` (HuggingFace) | Monthly credits depleted. The pool will auto-fail-over to another tier if you have Gemini/Anthropic keys set; otherwise upgrade to HF PRO ($9/mo, 20x credits) or wait for reset. |
+| `429 RESOURCE_EXHAUSTED` (Gemini) | Rate limited. The pool cools the key down and rotates to another. Free tier: 5 rpm, 20/day per key — add a second key (`GOOGLE_API_KEY_2`) to double the ceiling. |
+| `LLMPoolExhausted` at runtime | Every key across every tier is in cooldown. Check `/health` in the web app to see per-key state and next-available time. |
 | `404 model not found` (Gemini) | Update `google-genai`: `pip install --upgrade google-genai` |
 | `Chroma has X vectors but chunks file has Y rows` | Re-run `embedder.ipynb` to rebuild the index |
 | Retriever takes ~30 sec to load | Normal on first run — MedEmbed loads from HF cache (~1.3 GB) |

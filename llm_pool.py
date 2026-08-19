@@ -57,7 +57,10 @@ from typing import Any
 log = logging.getLogger("kidney_rag.llm_pool")
 
 DEFAULT_GEMINI_MODEL = "gemini-3.6-flash"
-DEFAULT_HF_MODEL = "Qwen/Qwen2.5-7B-Instruct"
+# Llama-3.1-8B-Instruct is served on HF Inference API's free providers as of
+# 2026-08. Qwen/Qwen2.5-7B-Instruct was removed from the free tier — override
+# with KIDNEY_RAG_HF_MODEL if you have a paid HF provider that still hosts it.
+DEFAULT_HF_MODEL = "meta-llama/Llama-3.1-8B-Instruct"
 DEFAULT_ANTHROPIC_MODEL = "claude-sonnet-5"
 
 DEFAULT_TIER_ORDER = ["gemini", "huggingface", "anthropic"]

@@ -24,16 +24,20 @@ Deliberate design choices:
 """
 from __future__ import annotations
 
+import csv
 import logging
 import os
+import threading
+import time
 from contextlib import asynccontextmanager
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
@@ -59,6 +63,36 @@ logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s %(levelname)-5s %(name)s :: %(message)s")
 
 FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
+
+# Every /api/ask call appends one row here — the audit trail the deck can
+# point to as proof of live usage.
+SITE_QUERY_LOG = _ROOT / "logs" / "site_queries.csv"
+SITE_QUERY_LOG.parent.mkdir(exist_ok=True)
+_QUERY_LOG_LOCK = threading.Lock()
+SITE_QUERY_LOG_FIELDS = [
+    "timestamp", "latency_ms", "question", "k",
+    "refused", "refusal_kind", "gate_reason",
+    "top_cosine", "evidence_strength", "confidence",
+    "served_by", "format_valid",
+    "total_claims", "supported_claims", "faithfulness", "citation_accuracy",
+    "unsupported_claims_count",
+    "hit_chunk_ids", "hit_documents",
+]
+
+
+def _append_site_query(row: dict[str, Any]) -> None:
+    """Thread-safe append to site_queries.csv. Writes header on first call."""
+    try:
+        with _QUERY_LOG_LOCK:
+            new_file = not SITE_QUERY_LOG.exists()
+            with SITE_QUERY_LOG.open("a", newline="", encoding="utf-8") as f:
+                writer = csv.DictWriter(f, fieldnames=SITE_QUERY_LOG_FIELDS,
+                                        extrasaction="ignore")
+                if new_file:
+                    writer.writeheader()
+                writer.writerow({k: row.get(k) for k in SITE_QUERY_LOG_FIELDS})
+    except Exception as exc:                             # never break /api/ask
+        log.exception("site_query logging failed: %s", exc)
 
 SOURCES = [
     {"name": "KDIGO 2024 CKD Guideline (full)", "pages": 199,
@@ -225,6 +259,7 @@ def sources() -> dict[str, Any]:
 def ask(req: AskRequest) -> AskResponse:
     r = app.state.retriever
     g: KidneyRAGGenerator | None = app.state.generator
+    t_start = time.perf_counter()
 
     hits_raw = r.hybrid_search(req.question, k=req.k)
     top_cos = hits_raw[0]["cosine_sim"] if hits_raw else None
@@ -249,7 +284,7 @@ def ask(req: AskRequest) -> AskResponse:
     if not gate.passed:
         from generation import build_refusal, CLINICAL_DISCLAIMER
         refusal = build_refusal(gate.reason or "no relevant documents retrieved")
-        return AskResponse(
+        response = AskResponse(
             question=req.question,
             answer=refusal + CLINICAL_DISCLAIMER,
             refused=True,
@@ -263,6 +298,22 @@ def ask(req: AskRequest) -> AskResponse:
             hits=public_hits,
             safety=None,
         )
+        _append_site_query({
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "latency_ms": round((time.perf_counter() - t_start) * 1000, 2),
+            "question": req.question, "k": req.k,
+            "refused": True, "refusal_kind": "gate",
+            "gate_reason": gate.reason,
+            "top_cosine": round(top_cos, 4) if top_cos is not None else None,
+            "evidence_strength": strength, "confidence": "insufficient",
+            "served_by": None, "format_valid": None,
+            "total_claims": None, "supported_claims": None,
+            "faithfulness": None, "citation_accuracy": None,
+            "unsupported_claims_count": None,
+            "hit_chunk_ids": "|".join(h["chunk_id"] for h in hits_raw),
+            "hit_documents": "|".join(sorted({h["document_name"] for h in hits_raw})),
+        })
+        return response
 
     # Path 2: no generator available (e.g. no API key on the server).
     if g is None:
@@ -324,7 +375,7 @@ def ask(req: AskRequest) -> AskResponse:
             unsupported_claims=report.unsupported_claims,
         )
 
-    return AskResponse(
+    response = AskResponse(
         question=req.question,
         answer=result.text,
         refused=refused,
@@ -338,6 +389,73 @@ def ask(req: AskRequest) -> AskResponse:
         hits=public_hits,
         safety=safety_payload,
     )
+    _append_site_query({
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "latency_ms": round((time.perf_counter() - t_start) * 1000, 2),
+        "question": req.question, "k": req.k,
+        "refused": refused, "refusal_kind": refusal_kind,
+        "gate_reason": None,
+        "top_cosine": round(top_cos, 4) if top_cos is not None else None,
+        "evidence_strength": strength, "confidence": result.confidence,
+        "served_by": served_by, "format_valid": result.format_valid,
+        "total_claims": safety_payload.total_claims if safety_payload else None,
+        "supported_claims": safety_payload.supported_claims if safety_payload else None,
+        "faithfulness": safety_payload.faithfulness if safety_payload else None,
+        "citation_accuracy": safety_payload.citation_accuracy if safety_payload else None,
+        "unsupported_claims_count": (
+            len(safety_payload.unsupported_claims) if safety_payload else None
+        ),
+        "hit_chunk_ids": "|".join(h["chunk_id"] for h in hits_raw),
+        "hit_documents": "|".join(sorted({h["document_name"] for h in hits_raw})),
+    })
+    return response
+
+
+@app.get("/api/logs")
+def download_query_log() -> PlainTextResponse:
+    """Download the site-wide query log as CSV. Public endpoint — this is a
+    demo; put an auth wrapper here before productionising."""
+    if not SITE_QUERY_LOG.exists():
+        return PlainTextResponse(
+            ",".join(SITE_QUERY_LOG_FIELDS) + "\n",
+            media_type="text/csv",
+            headers={"Content-Disposition": 'attachment; filename="site_queries.csv"'},
+        )
+    return PlainTextResponse(
+        SITE_QUERY_LOG.read_text(encoding="utf-8"),
+        media_type="text/csv",
+        headers={"Content-Disposition": 'attachment; filename="site_queries.csv"'},
+    )
+
+
+@app.get("/api/stats")
+def query_stats() -> dict[str, Any]:
+    """Aggregate stats over site_queries.csv — used by the deck slide 'live
+    usage from the deployed demo'."""
+    if not SITE_QUERY_LOG.exists():
+        return {"total": 0, "note": "no queries logged yet"}
+    with SITE_QUERY_LOG.open(encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+    if not rows:
+        return {"total": 0}
+    faith_vals = [float(r["faithfulness"]) for r in rows if r.get("faithfulness")]
+    cite_vals = [float(r["citation_accuracy"]) for r in rows if r.get("citation_accuracy")]
+    latencies = [float(r["latency_ms"]) for r in rows if r.get("latency_ms")]
+    return {
+        "total_queries": len(rows),
+        "answered":     sum(1 for r in rows if r["refused"] == "False"),
+        "refused_gate": sum(1 for r in rows if r["refusal_kind"] == "gate"),
+        "refused_model": sum(1 for r in rows if r["refusal_kind"] == "model"),
+        "avg_faithfulness":     round(sum(faith_vals) / len(faith_vals), 4) if faith_vals else None,
+        "avg_citation_accuracy": round(sum(cite_vals) / len(cite_vals), 4) if cite_vals else None,
+        "avg_latency_ms":       round(sum(latencies) / len(latencies), 1) if latencies else None,
+        "confidence_breakdown": {
+            level: sum(1 for r in rows if r["evidence_strength"] == level)
+            for level in ("strong", "partial", "weak", "insufficient")
+        },
+        "unique_questions": len({r["question"] for r in rows}),
+    }
 
 
 # --- static frontend -------------------------------------------------------

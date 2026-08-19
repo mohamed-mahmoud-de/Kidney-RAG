@@ -6,7 +6,9 @@ The project is designed around one safety principle:
 
 > **A fluent answer is not necessarily a safe answer.** Every retrieved recommendation should remain traceable to its source document, section, page range, and `chunk_id`.
 
-This repository currently focuses on the **retrieval foundation** of a clinical RAG system. It does not provide a production clinical decision-support application or replace professional medical judgment.
+This repository ships the **full four-day hackathon build**: retrieval foundation (Days 1–2), grounded generation with a citation-shaped answer schema and a calibrated refusal gate (Day 3), and a safety layer with claim-level faithfulness scoring, a multi-key LLM pool, and a deployable web UI (Day 4). It is a research prototype and does not replace professional medical judgment.
+
+For a plain-English walkthrough of what shipped each day, see [`docs/KIDNEY_RAG_TEAMMATE_GUIDE.pdf`](docs/KIDNEY_RAG_TEAMMATE_GUIDE.pdf).
 
 ## What the project does
 
@@ -62,9 +64,22 @@ Kidney-RAG/
 ├── pdf_parser.ipynb              # PDF → parsed JSON
 ├── chunker.ipynb                 # Parsed JSON → citation-ready JSONL
 ├── embedder.ipynb                # JSONL → embeddings + ChromaDB
-├── retriever.ipynb               # Semantic + BM25 hybrid retrieval sandbox
+├── retriever.ipynb               # Day 2 hybrid retrieval sandbox (superseded by retrieval.py)
+├── retrieval.py                  # HybridRetriever (production entry point)
+├── evaluate.py                   # Day 2 retrieval eval — writes artifacts/day2/*
+├── generation.py                 # Day 3 grounded generator + quality gate + refusal
+├── safety.py                     # Day 4 claim extractor + faithfulness + citation accuracy
+├── llm_pool.py                   # Day 4 multi-key LLM pool with RR + failover
+├── evaluate_day4.py              # Day 4 full-pipeline eval — writes artifacts/day4/*
+├── test_generation.py            # 18 offline tests
+├── test_safety.py                # 18 offline tests
+├── test_llm_pool.py              # 18 offline tests
+├── web/backend/app.py            # FastAPI wrapping the pipeline
+├── web/frontend/                 # Landing-page UI (self-contained)
+├── artifacts/day2/               # Day 2 measurement outputs
+├── artifacts/day4/               # Day 4 measurement outputs + responsible AI checklist
 ├── requirements.txt              # Pinned Python dependencies
-├── .env.example                  # Optional API-key template for future work
+├── .env.example                  # Multi-key template for the LLM pool
 ├── CLAUDE.md                     # Internal project brief and implementation contracts
 └── README.md
 ```
@@ -182,6 +197,59 @@ The dataset defines three basic retrieval metrics:
 | Hit@k | `1` when any gold chunk appears in the top `k`; otherwise `0` |
 
 The evaluation set also tests behavior beyond ranking quality. Screening questions should surface the USPSTF **insufficient-evidence** conclusion rather than force a yes/no recommendation, while out-of-scope questions should be refused instead of being answered with an unrelated CKD passage.
+
+## Grounded generation (Day 3)
+
+[`generation.py`](generation.py) turns the top-k retrieval into a strictly grounded answer. Every response comes back in a fixed **Recommendation / Excerpt / Citation** shape, with the citation built from real chunk metadata (`chunk_id`, `document_name`, `section_title`, `page_number` / `page_range`, `source_url`) so it is programmatically verifiable.
+
+A **retrieval-quality gate** at cosine ≥ 0.70 (calibrated on `eval/eval_set.json` — 0.10 gap between in-scope and out-of-scope questions) refuses before the LLM is ever called, so out-of-scope queries never risk hallucination. See [`docs/DAY3_DELIVERABLES.md`](docs/DAY3_DELIVERABLES.md) for the full flow and refusal conditions.
+
+## Safety layer + evaluation (Day 4)
+
+[`safety.py`](safety.py) scores every generated answer:
+
+- **Claim extraction** — splits the Recommendation into atomic factual claims, attaches cited chunk_ids.
+- **Verification** — LLM verifier (primary), embedding similarity (offline fallback), or NLI cross-encoder (opt-in).
+- **Faithfulness** = supported claims / total claims.
+- **Citation accuracy** = correct cited chunks / total cited chunks (existence + support).
+- **4-level evidence-strength labels** (strong / partial / weak / insufficient) derived from top-hit cosine, driving the UI badge and the wrapper phrase in the answer.
+
+[`llm_pool.py`](llm_pool.py) holds a rotating pool of provider keys. Round-robin within a tier (double your effective Gemini quota with two keys), failover across tiers when a whole tier is in cooldown (Gemini → HuggingFace → Anthropic). Role-based tier routing: generation prefers Gemini, verification prefers HuggingFace to preserve Gemini quota.
+
+[`evaluate_day4.py`](evaluate_day4.py) is the full-pipeline harness that writes `artifacts/day4/{evaluation_log.csv, threshold_sweep.csv, adversarial_results.csv, summary.json, responsible_ai_checklist.md}`. See [`docs/DAY4_DELIVERABLES.md`](docs/DAY4_DELIVERABLES.md) for the metric tables and threshold justification.
+
+## Web app
+
+[`web/backend/app.py`](web/backend/app.py) is a FastAPI process that wraps retriever + generator + safety layer. Endpoints:
+
+| Endpoint | Purpose |
+|---|---|
+| `GET /` | Static landing page |
+| `POST /api/ask` | Retrieval → gate → generation → safety scoring |
+| `GET /health` | Retriever + generator + live per-key pool status |
+| `GET /api/sources` | Catalog of indexed guidelines |
+| `GET /api/logs` | Download the full site-query CSV audit log |
+| `GET /api/stats` | Aggregate: refusals, avg faithfulness, latency, evidence-strength breakdown |
+| `GET /docs` | Auto-generated OpenAPI browser |
+
+The frontend at [`web/frontend/`](web/frontend) is a self-contained HTML/CSS/JS landing page — dark medical-tech aesthetic, mobile-responsive, no external dependencies. Every `/api/ask` call is appended to `logs/site_queries.csv` for post-hoc analysis.
+
+Run locally:
+
+```bash
+python -m uvicorn web.backend.app:app --port 8000
+# open http://127.0.0.1:8000
+```
+
+## Tests
+
+54 offline tests across three suites, all runnable without API keys or network:
+
+```bash
+python test_generation.py         # 18 tests — Day 3 gate + citation + format
+python test_safety.py             # 18 tests — Day 4 extractor + scoring math
+python -m pytest test_llm_pool.py # 18 tests — pool RR, cooldown, failover
+```
 
 ## Safety and scope
 
