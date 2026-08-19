@@ -62,11 +62,21 @@ DEFAULT_GEMINI_MODEL = "gemini-3.6-flash"
 # with KIDNEY_RAG_HF_MODEL if you have a paid HF provider that still hosts it.
 DEFAULT_HF_MODEL = "meta-llama/Llama-3.1-8B-Instruct"
 DEFAULT_ANTHROPIC_MODEL = "claude-sonnet-5"
+# Groq's free tier is by far the most generous of the four (30 rpm on the
+# default model, 14,400 requests/day). openai/gpt-oss-20b is a mid-size
+# open-weight OpenAI model — follows structured prompt formats (like our
+# Recommendation/Excerpt/Citation) tightly. Groq deprecated llama-3.1
+# variants; other options today: openai/gpt-oss-120b (larger), qwen/qwen3.6-27b.
+# See https://console.groq.com/docs/models for the current list.
+DEFAULT_GROQ_MODEL = "openai/gpt-oss-20b"
+GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
-DEFAULT_TIER_ORDER = ["gemini", "huggingface", "anthropic"]
-# Verification prefers HF (cheap, throwaway binary classification) so Gemini
-# quota is preserved for judge-facing answers.
-DEFAULT_VERIFY_TIER_ORDER = ["huggingface", "gemini", "anthropic"]
+# Groq goes first — best free ceiling, so evals + demos hit it first and
+# Gemini/HF stay in reserve as failover.
+DEFAULT_TIER_ORDER = ["groq", "gemini", "huggingface", "anthropic"]
+# Verification prefers Groq → HF (cheap, throwaway binary classification)
+# so Gemini quota is preserved for judge-facing generation.
+DEFAULT_VERIFY_TIER_ORDER = ["groq", "huggingface", "gemini", "anthropic"]
 
 DEFAULT_COOLDOWN_S = 60.0    # fallback when the provider doesn't hint one
 
@@ -135,6 +145,12 @@ class LLMPool:
                 backend="anthropic", key_env=env_name, api_key=api_key,
                 model=os.environ.get("KIDNEY_RAG_ANTHROPIC_MODEL", DEFAULT_ANTHROPIC_MODEL),
                 tier="anthropic",
+            ))
+        for env_name, api_key in _scan_keys("GROQ_API_KEY").items():
+            providers.append(Provider(
+                backend="groq", key_env=env_name, api_key=api_key,
+                model=os.environ.get("KIDNEY_RAG_GROQ_MODEL", DEFAULT_GROQ_MODEL),
+                tier="groq",
             ))
         order = tier_order or _parse_tier_order(
             os.environ.get("LLM_POOL_ORDER", ",".join(DEFAULT_TIER_ORDER))
@@ -238,6 +254,18 @@ class LLMPool:
         elif p.backend == "huggingface":
             from huggingface_hub import InferenceClient
             p._client = InferenceClient(model=p.model, token=p.api_key)
+        elif p.backend == "groq":
+            # Groq's chat completions is a plain OpenAI-compatible HTTPS
+            # endpoint — cheaper to hit with `requests` than to pull in the
+            # openai SDK just for one call site. Cache a session so keep-alive
+            # gives us the same latency win the SDKs get for free.
+            import requests
+            session = requests.Session()
+            session.headers.update({
+                "Authorization": f"Bearer {p.api_key}",
+                "Content-Type": "application/json",
+            })
+            p._client = session
         else:
             raise ValueError(f"Unknown backend: {p.backend!r}")
         return p._client
@@ -262,6 +290,46 @@ class LLMPool:
                 messages=[{"role": "user", "content": user_message}],
             )
             return "".join(b.text for b in response.content if b.type == "text")
+        if p.backend == "groq":
+            # OpenAI-compatible /v1/chat/completions endpoint.
+            # Groq's current chat models (openai/gpt-oss-*, qwen/qwen3.6-27b)
+            # are all *reasoning* models — they burn output tokens on internal
+            # thinking before emitting content. Two mitigations:
+            #   1. reasoning_effort=low keeps the thinking budget minimal.
+            #   2. Cap max_tokens at 2500 to fit inside Groq free tier's
+            #      per-minute token budget (8000 TPM on gpt-oss-20b) alongside
+            #      a ~5000-token clinical prompt. Bigger than that trips 413
+            #      and the pool cools the provider down.
+            groq_max = min(max_tokens, 2500)
+            resp = client.post(
+                GROQ_API_URL,
+                json={
+                    "model": p.model,
+                    "messages": [
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_message},
+                    ],
+                    "max_tokens": groq_max,
+                    "temperature": 0.0,          # deterministic for eval
+                    "reasoning_effort": "low",   # gpt-oss / o1-style hint
+                },
+                timeout=60,
+            )
+            if resp.status_code != 200:
+                # Turn the HTTP error into an exception the pool can classify.
+                # Groq surfaces 429 for rate-limits (retry-after in headers)
+                # and 402/403 for quota/plan issues.
+                raise RuntimeError(
+                    f"Groq {resp.status_code}: {resp.text[:300]}"
+                )
+            data = resp.json()
+            content = data["choices"][0]["message"].get("content") or ""
+            # Qwen3.6 emits <think>...</think> blocks inside content — strip
+            # them so the answer keeps our strict format schema.
+            import re as _re
+            content = _re.sub(r"<think>.*?</think>\s*", "", content, flags=_re.DOTALL).strip()
+            return content
+
         # huggingface chat.completions
         completion = client.chat.completions.create(
             messages=[
@@ -292,10 +360,12 @@ class LLMPool:
         low = msg.lower()
         transient = (
             "429" in msg
+            or "413" in msg                     # Groq: request too large for TPM
             or "rate limit" in low or "rate_limit" in low or "ratelimit" in low
             or "resource_exhausted" in low or "resourceexhausted" in low
             or "quota" in low
             or "too many requests" in low
+            or "tokens per minute" in low or "tpm" in low
             or "overloaded" in low
         )
         if not transient:

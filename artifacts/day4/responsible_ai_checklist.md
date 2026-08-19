@@ -36,11 +36,11 @@ demoing on Day 5.
 - Adversarial suite: 5 stress tests in `artifacts/day4/adversarial_results.csv`
   (out-of-scope, prompt injection, over-broad, personal diagnosis, in-scope
   control).
-- Faithfulness on eval set: None
-- Citation accuracy on eval set: None
+- Faithfulness on eval set: 1.0
+- Citation accuracy on eval set: 1.0
 - Precision@5 on eval set: 0.2133
 - Refusals: 3 refused by gate (cosine floor)
-  + 0 refused by model (system-prompt
+  + 1 refused by model (system-prompt
   conditions 2–6), out of 18 questions.
   Expected minimum: 3 (the 3 out-of-scope questions).
 

@@ -244,6 +244,89 @@ def test_status_marks_cooldown_and_ready():
     assert ids[h.id]["status"] == "ready"
 
 
+def test_env_discovery_picks_up_groq_keys(monkeypatch):
+    """LLMPool.from_env() must include GROQ_API_KEY[_N] as a discovered tier."""
+    # Isolate — clear ALL known key env vars so from_env() sees only ours.
+    for var in ("GOOGLE_API_KEY", "HF_TOKEN", "ANTHROPIC_API_KEY", "GROQ_API_KEY"):
+        monkeypatch.delenv(var, raising=False)
+        for i in range(2, 5):
+            monkeypatch.delenv(f"{var}_{i}", raising=False)
+    monkeypatch.setenv("GROQ_API_KEY", "gsk_first")
+    monkeypatch.setenv("GROQ_API_KEY_2", "gsk_second")
+    pool = LLMPool.from_env()
+    ids = [p.id for p in pool.providers()]
+    assert ids == ["groq:GROQ_API_KEY", "groq:GROQ_API_KEY_2"]
+    # Groq should be a discovered tier — order includes "groq" first per
+    # the default tier order.
+    assert "groq" in pool.tier_order
+
+
+def test_groq_call_maps_success(monkeypatch):
+    """Stub Groq's HTTP session to return a valid OpenAI-shaped response."""
+    from llm_pool import LLMPool, Provider
+
+    class FakeResp:
+        status_code = 200
+        text = ""
+        def json(self):
+            return {"choices": [{"message": {"content": "OK from Groq"}}]}
+
+    class FakeSession:
+        def __init__(self):
+            self.headers = {}
+        def post(self, url, json=None, timeout=None):
+            assert "chat/completions" in url
+            assert json["model"] == "llama-3.1-8b-instant"
+            return FakeResp()
+
+    p = Provider(backend="groq", key_env="GROQ_API_KEY",
+                 api_key="gsk_x", model="llama-3.1-8b-instant", tier="groq")
+    p._client = FakeSession()
+    pool = LLMPool(["groq"], [p])
+    text, provider = pool.generate("sys", "usr")
+    assert text == "OK from Groq"
+    assert provider.id == "groq:GROQ_API_KEY"
+    assert provider.successes == 1
+
+
+def test_groq_429_triggers_cooldown_and_failover(monkeypatch):
+    """A Groq 429 must be classified as transient and drop to the next tier."""
+    from llm_pool import LLMPool, Provider
+
+    class FakeResp:
+        status_code = 429
+        text = "429 rate_limit_exceeded. retry-after: 30s"
+
+    class FailingSession:
+        def __init__(self):
+            self.headers = {}
+        def post(self, *_a, **_k):
+            return FakeResp()
+
+    g = Provider(backend="groq", key_env="GROQ_API_KEY",
+                 api_key="gsk_x", model="llama-3.1-8b-instant", tier="groq")
+    g._client = FailingSession()
+    h = _mk_provider("huggingface", "huggingface", "HF_TOKEN")
+    pool = LLMPool(["groq", "huggingface"], [g, h])
+
+    # Grab the real _call once, then patch it to route HF calls to a stub and
+    # let the Groq branch fall through to the real code (which will hit the
+    # FailingSession and raise the 429-shaped RuntimeError we want).
+    real_call = LLMPool._call
+    def dispatch(self, p, s, u, m):
+        if p.backend == "huggingface":
+            return "hf-fallback"
+        return real_call(self, p, s, u, m)
+    monkeypatch.setattr(LLMPool, "_call", dispatch)
+
+    text, used = pool.generate("sys", "usr")
+    assert text == "hf-fallback"
+    assert used.id == h.id
+    assert g.in_cooldown()
+    # Retry-after 30s was parsed by _cooldown_from_error → ~31s left.
+    assert 28 <= g.cooldown_remaining_s() <= 32
+
+
 def test_status_does_not_leak_api_keys():
     g = Provider(backend="gemini", key_env="GOOGLE_API_KEY",
                  api_key="SECRET_XYZ", model="m", tier="gemini")
