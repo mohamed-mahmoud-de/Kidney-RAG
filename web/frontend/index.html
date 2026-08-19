@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kidney-RAG — Cited answers from CKD guidelines</title>
+  <meta name="description" content="Ask questions about chronic kidney disease and get grounded, cited answers pulled directly from KDIGO, NICE, and USPSTF guidelines." />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#ask">Skip to question</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3.2c3 0 6 2.4 6 6.4 0 3.8-3.6 8.4-6 11.2-2.4-2.8-6-7.4-6-11.2 0-4 3-6.4 6-6.4Z"/>
+            <path d="M9.5 10.5c.6 1.5 3.4 1.5 4 0"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>Kidney-RAG</strong>
+          <span class="brand-tag">Grounded CKD answers</span>
+        </span>
+      </a>
+      <nav class="site-nav">
+        <a href="#how">How it works</a>
+        <a href="#sources">Sources</a>
+        <a href="/docs" target="_blank" rel="noopener">API</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Retrieval-grounded clinical assistant · 666 chunks · 4 guidelines</p>
+        <h1>Ask a question about<br /><span class="accent">chronic kidney disease</span>.</h1>
+        <p class="lede">
+          Every answer is drawn from KDIGO, NICE, and USPSTF guideline text — with
+          the exact page, section, and chunk cited. If the evidence isn't there,
+          the system refuses instead of guessing.
+        </p>
+
+        <form id="ask-form" class="ask" autocomplete="off">
+          <label class="visually-hidden" for="q">Your clinical question</label>
+          <div class="ask-row">
+            <input
+              id="q" name="q" type="text"
+              placeholder="e.g. At what eGFR can an SGLT2 inhibitor be started in CKD?"
+              maxlength="500" autofocus required />
+            <button type="submit" id="ask-btn">
+              <span class="btn-label">Ask</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="examples" id="examples">
+            <span class="examples-label">Try:</span>
+            <button type="button" class="example">SGLT2 in CKD</button>
+            <button type="button" class="example">ACR threshold for A3</button>
+            <button type="button" class="example">First-line BP drug in CKD + proteinuria</button>
+            <button type="button" class="example">Should adults be screened for CKD?</button>
+            <button type="button" class="example">Treatment for acute appendicitis</button>
+          </div>
+        </form>
+
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="result" class="result" hidden aria-live="polite">
+      <div class="container">
+        <div class="result-header">
+          <p class="result-q" id="result-q"></p>
+          <div class="badges">
+            <span class="badge" id="badge-strength">strength</span>
+            <span class="badge" id="badge-conf">confidence</span>
+            <span class="badge badge-outline" id="badge-cosine">cosine —</span>
+            <span class="badge badge-outline" id="badge-served" hidden>via —</span>
+          </div>
+        </div>
+
+        <article class="card answer-card">
+          <header class="card-header">
+            <h2>Answer</h2>
+            <div class="mini-metrics" id="mini-metrics">
+              <span class="mini" title="Fraction of extracted claims supported by the retrieved evidence">
+                <span class="mini-label">Faithfulness</span>
+                <span class="mini-value" id="m-faith">—</span>
+              </span>
+              <span class="mini" title="Fraction of cited chunks that both exist in the retrieved set and support the claim">
+                <span class="mini-label">Citation accuracy</span>
+                <span class="mini-value" id="m-cite">—</span>
+              </span>
+              <span class="mini" title="Claims extracted from the answer">
+                <span class="mini-label">Claims</span>
+                <span class="mini-value" id="m-claims">—</span>
+              </span>
+            </div>
+          </header>
+          <div class="answer" id="answer"></div>
+          <p class="unsupported" id="unsupported" hidden></p>
+        </article>
+
+        <details class="card sources-card" id="sources-card" open>
+          <summary>
+            <span>Retrieved passages</span>
+            <span class="pill" id="sources-count">0</span>
+          </summary>
+          <ol class="hits" id="hits"></ol>
+        </details>
+
+        <p class="disclaimer">
+          Kidney-RAG is a retrieval-grounded lookup over indexed clinical guidelines.
+          It is <strong>not</strong> a substitute for professional medical advice.
+          Always consult a qualified clinician for patient-specific decisions.
+        </p>
+      </div>
+    </section>
+
+    <section id="how" class="how">
+      <div class="container">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">01</span>
+            <h3>Retrieve</h3>
+            <p>Hybrid search — MedEmbed semantic (0.7) fused with BM25 lexical (0.3) via RRF over 666 chunks.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <h3>Gate</h3>
+            <p>Top-hit cosine ≥ 0.70 or the system refuses. Calibrated with a 0.10 gap between in-scope and out-of-scope on the eval set.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <h3>Ground &amp; cite</h3>
+            <p>LLM answers <em>only</em> from the retrieved text, in a fixed Recommendation / Excerpt / Citation format, with the chunk ID embedded.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">04</span>
+            <h3>Verify</h3>
+            <p>Post-hoc claim extractor + verifier scores faithfulness and citation accuracy on every answer.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="sources" class="sources">
+      <div class="container">
+        <h2>Indexed guidelines</h2>
+        <div class="source-grid" id="source-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        Creativa × Orange AI Hackathon · CKD RAG ·
+        <span id="footer-model">local pipeline</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>

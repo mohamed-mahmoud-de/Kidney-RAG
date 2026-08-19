@@ -133,7 +133,23 @@ Notebooks are self-contained. Each reads its input, writes its output, and is id
 
 - **Day 1:** Searchable Vector DB with Metadata — DONE. Retrieval verified end-to-end.
 - **Day 2:** Retrieval Optimization — DONE. All 6 deck items done, every claim traces to `artifacts/day2/*`. See `docs/DAY2_DELIVERABLES.md`.
-- **Day 3 (next):** Grounded generation + citation. `retrieval.py`'s `HybridRetriever.hybrid_search(query, k)` is the entry point generation will import.
+- **Day 3:** Grounded generation + citation — DONE. `retrieval.py`'s `HybridRetriever.hybrid_search(query, k)` feeds `generation.KidneyRAGGenerator`. See `docs/DAY3_DELIVERABLES.md`.
+- **Day 4:** Safety, verification, evaluation, web UI — DONE. `safety.py` adds claim extraction + verification + faithfulness + citation accuracy + 4-level uncertainty language. `evaluate_day4.py` writes `artifacts/day4/*`. `web/backend/app.py` + `web/frontend/*` are the demo UI (FastAPI + static). See `docs/DAY4_DELIVERABLES.md`.
+- **Day 5 (next):** Deploy the web UI to Render/Railway, rehearse 3-question demo (strong / partial / refusal), rerun `evaluate_day4.py` for live faithfulness numbers, cut final deck.
+
+## Day 4 additions — quick reference
+
+| File | Role |
+|---|---|
+| `safety.py` | Claim extractor, LLM/similarity/NLI verifiers, faithfulness + citation-accuracy math, 4-level evidence-strength mapping |
+| `evaluate_day4.py` | Full pipeline harness → `artifacts/day4/*.{csv,json,md}` |
+| `test_safety.py` | 18 offline tests (no API needed) |
+| `web/backend/app.py` | FastAPI wrapping retrieval + generation + safety. Endpoints: `/health`, `/api/sources`, `/api/ask`, `/docs` |
+| `web/frontend/*` | Self-contained landing-page UI (dark theme, mobile-responsive, no external deps) |
+| `artifacts/day4/` | evaluation_log.csv · summary.json · threshold_sweep.csv · adversarial_results.csv · responsible_ai_checklist.md |
+
+Run the web app: `python -m uvicorn web.backend.app:app --port 8000` → open http://127.0.0.1:8000.
+Rerun eval: `python evaluate_day4.py --skip-generation` (retrieval-only, deterministic) or `python evaluate_day4.py --verifier llm` (needs Gemini quota).
 
 ## Team roles
 
@@ -148,7 +164,7 @@ Notebooks are self-contained. Each reads its input, writes its output, and is id
 
 - Never edit `all_chunks.jsonl` by hand — regenerate via chunker.
 - Never commit `chroma_db/`, `*.npy`, `models/`, or `.env` (all gitignored).
-- Never hardcode API keys. We're 100% local now — no API needed. If you re-add one, load from `.env` via `python-dotenv` (there is currently no dotenv usage in code).
+- Never hardcode API keys. `generation.py` and `web/backend/app.py` load `.env` via `python-dotenv`. Add a key by editing `.env` (gitignored), never the code.
 - Never delete `~/.cache/huggingface/` — re-triggers 1.3 GB MedEmbed download.
 - Never use `--output foo.ipynb` on nbconvert — always `--inplace`.
 - Never introduce backwards-compat shims — this is a 5-day hackathon.

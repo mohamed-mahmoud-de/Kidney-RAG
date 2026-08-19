@@ -26,19 +26,12 @@ from typing import Any
 
 from dotenv import load_dotenv
 
+from llm_pool import LLMPool, Provider, LLMPoolExhausted
+
 load_dotenv()
 
 SYSTEM_PROMPT_PATH = Path(__file__).parent / "kidney_rag_system_prompt.md"
 MAX_TOKENS = 2000
-
-# --- LLM backend selection ------------------------------------------------
-# "huggingface": free (rate-limited ~1000 req/day), open-weight models
-#                via HF Inference API. Default for this project.
-# "anthropic":   paid, better instruction-following for strict format/refusal.
-LLM_BACKEND = os.environ.get("KIDNEY_RAG_BACKEND", "huggingface")
-ANTHROPIC_MODEL = "claude-sonnet-5"
-HF_MODEL = os.environ.get("KIDNEY_RAG_HF_MODEL", "Qwen/Qwen2.5-7B-Instruct")
-GEMINI_MODEL = os.environ.get("KIDNEY_RAG_GEMINI_MODEL", "gemini-3.6-flash")
 
 # --- Retrieval-quality gate ------------------------------------------------
 # Calibrated against eval/eval_set.json (18 questions, 2026-08-18):
@@ -229,63 +222,49 @@ def _log_query(query: str, result: "GenerationResult", backend: str, model: str)
 
 
 class KidneyRAGGenerator:
-    def __init__(self, retriever, api_key: str | None = None,
-                 backend: str = LLM_BACKEND,
-                 model: str | None = None, top_k: int = 5,
+    """Grounded generator backed by an LLMPool.
+
+    The pool handles multi-key round-robin and cross-tier failover, so this
+    class only worries about retrieval, gating, prompt assembly, format
+    validation, and logging. The `last_provider` attribute records which
+    concrete key served the most recent answer — useful for the UI badge
+    and for `safety.verify_claim_llm` to avoid the same key on follow-ups.
+    """
+
+    def __init__(self, retriever, pool: LLMPool | None = None,
+                 top_k: int = 5,
                  system_prompt_path: Path = SYSTEM_PROMPT_PATH):
         self.retriever = retriever
-        self.backend = backend
         self.top_k = top_k
         self.system_prompt = load_system_prompt(system_prompt_path)
-
-        if backend == "anthropic":
-            from anthropic import Anthropic
-            self.model = model or ANTHROPIC_MODEL
-            self.client = Anthropic(api_key=api_key or os.environ.get("ANTHROPIC_API_KEY"))
-        elif backend == "huggingface":
-            from huggingface_hub import InferenceClient
-            self.model = model or HF_MODEL
-            token = api_key or os.environ.get("HF_TOKEN")
-            if not token:
-                raise ValueError("Set HF_TOKEN env var (or pass api_key=) for the huggingface backend.")
-            self.client = InferenceClient(model=self.model, token=token)
-        elif backend == "gemini":
-            from google import genai
-            self.model = model or GEMINI_MODEL
-            self.client = genai.Client(api_key=api_key or os.environ.get("GOOGLE_API_KEY"))
-        else:
-            raise ValueError(f"Unknown backend: {backend!r}. Use 'anthropic', 'huggingface', or 'gemini'.")
-
-    def _call_llm(self, user_message: str) -> str:
-        if self.backend == "anthropic":
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=MAX_TOKENS,
-                system=self.system_prompt,
-                messages=[{"role": "user", "content": user_message}],
+        self.pool = pool or LLMPool.from_env()
+        if not self.pool.has_providers():
+            raise ValueError(
+                "LLMPool has no providers. Set at least one of GOOGLE_API_KEY, "
+                "HF_TOKEN, or ANTHROPIC_API_KEY in the environment."
             )
-            return "".join(block.text for block in response.content if block.type == "text")
+        self.last_provider: Provider | None = None
 
-        if self.backend == "gemini":
-            from google.genai import types
-            response = self.client.models.generate_content(
-                model=self.model,
-                contents=user_message,
-                config=types.GenerateContentConfig(
-                    system_instruction=self.system_prompt,
-                    max_output_tokens=MAX_TOKENS,
-                ),
-            )
-            return response.text
+    # Legacy compatibility shims so older callers (evaluate scripts, tests,
+    # logs) still see .backend and .model without knowing about the pool.
+    @property
+    def backend(self) -> str:
+        p = self.last_provider or self.pool.providers()[0]
+        return p.backend
 
-        completion = self.client.chat.completions.create(
-            messages=[
-                {"role": "system", "content": self.system_prompt},
-                {"role": "user", "content": user_message},
-            ],
+    @property
+    def model(self) -> str:
+        p = self.last_provider or self.pool.providers()[0]
+        return p.model
+
+    def _call_llm(self, user_message: str) -> tuple[str, Provider]:
+        text, provider = self.pool.generate(
+            system_prompt=self.system_prompt,
+            user_message=user_message,
             max_tokens=MAX_TOKENS,
         )
-        return completion.choices[0].message.content
+        self.last_provider = provider
+        return text, provider
 
     def answer(self, query: str, k: int | None = None) -> GenerationResult:
         hits = self.retriever.hybrid_search(query, k=k or self.top_k)
@@ -297,7 +276,7 @@ class KidneyRAGGenerator:
                 text=text, refused=True, gate_reason=gate.reason,
                 confidence="insufficient", hits_used=[], format_valid=None,
             )
-            _log_query(query, result, self.backend, self.model)
+            _log_query(query, result, "gate", "n/a")
             return result
 
         context_block = format_context_block(gate.used_hits)
@@ -307,7 +286,7 @@ class KidneyRAGGenerator:
             f"CITATION_STRING exactly as given):\n\n{context_block}"
         )
 
-        text = self._call_llm(user_message)
+        text, provider = self._call_llm(user_message)
         format_valid = validate_output_format(text)
         text += CLINICAL_DISCLAIMER
 
@@ -319,7 +298,7 @@ class KidneyRAGGenerator:
             hits_used=gate.used_hits,
             format_valid=format_valid,
         )
-        _log_query(query, result, self.backend, self.model)
+        _log_query(query, result, provider.backend, provider.model)
         return result
 
 
@@ -330,6 +309,7 @@ if __name__ == "__main__":
 
     retriever = HybridRetriever()
     generator = KidneyRAGGenerator(retriever)
+    print(f"Pool providers: {[p.id for p in generator.pool.providers()]}")
 
     demo_questions = [
         "What is the diagnostic threshold for albuminuria in CKD?",
@@ -339,6 +319,8 @@ if __name__ == "__main__":
         print("=" * 100)
         print(f"Q: {q}")
         result = generator.answer(q)
-        print(f"[confidence={result.confidence} | refused={result.refused} | format_valid={result.format_valid}]")
+        who = generator.last_provider.id if generator.last_provider else "gate"
+        print(f"[served_by={who} | confidence={result.confidence} | "
+              f"refused={result.refused} | format_valid={result.format_valid}]")
         print(result.text)
         print()

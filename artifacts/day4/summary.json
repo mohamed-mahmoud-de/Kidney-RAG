@@ -1,0 +1,18 @@
+{
+  "eval_set": "eval/eval_set.json",
+  "k": 5,
+  "verifier": "similarity",
+  "backend_note": "generation skipped by --skip-generation",
+  "num_questions": 18,
+  "num_scored": 15,
+  "num_refused_by_gate": 3,
+  "num_refused_by_model": 0,
+  "num_answered": 0,
+  "num_gen_error": 0,
+  "avg_precision_at_k": 0.2133,
+  "avg_recall_at_k": 0.7056,
+  "avg_hit_at_k": 0.8667,
+  "avg_faithfulness": null,
+  "avg_citation_accuracy": null,
+  "avg_retrieval_ms": 208.0978
+}
