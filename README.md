@@ -1,15 +1,3 @@
----
-title: Kidney-RAG
-emoji: 🩺
-colorFrom: blue
-colorTo: indigo
-sdk: docker
-app_port: 7860
-pinned: false
-license: mit
-short_description: Clinical RAG over CKD guidelines with citations and safety scoring.
----
-
 # Kidney-RAG
 
 **Kidney-RAG** is a research prototype for retrieving evidence from authoritative chronic kidney disease (CKD) guidelines. It converts public guideline PDFs into citation-ready passages, indexes them with a local medical embedding model and ChromaDB, and provides semantic, lexical, and hybrid retrieval experiments.
