@@ -18,14 +18,13 @@ env/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# Vector store — regenerable, and big (should never be in git)
+# Vector store — regenerable, but committed for Render/Railway zero-build deploy
+# (Chroma DB ~23 MB, embeddings ~3 MB — well under GitHub's 100 MB/file limit)
 corpus/index/
 corpus/embeddings/
-corpus/chunks/chroma_db/
-corpus/chunks/*.npy
-corpus/chunks/*.sqlite3
+# corpus/chunks/chroma_db/          # committed so the deployed service starts instantly
+# corpus/chunks/*.npy               # committed for the same reason
 *.chroma
-*.sqlite3
 *.duckdb
 
 # HuggingFace model cache (if user opts into project-local caching)

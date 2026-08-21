@@ -26,6 +26,7 @@ python-dotenv==1.2.2
 # Generation backends (Day 3)
 huggingface_hub>=0.25.0
 google-genai>=2.0.0
+requests>=2.32.0
 
 # Web server (Day 4/5 — landing page + API)
 fastapi>=0.115.0
